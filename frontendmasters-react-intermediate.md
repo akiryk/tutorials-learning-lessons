@@ -2,6 +2,30 @@
 
 ## Hooks
 
+### useContext such that children can change the context
+
+If you use `useState` to set the context value, then consumers can `setState` and change the value for all other consumers
+
+```js
+const PersonContext = createContext();
+
+// the provider saves useState/setState to a single variable
+const person = React.useState({name: "Bobby"});
+return (
+  <PersonContext.Provider value={person}>
+    // etc
+ 
+// a consumer 
+// get a reference to the initial person object and to the setter method
+const [person, setPerson] = React.useContext(PersonContext)
+const handleClick = () => {
+  // change the person's name on click
+  setPerson({
+    ...person,
+    name: "New Name"
+  });
+```
+
 ### useMemo, memo, and useCallback
 
 `React.useMemo` and `React.memo` are two different things. 
