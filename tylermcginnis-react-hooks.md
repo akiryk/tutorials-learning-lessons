@@ -157,3 +157,31 @@ const SomeConsumer = () => {
   )
 }
 ```
+
+## Memo and useMemo
+
+`React.memo` enables you to skip re-rendering a component if the props haven't changed. This works fine if the props are not reference value, but otherwise might not do anything. 
+
+We have two options to fix this. We can either customize React.memo to only compare the count props and ignore the increment props or we can make the increment props the same reference across renders.
+
+To do the former, we can pass a function as the second argument to React.memo which will receive two arguments, the previous props and the current props. You can think of this function as a propsAreEqual function. If the propsAreEqual, return true and don’t re-render. If they’re not, return false and do re-render.
+
+```js
+export default React.memo(NthFib, (prevProps, nextProps) => {
+  return prevProps.count === nextProps.count
+})
+...
+
+That works fine for this scenario, but to me, the more interesting approach is to persist the references of the increment props across renders. This is where the built-in useCallback Hook can help us out.
+
+useCallback
+useCallback returns a memoized callback. What this means is that any function you create with useCallback won’t be re-created on subsequent re-renders. It takes two arguments, a function and an array of values that the function depends on. The memoized function it returns will only change if one of the values in the dependency array change.
+
+```js
+const memoizedCallback = useCallback(() => 
+  doSomething(a, b),
+  [a, b],
+)
+```
+
+This is particularly useful for our use case because of the issues we ran into earlier with React.memo. Instead of passing an inline function as the increment prop and creating a brand new function on every render, we can utilize useCallback to create one function on the initial render, and reuse it on subsequent renders. This means when React.memo compares the previous increment prop with the new increment prop, the reference will be the same and the identity operator (===) will work as expected.
