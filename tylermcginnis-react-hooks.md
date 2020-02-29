@@ -170,11 +170,11 @@ To do the former, we can pass a function as the second argument to React.memo wh
 export default React.memo(NthFib, (prevProps, nextProps) => {
   return prevProps.count === nextProps.count
 })
-...
+```
 
 That works fine for this scenario, but to me, the more interesting approach is to persist the references of the increment props across renders. This is where the built-in useCallback Hook can help us out.
 
-useCallback
+### useCallback
 useCallback returns a memoized callback. What this means is that any function you create with useCallback won’t be re-created on subsequent re-renders. It takes two arguments, a function and an array of values that the function depends on. The memoized function it returns will only change if one of the values in the dependency array change.
 
 ```js
@@ -185,3 +185,15 @@ const memoizedCallback = useCallback(() =>
 ```
 
 This is particularly useful for our use case because of the issues we ran into earlier with React.memo. Instead of passing an inline function as the increment prop and creating a brand new function on every render, we can utilize useCallback to create one function on the initial render, and reuse it on subsequent renders. This means when React.memo compares the previous increment prop with the new increment prop, the reference will be the same and the identity operator (===) will work as expected.
+
+### useMemo
+
+useMemo is a function that will memoize expensive functions. It takes two arguments, a function and an array of values that the function depends on. It returns a value that will be computed on the initial render and whenever any of the values in the dependency array change. 
+
+```js
+const memoizedValue = useMemo(() => 
+  computeExpensiveValue(a, b),
+  [a, b]
+)
+```
+
