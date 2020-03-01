@@ -79,3 +79,5 @@ How to?
 - Call `hydrate()` from react-dom not `render()`. This ensures that the content inside of `<div id="root">` isn't blown away, allowing users to see the SSR content
 - Remove any uses of `document` or `window` from code that will be called server-side, since node doesn't understand them.
 - In server side code, render the parts that you want to render (e.g. with express' `app.use()`)
+
+`renderToString` compared to `renderToNodeStream`. First renders the entire thing all at once, the second breaks it into chunks, which is much better approach for large apps. See [react-dom docs](https://reactjs.org/docs/react-dom-server.html).
