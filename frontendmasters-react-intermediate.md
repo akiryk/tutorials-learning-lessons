@@ -68,4 +68,14 @@ const LayoutEffectComponent = () => {
 `React.lazy()` enables you to load a component only at the moment you need it — i.e. when it is first rendered. 
 `Suspense` is used as a wrapper around anything that contains lazy loaded components. 
 
-**Only use lazy() if you have a module larger than approx 30kb** -according to Brian Holt, otherwise it's more effort than what you will gain.
+**Only use lazy() if you have a module larger than approx 30kb** -according to Brian Holt, otherwise it's more effort than what you will gain. His reason is that it can be a worse UX to wait for something that loads quickly anyway. If waiting for an 800k library to load, fine, show a loader. Otherwise...
+
+## SSR
+
+Why?
+- So that users have something to look at when page first loads as js is still downloading and being parsed
+
+How to?
+- Call `hydrate()` from react-dom not `render()`. This ensures that the content inside of `<div id="root">` isn't blown away, allowing users to see the SSR content
+- Remove any uses of `document` or `window` from code that will be called server-side, since node doesn't understand them.
+- In server side code, render the parts that you want to render (e.g. with express' `app.use()`)
