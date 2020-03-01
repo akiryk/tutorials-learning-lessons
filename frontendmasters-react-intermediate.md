@@ -62,3 +62,10 @@ const LayoutEffectComponent = () => {
   );
 };
 ```
+
+## Code Splitting
+
+`React.lazy()` enables you to load a component only at the moment you need it — i.e. when it is first rendered. 
+`Suspense` is used as a wrapper around anything that contains lazy loaded components. 
+
+**Only use lazy() if you have a module larger than approx 30kb** -according to Brian Holt, otherwise it's more effort than what you will gain.
