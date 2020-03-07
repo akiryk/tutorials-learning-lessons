@@ -1,20 +1,5 @@
 # Apollo & Graphql
 
-## Graphql
-
-### Operation Name
-
-It's important to name the operation for Apollo to be able to cache.
-
-```js
-query Cat { // operationKeyWord OperationName
-  cat {
-    id
-    name
-  }
-}
-```
-
 ## Start a client side apollo project:
 
 ### HttpLink
@@ -45,9 +30,28 @@ const client = new ApolloClient({
   cache,
   link
 });
+
+// Instead of using the Apollo hook (below), it's possible call a query or mutation and wait by using client directly:
+client.query(SOME_QUERY)
+  .then(data => {
+    // etc
 ```
 
-## Mutations
+## Graphql Review
+
+### Queries
+
+- Queries take the `query` operation keyword followed by an operation name
+- While not required, it's important to use the operation name for Apollo to cache.
+
+```js
+query Cat { // operationKeyWord OperationName
+  cat {
+    id
+    name
+  }
+}
+```
 
 ### Mutations in Graphql
 
@@ -58,7 +62,7 @@ const client = new ApolloClient({
 ```js
 mutation AddPet($newPet:NewPetType!) { // operationKeyWord operationName(variable: VariableType)
   addPet(input: $newPet) { // run the 'addPet' mutation; satisfy its input variable.
-    id
+    id // get back id and name since that's what we're querying for in the above query
     name
   }
 }
@@ -76,7 +80,9 @@ const {useMutation} from '@apollo/react-hooks';
 const CREATE_PET = (the addPet mutation above...)
 
 const MyComponent = () => {
-  const [createPet, newPetData] = useMutation(CREATE_PET);
+  // createPet is the mutation function
+  // newPetData is an object with data, error, and loading.
+  const [createPet, newPet] = useMutation(CREATE_PET);
   
   const handleSubmit = input => {
     createPet({
@@ -101,3 +107,24 @@ const MyComponent = () => {
 }
  ```
 
+### Update Local Cache after a mutation
+
+When you make a mutation to a single item, it will automatically update the cache. For example, if you have a `pet` query that gets a single pet and a `updatePet` mutation that updates a single pet by ID, the cache will update as soon as mutation returns. 
+
+However, if you are mutating a list — e.g. a an array of pets or any collection at all — you need to take charge of updating the cache yourself. There a several ways to do that described in [Apollo docs](https://www.apollographql.com/docs/react/data/mutations/). However, the best way for many cases is to use the update option on the `useMutation` hook.
+
+```js
+const [createPet, newPet] = useMutation(CREATE_PET, {
+  // update takes cache from the client and a data object.
+  // The data object takes the mutation's returned data. The name (addPet) must match the name of your mutation.
+  update(cache, {data: { addPet }}) {
+    // get the current data in the cache
+    const data = cache.readQuery({ query: ALL_PETS }); 
+    // update the cache
+    cache.writeQuery({ 
+      query: ALL_PETS,
+      data: { pets: [addPet, ...data.pets] } // e.g. prepend addPet (the name of your mutation) to data
+    })
+  }
+});
+```
