@@ -28,7 +28,7 @@ const Hoverable = ({render}) => {
 
 ## The logic-consuming component
 
-1. Render the logic-providing component
+1. Import the logic-providing component and wrap it around your consumer.
 2. It's children should be a function that expects to receive an argument or arguments and does something with those arguments.
 
 ### Example 
