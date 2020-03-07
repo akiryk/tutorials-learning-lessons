@@ -18,8 +18,15 @@ const link = new HttpLink({
 ```js
 import { inMemoryCache } from 'apollo-cache-inmemory'
 
-// use HttpLink to create a link to a graphql server endpoint
-const link = new HttpLink({
-  uri: "http://localhost:4000",
-})
+const cache = new inMemoryCache()
 ```
+
+### Client
+
+```
+import { ApolloClient } from 'apollo-client'
+
+const client = new ApolloClient({
+  cache,
+  link
+});
