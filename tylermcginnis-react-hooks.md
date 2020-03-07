@@ -14,7 +14,7 @@ There are three main things that class components enable us to handle that funct
 
 - *State* is handled by `useState` vs `setState`
 - *Synchronization* is handled by `useEffect` vs life cycle methods. Note: don't think of this as simply replacement for lifecycle methods because it's a different mental model.
-- *Sharing* is handled by custom hooks
+- *Sharing non-visual logic* is handled by custom hooks vs HOC and render props.
 
 ## useState
 
