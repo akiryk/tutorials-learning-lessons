@@ -161,4 +161,69 @@ const handleSubmit = input => {
     }
   })
 }
+```
 
+### Client Side Schemas
+
+Apollo enables us to manage local state much like Redux. We do this by extending query types to add whatever data we want, locally, to the types that are stored on the server. 
+
+1. Create a local schema (see below)
+2. Add schema as additional arguments when making the client
+3. Use properties of the local schema by adding a directive, `@client`
+
+For example, we have a `User` type like so:
+```
+User
+  id: ID!
+  username: String!
+  pets: [Pet]!
+```
+
+We define the local state with a schema, made of two parts:
+
+- type definitions
+- resolvers
+
+```js
+// client.js
+
+// type definitions that extend the types from the server
+const typeDefs = gql`
+    extend type User {
+        age: Int
+    }
+`
+
+// Resolvers
+const resolvers = {
+  // resolver maps directly to the user type and to the fields we want to get data for.
+  User: {
+    age() {
+        return 35;
+    }
+  }
+}
+
+// add to client, e.g.
+const client = new ApolloClient({ 
+  link,
+  cache,
+  resolvers,
+  typeDefs
+})
+
+// when you want to access the age property,
+const ALL_PETS = gql`
+    query AllPets {
+      pets {
+        id
+        name
+        type
+        user {
+          id
+          age @client
+        }
+      }
+    }
+`
+```
