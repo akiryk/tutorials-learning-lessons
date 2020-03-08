@@ -138,6 +138,7 @@ Rather than waiting for a server response when making a mutation, Apollo will op
     - if you add it to the mutation hook, it will be used every single time that mutation is called
     - if you add it to your submit handler, you can use data from the inputs to more accurately reflect the data returned from server
 - Either way, you need to accurately reflect the way data will be returned from the server. Not only must you give it fields such as `id` and `name`, you must give it values for otherwise hidden fields, such as `__typename`.
+- If you use fragment in the query, you'll need to tell optimisticResponse that there is a fragment.
 
 ```js
 // Attach to the submit handler, specifically where we call the mutation.
