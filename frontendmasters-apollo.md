@@ -128,3 +128,37 @@ const [createPet, newPet] = useMutation(CREATE_PET, {
   }
 });
 ```
+
+### Optimistic Update
+
+Rather than waiting for a server response when making a mutation, Apollo will optimistically update the UI if you give it the right data.
+
+- Use the `optimisticResponse` property ([see docs](https://www.apollographql.com/docs/react/performance/optimistic-ui/)
+- Add it to either your submit handler or to the mutation hook
+    - if you add it to the mutation hook, it will be used every single time that mutation is called
+    - if you add it to your submit handler, you can use data from the inputs to more accurately reflect the data returned from server
+- Either way, you need to accurately reflect the way data will be returned from the server. Not only must you give it fields such as `id` and `name`, you must give it values for otherwise hidden fields, such as `__typename`.
+
+```js
+// Attach to the submit handler, specifically where we call the mutation.
+const handleSubmit = input => {
+  createPet({
+    variables: {
+      newPet: {
+        name: input.name,
+        type: input.type
+      }
+    },
+    optimisticResponse: {
+      __typename: 'Mutation', 
+      addPet: { // the mutation's name
+        __typename: 'Pet',
+        id: Date.now().toString(), // we don't know what this will be, but we know it will be a string (ID type is a string)
+        name: input.name,
+        type: input.type, 
+        img: 'some-placeholder.jpg'
+      }
+    }
+  })
+}
+
