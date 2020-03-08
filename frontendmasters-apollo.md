@@ -228,3 +228,29 @@ const ALL_PETS = gql`
     }
 `
 ```
+
+### Fragments
+
+```
+const PETS_FIELDS = {
+  fragment PetsFields on Pet {
+       id
+        name
+        type
+        user {
+          id
+          age @client
+        }
+    }
+ }
+ 
+ // use the fragment
+ const All_Pets = gql`
+     query allPets {
+         pets {
+            ...PetsFields
+         }
+      }
+      ${PETS_FIELDS}
+`
+```
