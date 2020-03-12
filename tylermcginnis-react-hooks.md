@@ -56,6 +56,39 @@ How to make a custom hook
 2. It must return a value -- could be an object, a string, a boolean.
 3. It can use `useState` or any other hooks
 
+```js
+function useWindowDimensions() {
+  const [width, setWidth] = React.useState(window.innerWidth)
+  const [height, setHeight] = React.useState(window.innerHeight)
+
+  React.useEffect(() => {
+    const listener = () => {
+      setWidth(window.innerWidth)
+      setHeight(window.innerHeight)
+    }
+
+    window.addEventListener("resize", listener)
+
+    return () => {
+      window.removeEventListener("resize", listener)
+    }
+  }, [])
+
+  return {
+    width,
+    height
+  }
+}
+
+// use this hook like so:
+const SomeComponent = () => {
+    const {width, height} = useWindowDimensions();
+    return (
+       // jsx
+    )
+}
+```
+
 ## useReducer
 - more declarative than `useState`
 - because the reducer function is passed the current state, it's easier to update state of app based on the previous state
