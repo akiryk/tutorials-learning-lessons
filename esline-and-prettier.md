@@ -1,3 +1,5 @@
+Notes from KCDodds lessons
+
 ## Prettier
 
 - Install the VSCode Prettier extension (or extension for whatever your code editor is)
