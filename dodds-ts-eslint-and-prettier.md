@@ -39,7 +39,11 @@ Notes from Kent Dodds lessons
 
 - Install preset-typescript for babel, so it can handle .ts files, `npm install --save-dev @babel/preset-typescript`;
 
-### Example package.json scripts from dodds
+## Husky
+
+Install husky and create a `.huskyrc` file to enable pre-git-commit validation
+
+## Example package.json scripts from dodds
 
 - `--ignore-path` flag says to use a particular file for a list of what to ignore.
 - Use `npm-run-all` module and command in your `validate` script to run all validations in parallel. Much faster. 
