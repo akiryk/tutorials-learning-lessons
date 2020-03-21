@@ -19,6 +19,8 @@ const data = {
 }
 
 ```
+
+Use spread operator to destructure each property all the way down:
 ```js
  const copy = {
     ...data,
