@@ -8,22 +8,35 @@
 - Go to user settings and set editor configurations like so:
     - `"editor.formatOnSave": true`
     - `"editor.defaultFormatter": "esbenp.prettier-vscode"`
-
+    
+ ```sh
+ npm install --save-dev prettier
+ ```
+ ```json
+ // package.json
+ scripts": {
+    // we can tell prettier to "write", which saves changes matching js and json files
+    // add --ignore-path so prettier knows what file to use for ignoring 
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|html|css)\"",
+ // etc
+ ```
+ 
 ## Eslint
 
 Since Prettier will clean up certain Eslint mistakes automatically, anyway, no need to be alerted. You can install eslint-config-prettier and then add it as an extension.
 
 ```sh
 # terminal
+npm install --save-dev eslint
+# add prettier config so that we don't get warnings for stuff prettier will fix
 npm install --save-dev eslint-config-prettier
 
-# add to .eslint
+# add to .eslint extends both recommended and the prettier config
  "extends": ["eslint:recommended", "eslint-config-prettier"],
  ```
 
 ## Typescript
 
-Notes from Kent Dodds lessons
  - install typescript: `npm install --save-dev typescript`
  - create a config file, `tsconfig.json`
  - Tell typescript not to compile (Babel can do that); just identify problems:
@@ -36,6 +49,9 @@ Notes from Kent Dodds lessons
   }
 }
 ```
+
+- To disable eslint rules, you can use `// eslint-disable-next-line <name-of-rule>`
+- To disable an eslint rule for the entire file, e.g.: `/* eslint-disable strict */`
 
 - Install preset-typescript for babel, so it can handle .ts files, `npm install --save-dev @babel/preset-typescript`;
 
@@ -56,6 +72,7 @@ Install husky and create a `.huskyrc` file to enable pre-git-commit validation
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
     "check-types": "tsc",
     "check-format": "npm run prettier -- --list-different",
+    // validate simply assures that project is in a good state; run-all in parallel is faster than not in parallel
     "validate": "npm-run-all --parallel check-types check-format lint build"
  }
  ```
