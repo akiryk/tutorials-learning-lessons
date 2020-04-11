@@ -1,5 +1,97 @@
 # Firebase Firestore
 
+## Security Rules
+
+**The only applies when not using server libraries**
+
+If using REST endpoints or server client libraries for Firestore, none of these rules apply. Instead use [Identify and Access Management tools](https://cloud.google.com/firestore/docs/security/iam)
+
+**Matching** 
+
+The basic structure of a rule begins with a path, e.g.
+```
+match /databases/{database}/document`
+```
+This says to match any document found anywhere that is
+- in the databases path
+- in a database of any name — curly braces are just a wildcard, so this would match "funfunretro" or anything else
+
+The matches can nest but they do not cascade:
+```
+match /databases/{database}/document {`
+  allow read
+  match /restaurants/{restaurantId} {
+    match /reviews/{reviewId} {
+```
+The `allow read` rule will not cascade and apply to reviews just because they are nested; the reviewId rules will be default unless we specify otherwise. Why nest then? 
+- Helps organize our rules for easier dev experience
+- It allows us access outer variables down the nest
+
+```
+match /databases/{database}/document {`
+  allow read
+  match /restaurants/{restaurantId} {
+    match /reviews/{reviewId} {
+      // we can access the restaurantId here, eg.
+      allow write: if restaurantId == "1234"
+```
+
+**The Path Wildcard** 
+
+```
+match /databases/{database}/document {`
+  match /users/{restOfPath=**} {
+    // any rule here will match any document in users collection
+    // and also any document in any sub collection e.g.
+    // users/userId_123/history/history_123 will match
+```
+
+**Rule Precedence** 
+```
+match /databases/{database}/document {`
+  match /users/{restOfPath=**} {
+    allow read;
+    match /users/{userId}/privateData/{privateDoc} {
+    // this won't apply because the path is already set to read above
+      allow read: if false; 
+```
+
+**Actions**
+
+- Get
+- List
+    - `allow read;` can handle `get` and `list`
+- Create
+- Delete
+- Update
+  - `allow write;` can handle the three above
+
+Get and List can be handled together
+
+Make something completely public
+`allow read;` or `allow read: if true;` These rules are identical
+
+**Applying Logic**
+
+Sometimes, you'll just allow or prohibit for everyone no matter what, e.g .`allow read;`. More often, you'll apply logic based on these three conditions
+
+- Request data (the request object)
+- Target documents
+- Some other document 
+
+The Request object is made of
+- auth: contains info about the signed in user, e.g.
+  - `request.auth != null` checks if they are a signed in user
+  - `request.auth.uid` the user id
+  - `request.auth.token.email` data from the token
+  - `request.auth.token.email_verified` is the email address verified
+- resource: info about the document that the user is trying to write to
+  - It's a map to any field in the data
+  - Access fields via `data`, as in: `request.resource.data`
+  - access individual fields like `request.resource.data.score` (or `data["score"]`)
+
+
+
 ## Functions
 
 - Create a function in the functions directory
