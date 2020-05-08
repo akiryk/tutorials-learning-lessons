@@ -4,18 +4,23 @@ Express is essentially a routing and middleware web framwork. It handles routing
 
 ## Instantiate Express
 
-`const app = express()`; 
+```
+const express = require('express');
 
-## Routing
+const app = express();
+```
 
-An express routing function 
+## Controller Functions
+
 ```
 app.get('/books/:id', function(req, res, next){
   // res.send();
 });
 ```
 
-## Middleware
+## Middleware Functions
+
+Format is the same as controller functions, but intent is different. The intent of controllers is to send a response; the intent of middleware is to do something to the request and pass it along.
 
 The order of calls to middleware matters. 
 ```
