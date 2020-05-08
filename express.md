@@ -26,10 +26,23 @@ app.use(morgan('dev'));
 ```
 
 Each middleware does something and then calls `next()`, usually without arguments, which are treated as errors.
+
+### Custom middleware example
 ```
 // example custom middleware
 const myLogger = (req, res, next) => {
   logRequest(req);
   next();
 };
+
+// insert the custom middleware in calls to a specific book
+app.get('/book/:id', myLogger, function(req, res, next) {
+   //...
+})
+
+// Alternatively, 
+app.use('/book/:id', function (req, res, next) {
+  myLogger(req.method);
+  next()
+})
 ```
