@@ -56,3 +56,34 @@ app.use('/book/:id', function (req, res, next) {
   next()
 })
 ```
+
+## Router
+
+Router is an Express class that enables you to make mini-apps within your larger apps. They can have their own authentication, their own middleware, etc. 
+
+```
+// instantiate express
+const app = express();
+
+// create a new Router
+const router = express.Router();
+
+// register (mount) the router, otherwise it won't do anything
+// this will use the router miniapp for all routes starting with /me.
+app.use('/me', router);
+```
+
+Both Router and Express enable you to use the `route` function to streamline.
+```
+// handle all methods for the route to book
+router.route('/book/')
+  .get((req, res, next) => { ... })
+  .post(...)
+  .put(...)
+  .delete(...);
+
+// handle all methods for the route to a specific book by id
+router.route('/book/:id')
+  .get(...)
+  // etc.
+```
