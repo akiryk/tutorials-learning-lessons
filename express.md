@@ -40,6 +40,11 @@ app.get('/book/:id', myLogger, function(req, res, next) {
    //...
 })
 
+// multiple middlewares should be passed as an array
+app.get('/book/:id', [myLogger, auth, somethingElse], function(req, res, next) {
+   //...
+})
+
 // Alternatively, 
 app.use('/book/:id', function (req, res, next) {
   myLogger(req.method);
