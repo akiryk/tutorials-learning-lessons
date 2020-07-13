@@ -2,25 +2,12 @@
 
 ## Queries
 
-```json
-export const registryItemsQuery = gql`
-  query getRegistryItems($registryId: Int64) {
-      registry(input: {id: $registryId}) {
-        registries {
+```
+export const getSomething = gql`
+  query getSomething($someId: Int64) {
+      whatever(input: {id: $someId}) {
           id
           name
-          urlSlug
-          items {
-            listId
-            itemConnection {
-              totalCount
-              ...pageInfo
-              edges {
-                ...node
-                cursor
-              }
-            }
-          }
         }
       }
     }
