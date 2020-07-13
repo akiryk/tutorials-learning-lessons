@@ -5,14 +5,12 @@
 ```
 export const getSomething = gql`
   query getSomething($someId: Int64) {
-      whatever(input: {id: $someId}) {
-          id
-          name
-        }
-      }
+    theThing(input: {id: $someId}) {
+      id
+      name
     }
   }
-`;
+}`;
 ```
 
 You can now use fetchQuery with this query as in:
