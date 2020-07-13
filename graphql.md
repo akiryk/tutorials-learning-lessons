@@ -14,3 +14,15 @@ export const getSomething = gql`
   }
 `;
 ```
+
+You can now use fetchQuery with this query as in:
+```
+fetchQuery({
+  query: registryItemsQuery,
+  variables: {
+    someId: 121312,
+  })
+  .then(() => {
+    // etc
+  });
+```
