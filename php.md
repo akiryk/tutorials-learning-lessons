@@ -15,6 +15,9 @@ $this->listOfStuff = [];
 
 #### Loops
 ```php
+// an array
+$this->categoryList = [];
+
 for($i = 0; $i < count($categoryIds); $i++) {
     $category = $storefront->get_category($categoryIds[$i]);
     $this->categoryList[] = [
