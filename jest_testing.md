@@ -12,7 +12,7 @@ jest.mock('@mysource/some-utils', () => {
 });
 
 it('gives data back', async () => {
-  fetchQuery.mockImplementation(() => {
+  nameOfModule.mockImplementation(() => {
     return Promise.resolve({
       data: { stuff: { name: 'bill'}},
     });
@@ -20,13 +20,13 @@ it('gives data back', async () => {
 });
 
 it('gives nothing back', async () => {
-  fetchQuery.mockImplementation(() => {
+  nameOfModule.mockImplementation(() => {
     return Promise.resolve();
   });
 });
 
 it('rejects', async () => {
-  fetchQuery.mockImplementation(() => {
+  nameOfModule.mockImplementation(() => {
     return Promise.reject();
   });
 });
