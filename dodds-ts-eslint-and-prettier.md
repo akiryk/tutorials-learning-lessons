@@ -21,6 +21,16 @@
  // etc
  ```
  
+ An example `.prettierrc` config file in json format:
+ ```json
+ {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+}
+ ```
+ 
 ## Eslint
 
 Since Prettier will clean up certain Eslint mistakes automatically, anyway, no need to be alerted. You can install eslint-config-prettier and then add it as an extension.
