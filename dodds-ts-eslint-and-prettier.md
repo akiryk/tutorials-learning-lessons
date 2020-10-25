@@ -1,5 +1,40 @@
 # Typescript, Eslint, and Prettier
 
+## tldr
+```js
+// in vscode settings.json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
+}
+
+// in .eslintrc
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "prettier/prettier": ["error"]
+  }
+}
+
+// in .prettierrc
+{
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 70,
+}
+
+
+```
+
 ## Prettier
 
 - Install the VSCode Prettier extension (or extension for whatever your code editor is)
