@@ -3,6 +3,7 @@
 * [Front end masters course](https://frontendmasters.com/courses/complete-intro-containers/chroot/)
 * [Helpful files and how-tos](https://btholt.github.io/complete-intro-to-containers/chroot)
 
+### First, some background info
 When you make a container, you make a self-contained environment. It knows nothing of the outside, so you need to "copy" everything included the OS inside. 
 
 There are three key parts to this:
@@ -17,3 +18,6 @@ ldd /bin/cat
 /lib64/ld-linux-x86-64.so.2
 # which indicates we need these two files placed in the lib and lib64 directories.
 ```
+
+### Docker
+In Terminal, `docker ps` will show all running containers
