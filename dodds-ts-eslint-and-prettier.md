@@ -79,6 +79,13 @@ npm install --save-dev eslint-config-prettier
 # add to .eslint extends both recommended and the prettier config
  "extends": ["eslint:recommended", "eslint-config-prettier"],
  ```
+ 
+### eslintignore
+Useful for ignoring certain files
+```sh
+public/
+node_modules/
+```
 
 ## Typescript
 
