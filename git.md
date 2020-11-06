@@ -10,4 +10,7 @@ git diff master --diff-filter=M --name-only
 
 # have been re-named
 git diff master --diff-filter=R 
+
+# Show only commits authored by an author
+git log --author akiryk
 ```
