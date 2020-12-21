@@ -29,3 +29,9 @@ for($i = 0; $i < count($categoryIds); $i++) {
       ];
     }
 ```
+
+#### Mock Error
+```php
+// pretend some endpoint fails
+throw new \Exception('my error!');
+```
