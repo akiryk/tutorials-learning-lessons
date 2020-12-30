@@ -12,3 +12,7 @@ There is also a [front-end-masters-course](https://frontendmasters.com/courses/n
 The pattern here is:
 
 READABLE = READABLE.pipe(WRITEABLE);
+Think of it like a `then()` function. 
+```
+const stream3 = stream1.pipe(result => stream2(result));
+```
