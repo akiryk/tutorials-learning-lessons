@@ -20,3 +20,4 @@ When you want to execute a node file, you can just say `node myfile.js`. But if 
 ```
 cat hello.txt | processor.js
 ```
+Note, too, that you can eliminate the `node` command if you make your file executable: `chmod u+x processor.js`
