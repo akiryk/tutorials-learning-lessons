@@ -16,3 +16,7 @@ Think of it like a `then()` function.
 ```
 const stream3 = stream1.pipe(result => stream2(result));
 ```
+When you want to execute a node file, you can just say `node myfile.js`. But if you want to add some input to a node file for it to operate on — e.g. hello.txt should be processed by processor.js — then you need to pipe it like so:
+```
+cat hello.txt | processor.js
+```
