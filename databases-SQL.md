@@ -7,8 +7,8 @@ SQL (pronounced *ess-q-ell*) is a relational database. You have tables that are 
 ```
 // \d table_name will describe the table, which will show something like following:
  Column   |            Type             | Collation | Nullable |           Default
-------------+-----------------------------+-----------+----------+------------------------------
- user_id    | integer                     |           | not null | generated always as identity
- username   | character varying(25)       |           | not null |
- email      | character varying(50)       |           | not null |
+------------+---------------------------+-----------+----------+------------------------------
+ user_id    | integer                   |           | not null | generated always as identity
+ username   | character varying(25)     |           | not null |
+ email      | character varying(50)     |           | not null |
 ```
