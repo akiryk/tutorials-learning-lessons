@@ -3,12 +3,27 @@
 ## SQL
 First, just go watch the [Frontend Masters course](https://frontendmasters.com/courses/databases/introducing-join/).
 
-SQL (pronounced *ess-q-ell*) is a relational database. You have tables that are connected to each other by *foreign keys*. For example, the users table is connected to the comments table by user_id:
+SQL (pronounced *ess-q-ell*) is a relational database. You have tables that are connected to each other by *foreign keys*. For example, the users table is connected to the comments table by user_id. `\d table_name` will describe the table, which will show something like following:
 ```
-// \d table_name will describe the table, which will show something like following:
+ Table: public.users
  Column   |            Type             | Collation | Nullable |           Default
 ------------+---------------------------+-----------+----------+------------------------------
  user_id    | integer                   |           | not null | generated always as identity
  username   | character varying(25)     |           | not null |
  email      | character varying(50)     |           | not null |
+ 
+ Table: public.comments
+    Column  |            Type           | Collation | Nullable |           Default
+------------+---------------------------+-----------+----------+------------------------------
+ comment_id | integer                   |           | not null | generated always as identity
+ user_id    | integer                   |           |          |
+ board_id   | integer                   |           |          |
+ comment    | text                      |           | not null |
+```
+
+### JOINS
+Use JOIN to get data from more than one table. For example, if we want to find all boards with id of 1, simply:
+```SQL
+# semicolon is critical
+SELECT * FROM boards WHERE board_id=1;
 ```
