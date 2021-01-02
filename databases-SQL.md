@@ -36,4 +36,6 @@ SELECT users.username
   INNER JOIN users 
   ON users.user_id = comments.user_id 
   WHERE comment_id = 1;
+ 
+ # gives back username: somename
 ```
