@@ -16,31 +16,47 @@ git log --author akiryk
 ```
 
 ### Copy directory from one repo to another
-Copy directory so that you maintain git history.
+This will enable copying a directory from one repo to another so that you maintain git history.
+Assume you want to move a directory called `src` from repo-a to repo-b and you want to leave in place all the other content in both repos.
 
-Goal: move directory-a from repo-a to repo-b 
+Directory structure of your two repos
+```sh
+# repo-a
+repo-a
+  resources
+    components
+      file-a.js
+      file-b.js
+      file-c.js
+  otherstuff
+  ...
+  
+# repo-b
+repo-b
+  app
+    src
+  data
+  important-stuff
+  ...
+```
 
-Constraints: repo-a contains other directories we don't want to move.
-
-1. Clone repo-a and repo-b, then create a new branch in repo-a and filter out all content but the directory we want to copy over. 
+1. Clone repo-a and repo-b, then create a new branch in repo-a and filter out all content but the directory we want to copy over, in this case, `components`. 
 ```sh
 git clone https://github.path.to/repo-a tmp-repo
 git clone https://github.path.to/repo-b
 cd tmp-repo
 git checkout -b filtered-branch 
-# Filtering as below will show a warning which you can ignore since you aren't concerned with preserving tmp-repo. 
-# To be extra careful, you could run git remote rm origin before filtering.
-git filter-branch --subdirectory-filter path/to/directory-a -- --all
+
+# Remove everything but the components directory
+git filter-branch --subdirectory-filter resources/components -- --all
+
+# The above will show a warning which you can ignore since you aren't concerned with preserving tmp-repo.
+# (to be extra careful, you could run git remote rm origin before filtering)
+
 ```
 
 2. Create a new directory in repo-a that maps to the directory in repo-b.
 ```sh
-# Assume directory structure like so; we want to copy files into src
-repo-b
-  app
-    src
-  otherstuff
-
 # create app/src in repo-a
 cd repo-a
 mkdir -p app/src
