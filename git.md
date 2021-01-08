@@ -55,6 +55,16 @@ git filter-branch --subdirectory-filter resources/components -- --all
 
 ```
 
+You will now how a new directory structure for repo-a:
+```sh
+```sh
+# repo-a
+repo-a
+  file-a.js
+  file-b.js 
+  file-c.js
+```
+
 2. Create a new directory in repo-a that maps to the directory in repo-b.
 ```sh
 # create app/src in repo-a
