@@ -58,8 +58,10 @@ git remote rm origin
 # Remove everything but the components directory
 # The old way: git filter-branch --subdirectory-filter resources/components -- --all
 # Use the git-filter-repo way:
-# --force may not be necessary, but you may need it. git-filter-repo uses various tactics to make clear its actions are destructive.
-# This will move all files in components to a new directory called 'src' and will replace all tags with the 'new-module' tag.
+# --force may not be necessary, but you may need it. git-filter-repo uses various tactics 
+# to make clear its actions are destructive.
+# This will move all files in components to a new directory called 'src' and will 
+# replace all tags with the 'new-module' tag.
 git filter-repo --subdirectory-filter resources/components --force
 
 # You will now how a new directory structure for repo-a:
