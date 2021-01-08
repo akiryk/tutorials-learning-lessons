@@ -82,7 +82,7 @@ git checkout -b new-branch
 git remote add origin-tmp-repo ../tmp-repo
 ```
 
-4. Fetch the tmp-repo's branch and then merge with the all-unrelated-histories flag
+4. Fetch the tmp-repo's branch and then merge with the `--allow-unrelated-histories` flag
 ```sh
 git fetch origin-tmp-repo filtered-branch
 git merge origin-tmp-repo/filtered-branch --allow-unrelated-histories
