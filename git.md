@@ -55,20 +55,18 @@ git filter-branch --subdirectory-filter resources/components -- --all
 
 ```
 
-You will now how a new directory structure for repo-a:
+You will now how a new directory structure for tmp-repo (repo-a):
 ```sh
-```sh
-# repo-a
-repo-a
+tmp-repo
   file-a.js
   file-b.js 
   file-c.js
 ```
 
-2. Create a new directory in repo-a that maps to the directory in repo-b.
+2. Create a new directory in tmp-repo that maps to the directory in repo-b.
 ```sh
-# create app/src in repo-a
-cd repo-a
+# create app/src in tmp-repo (repo-a)
+cd tmp-repo
 mkdir -p app/src
 
 # copy the filtered files into app/src 
