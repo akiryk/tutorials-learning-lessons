@@ -13,6 +13,12 @@ git diff master --diff-filter=R
 
 # Show only commits authored by an author
 git log --author akiryk
+
+# log without refs/tags
+git log --no-decorate
+
+# log on one line, no tags, just the commit message
+git log --format="%C(auto) %h %s"
 ```
 
 ### Copy directory from one repo to another
