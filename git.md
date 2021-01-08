@@ -28,7 +28,8 @@ git clone https://github.path.to/repo-a tmp-repo
 git clone https://github.path.to/repo-b
 cd tmp-repo
 git checkout -b filtered-branch 
-# Filtering as below will show a warning which you can ignore since you aren't concerned with preserving tmp-repo. To be extra careful, you could run git remote rm origin before filtering.
+# Filtering as below will show a warning which you can ignore since you aren't concerned with preserving tmp-repo. 
+# To be extra careful, you could run git remote rm origin before filtering.
 git filter-branch --subdirectory-filter path/to/directory-a -- --all
 ```
 
