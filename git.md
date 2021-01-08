@@ -42,59 +42,48 @@ repo-b
 
 **Alert** There's an older way of doing this that uses `git filter-branch --subdirectory-filter`. This works fine with small, simple repos, but is unusably slow with large, complex repos. 
 
-Step 1. Install [git-filter-repo](https://github.com/newren/git-filter-repo). There are various ways to do this, but an easy way is with homebrew:
+Prerequisite. Install [git-filter-repo](https://github.com/newren/git-filter-repo). There are various ways to do this, but an easy way is with homebrew:
 ```sh
 brew install git-filter-repo
 ```
 
-1. Clone repo-a and repo-b, then create a new branch in repo-a
+1. In repo-a, checkout a new branch and filter out all but the content we want to keep.
 ```sh
-git clone https://github.path.to/repo-a tmp-repo
-git clone https://github.path.to/repo-b
-cd tmp-repo
-git checkout -b filtered-branch 
-```
+cd repo-a
+git checkout -b filtered-branch
 
-2. Filter out all content but the directory we want to copy over, in this case, `components`. 
-```sh
-# in repo-a
+# optionally remove git link for security
+git remote rm origin
+
 # Remove everything but the components directory
 # The old way: git filter-branch --subdirectory-filter resources/components -- --all
 # Use the git-filter-repo way:
 # --force may not be necessary, but you may need it. git-filter-repo uses various tactics to make clear its actions are destructive.
 # This will move all files in components to a new directory called 'src' and will replace all tags with the 'new-module' tag.
 git filter-repo --subdirectory-filter resources/components --force
-```
 
-You will now how a new directory structure for tmp-repo (repo-a):
-```sh
-tmp-repo
-  file-a.js
-  file-b.js 
-  file-c.js
-```
+# You will now how a new directory structure for repo-a:
+# repo-a
+#   file-a.js
+#   file-b.js 
+#   file-c.js
 
-3. Create a new directory in tmp-repo that maps to the directory in repo-b.
-```sh
-# create app/src in tmp-repo (repo-a)
-cd tmp-repo
+# Create a new directory in repo-a that maps to the directory in repo-b.
 mkdir -p app/src
 
 # copy the filtered files into app/src 
 git mv -k * app/src`
 ```
 
-4. Move to repo b, create a new branch, and link it to the local tmp-repo
+2. In repo-b, create a new branch, link it to the local repo-a 
 ```sh
 cd ../repo-b
 git checkout -b new-branch
-git remote add origin-tmp-repo ../tmp-repo
-```
+git remote add origin-repo-a ../repo-a
 
-5. Fetch the tmp-repo's branch and then merge with the `--allow-unrelated-histories` flag
-```sh
-git fetch origin-tmp-repo filtered-branch
-git merge origin-tmp-repo/filtered-branch --allow-unrelated-histories
+# Fetch repo-a filtered-branc and merge
+git fetch origin-repo-a filtered-branch
+git merge origin-repo-a/filtered-branch --allow-unrelated-histories
 git add .
 git commit -m 'add directory-a'
 ```
