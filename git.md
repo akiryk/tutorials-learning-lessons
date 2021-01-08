@@ -47,6 +47,24 @@ Prerequisite. Install [git-filter-repo](https://github.com/newren/git-filter-rep
 brew install git-filter-repo
 ```
 
+#### tldr;
+```sh
+# repo-a
+git checkout -b filtered-branch
+# filter out everything but what is in components directory
+git filter-repo --subdirectory-filter resources/components --force
+# move components files to new directory
+mkdir -p app/src
+git mv -k * app/src
+# in repo-b
+git checkout -b new-branch
+git remote add origin-repo-a ../repo-a
+# link to local repo-a's filtered branch and pull
+git fetch origin-repo-a filtered-branch
+git merge origin-repo-a/filtered-branch --allow-unrelated-histories
+git commit
+```
+
 1. In repo-a, checkout a new branch and filter out all but the content we want to keep.
 ```sh
 cd repo-a
@@ -74,7 +92,7 @@ git filter-repo --subdirectory-filter resources/components --force
 mkdir -p app/src
 
 # copy the filtered files into app/src 
-git mv -k * app/src`
+git mv -k * app/src
 ```
 
 2. In repo-b, create a new branch, link it to the local repo-a 
