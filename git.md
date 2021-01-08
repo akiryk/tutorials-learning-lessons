@@ -86,4 +86,6 @@ git remote add origin-tmp-repo ../tmp-repo
 ```sh
 git fetch origin-tmp-repo filtered-branch
 git merge origin-tmp-repo/filtered-branch --allow-unrelated-histories
-``
+git add .
+git commit -m 'add directory-a'
+```
