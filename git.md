@@ -19,7 +19,7 @@ git log --author akiryk
 This will enable copying a directory from one repo to another so that you maintain git history.
 Assume you want to move a directory called `src` from repo-a to repo-b and you want to leave in place all the other content in both repos.
 
-Directory structure of your two repos
+Example directory structure of your two repos. **Goal:** move the files in `repo-a/resources/components` to `repo-b/app/src` and keep thei git history.
 ```sh
 # repo-a
 repo-a
@@ -40,19 +40,30 @@ repo-b
   ...
 ```
 
-1. Clone repo-a and repo-b, then create a new branch in repo-a and filter out all content but the directory we want to copy over, in this case, `components`. 
+**Alert** There's an older way of doing this that uses `git filter-branch --subdirectory-filter`. This works fine with small, simple repos, but is unusably slow with large, complex repos. 
+
+Step 1. Install [git-filter-repo](https://github.com/newren/git-filter-repo). There are various ways to do this, but an easy way is with homebrew:
+```sh
+brew install git-filter-repo
+```
+
+1. Clone repo-a and repo-b, then create a new branch in repo-a
 ```sh
 git clone https://github.path.to/repo-a tmp-repo
 git clone https://github.path.to/repo-b
 cd tmp-repo
 git checkout -b filtered-branch 
+```
 
+2. Filter out all content but the directory we want to copy over, in this case, `components`. 
+```sh
+# in repo-a
 # Remove everything but the components directory
-git filter-branch --subdirectory-filter resources/components -- --all
-
-# The above will show a warning which you can ignore since you aren't concerned with preserving tmp-repo.
-# (to be extra careful, you could run git remote rm origin before filtering)
-
+# The old way: git filter-branch --subdirectory-filter resources/components -- --all
+# Use the git-filter-repo way:
+# --force may not be necessary, but you may need it. git-filter-repo uses various tactics to make clear its actions are destructive.
+# This will move all files in components to a new directory called 'src' and will replace all tags with the 'new-module' tag.
+git filter-repo --subdirectory-filter resources/components --force
 ```
 
 You will now how a new directory structure for tmp-repo (repo-a):
@@ -63,7 +74,7 @@ tmp-repo
   file-c.js
 ```
 
-2. Create a new directory in tmp-repo that maps to the directory in repo-b.
+3. Create a new directory in tmp-repo that maps to the directory in repo-b.
 ```sh
 # create app/src in tmp-repo (repo-a)
 cd tmp-repo
@@ -73,14 +84,14 @@ mkdir -p app/src
 git mv -k * app/src`
 ```
 
-3. Move to repo b, create a new branch, and link it to the local tmp-repo
+4. Move to repo b, create a new branch, and link it to the local tmp-repo
 ```sh
 cd ../repo-b
 git checkout -b new-branch
 git remote add origin-tmp-repo ../tmp-repo
 ```
 
-4. Fetch the tmp-repo's branch and then merge with the `--allow-unrelated-histories` flag
+5. Fetch the tmp-repo's branch and then merge with the `--allow-unrelated-histories` flag
 ```sh
 git fetch origin-tmp-repo filtered-branch
 git merge origin-tmp-repo/filtered-branch --allow-unrelated-histories
