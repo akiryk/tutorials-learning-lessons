@@ -13,3 +13,7 @@
 * Find some errors at compile time
 * Provide a better developer experience
 
+## Get Started
+
+* Clone the repo and `yarn`
+* `npx tsc` to install typescript compiler
