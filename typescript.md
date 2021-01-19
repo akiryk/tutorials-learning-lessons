@@ -43,7 +43,12 @@ The above will create your ts files in `lib/` folder and will compile them to wo
 ## Variables
 Some variables can be typed by inference:
 ```js
+// The jsdocs notation will be undestood by Typescript:
+/**
+ * x is a string!
+ */
 let x = "hello world";
-// x is a string by inference
-x = 32; // ERROR
+// x is a string by inference; the comment is from jsdocs:
+x = 32; // ERROR, if you hover over `x`, you'll see, "x is a string!"
+
 ```
