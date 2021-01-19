@@ -97,6 +97,29 @@ cc = {
  * 🚨   is missing in type   '{ houseNumber: number; }'
  * 🚨   but required in type '{ houseNumber: number; streetName: string; }'.
  */
+ 
+ // if we want to re-use this type, we can create an interface
+interface Address {
+  houseNumber: number;
+  streetName?: string; // streetName is optional (?:)
+}
+// and refer to it by name
+let ee: Address = { houseNumber: 33 };
+
 ```
+
+## Interaction & Union Operators
+Intersection ('OR'), is `|`
+Untion ('AND'), is `&`
+
 For lots more examples, see the [course notes for basics.ts](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/1-basics.ts)
 
+## Structural vs Nominal Typing
+Typescript is a `structural` type system — it only cares about the *shape* of an object. A car type is a car type if it has `make`, `model`, `year`, that are strong, string, and number.  
+
+Taking this approach can help V8 optimize your JavaScript.
+
+## Wide vs Narrow Types
+The widest is `any`; it can take anything.
+An array of any is narrower.
+A string is narrow.
