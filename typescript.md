@@ -51,4 +51,30 @@ let x = "hello world";
 // x is a string by inference; the comment is from jsdocs:
 x = 32; // ERROR, if you hover over `x`, you'll see, "x is a string!"
 
+// Any type!
+let z; // z is assigned `any`
+z = 41;
+z = "abc"; // No error or alert!
+
+// Type annotation
+let z: number;
+z = 31; // fine
+z = "hi there"; // ERROR Type '"abc"' is not assignable to type 'number'.
+
 ```
+
+## Arrays 
+```js
+let aa: number[] = [];
+aa.push(33);
+aa.push("abc"); // 🚨 ERROR: Argument of type '"abc"' is not assignable to parameter of type 'number'.
+
+// an array of "nevers"; it will never work
+let aa = [];
+aa.push(33); // ERROR
+
+// "Tupple" an array of fixed length; follows a convention
+```
+
+For lots more examples, see the [course notes for basics.ts](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/1-basics.ts)
+
