@@ -23,10 +23,12 @@ Create a `tsconfig.json` file to configure target JS version, output directory, 
 ```json
 {
   "compilerOptions": {
+    "jsx": "react",
+    "strict": true,
+    "noImplicitAny": true,
     "module": "commonjs",
     "target": "ES2017",
     "outDir": "lib",
-    // declaration will create a type declaration file, useful for VSCode
     "declaration": true,
     "sourceMap": true
   },
@@ -34,3 +36,7 @@ Create a `tsconfig.json` file to configure target JS version, output directory, 
 }
 ```
 The above will create your ts files in `lib/` folder and will compile them to work with ES2017.
+* declaration enables VSCode to understand and help debug ts files (ie. it create a type declaration file)
+* noImplicitAny: wildcards, where any type is allowed -- good to prohibit
+* jsx enables jsx
+
