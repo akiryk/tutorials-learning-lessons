@@ -166,3 +166,6 @@ function contactPeople(
   }
 }
 ```
+
+### Lexical Scoping
+Lexical scoping concerns the value of `this`. If you need to pass `this`, see the [lexical scoping section](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/2-function-basics.ts) of the notes.
