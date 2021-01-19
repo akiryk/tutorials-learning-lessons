@@ -17,3 +17,16 @@
 
 * Clone the repo and `yarn`
 * `npx tsc` to install typescript compiler
+
+## Configure
+Create a `tsconfig.json` file to configure target JS version, output directory, etc:
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2017",
+    "outDir": "lib"
+  },
+  "include": ["src"]
+}
+```
