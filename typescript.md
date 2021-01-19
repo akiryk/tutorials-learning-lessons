@@ -25,7 +25,10 @@ Create a `tsconfig.json` file to configure target JS version, output directory, 
   "compilerOptions": {
     "module": "commonjs",
     "target": "ES2017",
-    "outDir": "lib"
+    "outDir": "lib",
+    // declaration will create a type declaration file, useful for VSCode
+    "declaration": true,
+    "sourceMap": true
   },
   "include": ["src"]
 }
