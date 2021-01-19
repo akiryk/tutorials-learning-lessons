@@ -129,3 +129,40 @@ A string is narrow.
 ## Function Basics
 
 See notes about [functions from course](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/2-function-basics.ts)
+
+In functions, return types can almost always be inferred; however it is usually safer to be explicit. There can be unintended consequences to what the infered values will be. 
+
+Rest params need to be array since that's what rest params are: 
+
+`const sum = (...vals: number[]) => vals.reduce((sum, x) => sum + x, 0);`
+
+### Overload functions
+If you overload a function, you can provide explicit rules given different dependencies:
+```js
+interface HasPhoneNumber {
+  name: string;
+  phone: number;
+}
+
+interface HasEmail {
+  name: string;
+  email: string;
+}
+
+// "overload signatures"
+function contactPeople(method: "email", ...people: HasEmail[]): void;
+function contactPeople(method: "phone", ...people: HasPhoneNumber[]): void;
+// If you use "email", you must provide people as a HasEmail interface type.
+
+// "function implementation"
+function contactPeople(
+  method: "email" | "phone",
+  ...people: (HasEmail | HasPhoneNumber)[]
+): void {
+  if (method === "email") {
+    (people as HasEmail[]).forEach(sendEmail);
+  } else {
+    (people as HasPhoneNumber[]).forEach(sendTextMessage);
+  }
+}
+```
