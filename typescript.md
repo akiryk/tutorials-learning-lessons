@@ -30,3 +30,4 @@ Create a `tsconfig.json` file to configure target JS version, output directory, 
   "include": ["src"]
 }
 ```
+The above will create your ts files in `lib/` folder and will compile them to work with ES2017.
