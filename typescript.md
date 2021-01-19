@@ -76,5 +76,27 @@ aa.push(33); // ERROR
 // "Tupple" an array of fixed length; follows a convention
 ```
 
+## Objects
+```js
+//== OBJECTS ==//
+
+/**
+ * (11) object types can be expressed using {} and property names
+ */
+// let cc: { houseNumber: number; streetName: string };
+// cc = {
+//   streetName: "Fake Street",
+//   houseNumber: 123
+// };
+
+// cc = {
+//   houseNumber: 33
+// };
+/**
+ * 🚨 Property 'streetName'
+ * 🚨   is missing in type   '{ houseNumber: number; }'
+ * 🚨   but required in type '{ houseNumber: number; streetName: string; }'.
+ */
+```
 For lots more examples, see the [course notes for basics.ts](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/1-basics.ts)
 
