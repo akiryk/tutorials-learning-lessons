@@ -40,7 +40,11 @@ The above will create your ts files in `lib/` folder and will compile them to wo
 * noImplicitAny: wildcards, where any type is allowed -- good to prohibit
 * jsx enables jsx
 
-## Variables
+## Basics
+
+See the [course notes for basics.ts](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/1-basics.ts)
+
+### Variables
 Some variables can be typed by inference:
 ```js
 // The jsdocs notation will be undestood by Typescript:
@@ -63,7 +67,7 @@ z = "hi there"; // ERROR Type '"abc"' is not assignable to type 'number'.
 
 ```
 
-## Arrays 
+### Arrays 
 ```js
 let aa: number[] = [];
 aa.push(33);
@@ -76,7 +80,7 @@ aa.push(33); // ERROR
 // "Tupple" an array of fixed length; follows a convention
 ```
 
-## Objects
+### Objects
 ```js
 //== OBJECTS ==//
 
@@ -108,18 +112,20 @@ let ee: Address = { houseNumber: 33 };
 
 ```
 
-## Interaction & Union Operators
+### Interaction & Union Operators
 Intersection ('OR'), is `|`
 Untion ('AND'), is `&`
 
-For lots more examples, see the [course notes for basics.ts](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/1-basics.ts)
-
-## Structural vs Nominal Typing
+### Structural vs Nominal Typing
 Typescript is a `structural` type system — it only cares about the *shape* of an object. A car type is a car type if it has `make`, `model`, `year`, that are strong, string, and number.  
 
 Taking this approach can help V8 optimize your JavaScript.
 
-## Wide vs Narrow Types
+### Wide vs Narrow Types
 The widest is `any`; it can take anything.
 An array of any is narrower.
 A string is narrow.
+
+## Function Basics
+
+See notes about [functions from course](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/2-function-basics.ts)
