@@ -83,15 +83,15 @@ aa.push(33); // ERROR
 /**
  * (11) object types can be expressed using {} and property names
  */
-// let cc: { houseNumber: number; streetName: string };
-// cc = {
-//   streetName: "Fake Street",
-//   houseNumber: 123
-// };
+let cc: { houseNumber: number; streetName: string };
+cc = {
+   streetName: "Fake Street",
+   houseNumber: 123
+};
 
-// cc = {
-//   houseNumber: 33
-// };
+cc = {
+   houseNumber: 33
+};
 /**
  * 🚨 Property 'streetName'
  * 🚨   is missing in type   '{ houseNumber: number; }'
