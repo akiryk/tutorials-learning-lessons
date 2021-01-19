@@ -40,3 +40,10 @@ The above will create your ts files in `lib/` folder and will compile them to wo
 * noImplicitAny: wildcards, where any type is allowed -- good to prohibit
 * jsx enables jsx
 
+## Variables
+Some variables can be typed by inference:
+```js
+let x = "hello world";
+// x is a string by inference
+x = 32; // ERROR
+```
