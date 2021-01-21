@@ -160,6 +160,7 @@ function contactPeople(
   ...people: (HasEmail | HasPhoneNumber)[]
 ): void {
   if (method === "email") {
+    // as is a typescript operator, not vanilla JS
     (people as HasEmail[]).forEach(sendEmail);
   } else {
     (people as HasPhoneNumber[]).forEach(sendTextMessage);
