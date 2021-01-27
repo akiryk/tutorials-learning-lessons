@@ -69,6 +69,10 @@ git remote add origin-repo-a ../repo-a
 git fetch origin-repo-a filtered-branch
 git merge origin-repo-a/filtered-branch --allow-unrelated-histories
 git commit
+
+# later, remove the added local repo
+# in repo-b
+git remote rm repo-a
 ```
 
 1. In repo-a, checkout a new branch and filter out all but the content we want to keep.
