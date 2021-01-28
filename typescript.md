@@ -5,6 +5,7 @@
 * [Github repo](https://github.com/mike-works/typescript-fundamentals)
 * [Course Notes](https://mike.works/course/typescript-fundamentals-7832c19)
 * [Course Slides](https://docs.mike.works/typescript-slides-v2)
+* [DTS Lint](https://github.com/Microsoft/dtslint) - a good resource for testing that your types get what they expect and error correctly
 
 ## Why?
 
