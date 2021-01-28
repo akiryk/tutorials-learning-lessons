@@ -236,3 +236,12 @@ interface PhoneNumberDict {
   };
 }
 ```
+
+## Classes
+
+### Definite Assignment Operator
+Add exclamation mark to tell Typescript to not throw an error the way it ordinarily would; let you handle it. For example:
+```js
+private password!: string 
+// now even though no password is passed in,  you are saying that you'll create one and it will be a string
+```
