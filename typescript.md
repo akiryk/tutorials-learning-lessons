@@ -205,3 +205,32 @@ type ContactMessenger2 = (
 ) => void;
 ```
 
+Note that you can declare an interface more than once — that is, you can narrow it:
+
+```js
+interface PhoneNumberDict {
+  // arr[0],  foo['myProp']
+  [numberName: string]:
+    | undefined
+    | {
+        areaCode: number;
+        num: number;
+      };
+}
+
+// we declare it again, this time narrowing it to require a home and an office key
+interface PhoneNumberDict {
+  home: {
+    /**
+     * (7) interfaces are "open", meaning any declarations of the
+     * -   same name are merged
+     */
+    areaCode: number;
+    num: number;
+  };
+  office: {
+    areaCode: number;
+    num: number;
+  };
+}
+```
