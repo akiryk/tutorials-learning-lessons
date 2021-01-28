@@ -192,7 +192,7 @@ const y: EmailOrPhone;
 ### Interfaces
 While aliases can handle any type — primitives likes string as well as object or array — interfaces can **only** handle objects or arrays or functions (things that have `prototypes`)
 
-Interface and alias can do the same thing:
+Interface and alias can do the same things, except that Interfaces can't handle primitives and aliaes can't extend. This could be an argument in favor of using Aliases, since they avoid the confusion/complications of extending interfaces and using the same name multiple times. 
 
 ```js
 // note return type void using colon
