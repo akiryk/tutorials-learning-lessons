@@ -170,3 +170,38 @@ function contactPeople(
 
 ### Lexical Scoping
 Lexical scoping concerns the value of `this`. If you need to pass `this`, see the [lexical scoping section](https://github.com/mike-works/typescript-fundamentals/blob/master/notes/2-function-basics.ts) of the notes.
+
+## Type Aliases and Interfaces
+These are both ways to give a name to a structure we can import and export. 
+Type aliases are eager; interfaces are lazy.
+
+### Type Aliases
+Just a way to give a type a name:
+
+`type EmailOrPhone = string | number;` or
+
+`type hasName = { name: string }
+
+```js
+// this enables us to replace this with the following:
+const x: string | number;
+const y: EmailOrPhone;
+```
+### Interfaces
+While aliases can handle any type — primitives likes string as well as object or array — interfaces can **only** handle objects or arrays or functions (things that have `prototypes`)
+
+Interface and alias can do the same thing:
+
+```js
+// note return type void using colon
+interface ContactMessenger1 {
+  (contact: HasEmail | HasPhoneNumber, message: string): void;
+}
+
+// for alias, it must us fat arrow
+type ContactMessenger2 = (
+  contact: HasEmail | HasPhoneNumber,
+  message: string
+) => void;
+```
+
