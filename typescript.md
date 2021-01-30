@@ -271,3 +271,4 @@ You can have `.js` and `.ts` modules side by side. You can import one from the o
 "strictFunctionTypes": true,
 "strictBindCallApply": true
 ```
+Also, try really hard to avoid casting with `as` keyword, where you force TypeScript to regard something as a particular type.
