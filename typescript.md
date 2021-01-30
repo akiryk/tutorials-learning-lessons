@@ -252,17 +252,22 @@ You can have `.js` and `.ts` modules side by side. You can import one from the o
 - Don't make functional changes at the same time. If you check that something is falsy now, don't change to checking if it's undefined with TypeScript.
 - Don't neglect to write tests for your types — use dtslint for type tests
 ### Three step process js to ts
-1. PR 1: Compile in "Loose Mode"
+**PR 1: Compile in "Loose Mode"**
   - Tests should pass
   - Rename all .js files to .ts
   - Fix only things that are not type-checking, or causing compile errors
   - don't change behavior
   - Get tests passing again
   - That is one PR
-2. PR 2: Explicit any
+**PR 2: Explicit any**
   - tests pass
   - ban implicit `any`
   - where possible provide a specific type
       - use [Definitely Typed](https://github.com/DefinitelyTyped/DefinitelyTyped) package to convert untyped libraries like Lodash to use types
-3. Squash Explicity any and enable strict mode
-  - 
+**PR 3: Squash Explicity any and enable strict mode**
+```json
+"strictNullChecks": true,
+"strict": true,
+"strictFunctionTypes": true,
+"strictBindCallApply": true
+```
