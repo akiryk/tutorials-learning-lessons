@@ -173,6 +173,9 @@ Lexical scoping concerns the value of `this`. If you need to pass `this`, see th
 These are both ways to give a name to a structure we can import and export. 
 Type aliases are eager; interfaces are lazy.
 
+### Personal Note
+While Interfaces seem to give more power, by being extensible, that might actually not be a good thing. It means you could have more than one interface with the same name; overloading can be difficult for other devs to follow. Type aliases can do the same things and may be a better option.
+
 ### Type Aliases
 Just a way to give a type a name:
 
