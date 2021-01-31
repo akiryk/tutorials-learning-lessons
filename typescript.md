@@ -79,25 +79,21 @@ aa.push("abc"); // 🚨 ERROR: Argument of type '"abc"' is not assignable to par
 let aa = [];
 aa.push(33); // ERROR
 
+// array of objects (see below for example of an object type)
+const contacts: contactType[] = [];
+
 // "Tupple" an array of fixed length; follows a convention
 ```
 
 ### Objects
 ```js
-//== OBJECTS ==//
-
-/**
- * (11) object types can be expressed using {} and property names
- */
-let cc: { houseNumber: number; streetName: string };
-cc = {
+// required and optional types:
+type contactType = { houseNumber: number; streetName: string, apt?: string };
+const myContact: contactType = {
    streetName: "Fake Street",
    houseNumber: 123
 };
 
-cc = {
-   houseNumber: 33
-};
 /**
  * 🚨 Property 'streetName'
  * 🚨   is missing in type   '{ houseNumber: number; }'
@@ -255,20 +251,49 @@ You can have `.js` and `.ts` modules side by side. You can import one from the o
 **PR 1: Compile in "Loose Mode"**
   - Tests should pass
   - Rename all .js files to .ts
+  - change tsconfig.json as below
   - Fix only things that are not type-checking, or causing compile errors
   - don't change behavior
-  - Get tests passing again
-  - That is one PR
+  - don't run `tsc src/index.ts` or the like -- don't convert at this point
+  - Make sure tests are still passing and submit your PR!
+  
+```json
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noImplicitAny": false
+  }
+}
+```
+  
 **PR 2: Explicit any**
   - tests pass
   - ban implicit `any`
   - where possible provide a specific type
-      - use [Definitely Typed](https://github.com/DefinitelyTyped/DefinitelyTyped) package to convert untyped libraries like Lodash to use types
+      - use [Definitely Typed](https://github.com/DefinitelyTyped/DefinitelyTyped) package to convert untyped libraries like Lodash to use types  
+```json
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noImplicitAny": true
+  }
+}
+```
+      
 **PR 3: Squash Explicity any and enable strict mode**
 ```json
-"strictNullChecks": true,
-"strict": true,
-"strictFunctionTypes": true,
-"strictBindCallApply": true
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true
+  }
+}
 ```
 Also, try really hard to avoid casting with `as` keyword, where you force TypeScript to regard something as a particular type.
