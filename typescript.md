@@ -176,6 +176,8 @@ Type aliases are eager; interfaces are lazy.
 ### Personal Note
 While Interfaces seem to give more power, by being extensible, that might actually not be a good thing. It means you could have more than one interface with the same name; overloading can be difficult for other devs to follow. Type aliases can do the same things and may be a better option.
 
+This is a useful [StackOverview](https://stackoverflow.com/questions/41682572/when-to-use-types-vs-interface-in-ts/41683135#41683135) of types vs. interfaces
+
 ### Type Aliases
 Just a way to give a type a name:
 
