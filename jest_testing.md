@@ -31,7 +31,9 @@ There are a couple ways to handle it.
 
 2. Wrap a resolved promise in act.
 ```js
- it('calls an async function with a new status"', () => {
+import {act} from 'react-dom/test-utils';
+
+it('calls an async function with a new status"', () => {
       const button = wrapper.find('button');
       button.simulate('click');
       // only called once!
@@ -47,6 +49,17 @@ There are a couple ways to handle it.
       // Now it's been called twice!
       expect(myAsyncFunc).toHaveBeenCalledTimes(2);
     });
+    
+it('updates state after a promise is resolved', async () => {
+      const promise = Promise.resolve();
+      const button = wrapper.find(SomeButton);
+      // simulate click!
+      act(() => button.prop('onClick')());
+      await act(() => promise);
+      expect(wrapper.find(getEnzymeID(QUICK_ATR_BUTTON_ID)).text()).toContain(
+        'atrButton.loadingButton.adding'
+      );
+});
 ```
 
 ### Mocking 
