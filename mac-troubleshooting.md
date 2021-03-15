@@ -20,7 +20,7 @@ The SMC on your Mac is responsible for managing the following features:
 
 If you're experiencing issues with any of the above features, you might need to reset the SMC. 
 
-## To reset the SMC on your Mac:
+### To reset the SMC on your Mac:
 
 1. Shut down your Mac.
 2. On your built-in keyboard, press and hold all of the following keys. Your Mac might turn on.
@@ -41,7 +41,7 @@ Settings that are stored in PRAM/NVRAM on your Mac include:
 * Recent kernel panic information
 * If your Mac has issues related to settings listed above, resetting the PRAM/NVRAM might help.
 
-To reset the PRAM/NVRAM on your Mac:
+### To reset the PRAM/NVRAM on your Mac:
 
 1. Shut down your Mac,
 2. Turn it on and immediately press and hold these four keys together: 
