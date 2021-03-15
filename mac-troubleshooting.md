@@ -62,10 +62,11 @@ For troubleshooting software or third party apps, this mode will let you see lin
 
 You will know you are in verbose mode when white text appears on the screen and you will exit automatically when it progresses sufficiently.
 
-Apple Diagnostics
+## Apple Diagnostics
+
 To test the hardware of your Mac, you can choose to boot into Apples diagnostics tool doing the following.
 
-Shut down your Mac
-Turn it on and immediately press and hold the D key
-Release the D key when the prompt appears asking you to choose your language
+1. Shut down your Mac
+2. Turn it on and immediately press and hold the D key
+3. Release the D key when the prompt appears asking you to choose your language
 Your Mac will run a diagnostic test for about five minutes and provide the results
