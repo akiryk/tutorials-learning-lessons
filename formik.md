@@ -68,3 +68,6 @@ return (
         </div>
        // etc
 ```
+
+Any props you pass to `Field` will be passed through. 
+* use `as=` to enable field to render other types of elements, e.g. `as="text-area"` or `as={CustomComponent}`
