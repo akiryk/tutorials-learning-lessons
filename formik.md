@@ -38,7 +38,7 @@ To know if input has been touched, add `handleBlur` to the input. This ensures f
 <input
   type="email"
   id="email"
-  { formik.getFieldProps("name") }
+  { ...formik.getFieldProps("name") }
 />
 ```
 
