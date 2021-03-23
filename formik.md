@@ -48,6 +48,9 @@ If you use the Formik context, you can refactor even further with
 * Form
 * Field
 * Error
+
+Formik takes the props that will enable it to track validation, touched, errors, values, etc.
+Use Form in place of an html `form` element and `field` in place of `input`
 ```js
 import { Formik, Form, Field, Error } from 'formik';
 
