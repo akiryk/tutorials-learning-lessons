@@ -42,4 +42,26 @@ To know if input has been touched, add `handleBlur` to the input. This ensures f
 />
 ```
 
-## Validatio
+## Formik Components
+If you use the Formik context, you can refactor even further with
+* Formik
+* Form
+* Field
+* Error
+```js
+import { Formik, Form, Field, Error } from 'formik';
+
+return (
+  <Formik
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={onSubmit}
+    >
+      <Form>
+        <div className="form-control">
+          <label htmlFor="name">Name</label>
+          <Field type="text" id="name" name="name" />
+          <ErrorMessage name="name" />
+        </div>
+       // etc
+```
