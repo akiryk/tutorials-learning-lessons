@@ -2,6 +2,8 @@
 
 There are a lot of good resources in the [formik docs](https://formik.org/docs/overview); [this is also a good video series](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiPmFbtzEWjESkqBVDbdgGu). 
 
+See also my Codesandbox test site: https://codesandbox.io/s/formik-learning-qip3w
+
 ## Basic setup.
 Every input will need:
 * `id` -- also, it's conventional to also have a name. 
@@ -18,6 +20,7 @@ Every input will need:
   value={formik.values.email}
   onBlur={formik.handleBlur}
 />
+```
 
 ## Validation
 In order to validate,  you need
