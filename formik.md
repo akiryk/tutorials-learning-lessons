@@ -16,6 +16,7 @@ Every input will need:
 <input
   type="email"
   id="email"
+  name="name"
   onChange={formik.handleChange}
   value={formik.values.email}
   onBlur={formik.handleBlur}
@@ -29,3 +30,16 @@ In order to validate,  you need
 * what to display?
 
 To know if input has been touched, add `handleBlur` to the input. This ensures formik will have an accurate `formik.touched` object.
+
+## Reduce boilerplate
+
+`getFieldProps()` will allow us to replace onChange, value, onBlur, and other repeated lines. It requires the name of the form field. 
+```js
+<input
+  type="email"
+  id="email"
+  { formik.getFieldProps("name") }
+/>
+```
+
+## Validatio
