@@ -6,22 +6,39 @@ Run the following in jsbin or whatever
 const obj = {
   outerThis: this,
   runFunction: function() {
-    console.log(obj.outerThis === this)
+    if (obj.outerThis === this){
+      console.log('outerThis === this in function')
+    } else {
+      console.log('outerThis !== this in function')
+    }
   },
   runArrowFunction: () => {
-    console.log(obj.outerThis === this)
+    if (obj.outerThis === this){
+      console.log('outerThis === this in arrow fn')
+    } else {
+      console.log('outerThis !== this in affor fn')
+    }
   },
   whatIsOuterThis: function(){
-    console.log(obj.outerThis === window)
-    console.log(obj.outerThis === obj)
+    if (obj.outerThis === window) {
+      console.log("outerThis is window")
+    } else if (obj.outerThis === obj) {
+      console.log('outerThis is obj')
+    }
   },
   whatIsThis: function(){
-    console.log(this === window);
-    console.log(this === obj);
+    if (this === window) {
+      console.log("this is window in fn")
+    } else if (this === obj) {
+      console.log('this is obj in fn')
+    }
   },
   whatIsThisArrow: () => {
-    console.log(this === window)
-    console.log(this === obj);
+    if (this === window) {
+      console.log("this is window in arrow fn")
+    } else if (this === obj) {
+      console.log('this is obj in arrow fn')
+    }
   }
 }
 
