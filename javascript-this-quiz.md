@@ -39,7 +39,7 @@ const obj = {
     } else if (this === obj) {
       console.log('this is obj in arrow fn')
     }
-  }
+  },
   bar: function() {
     const x = (() => this);
     return x;
