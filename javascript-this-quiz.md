@@ -40,6 +40,10 @@ const obj = {
       console.log('this is obj in arrow fn')
     }
   }
+  bar: function() {
+    const x = (() => this);
+    return x;
+  }
 }
 
 // True or False?
@@ -56,4 +60,15 @@ obj.whatIsThis();
 
 // True or False?
 obj.whatIsThisArrow();
+
+// True of False
+const getValueOfX = obj.bar();
+console.log(getValueOfX() === obj);
+console.log(getValueOfX() === window);
+
+// True of False
+const getValueOfX2 = obj.bar;
+console.log(getValueOfX2()() === obj);
+console.log(getValueOfX2()() === window);
 ```
+
