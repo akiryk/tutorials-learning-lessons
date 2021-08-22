@@ -9,18 +9,18 @@
 ```js
 const myArray = Array.from(Array(10).keys());
 // myArray is now [0,1,2,3,4,5,6,7,8,9]
+
+// If you do this, it fills the new array with n copies of the *same* array
+Array.from(Array(10).fill([]));
 ```
 
 ## of n arbitrary elements
+The above approach won't work for these examples because the above will fill the array with the same object
 ```js
-const myArray = Array.from(Array(10).fill([]);
-// myArray is now [[], [], [], ...]
-```
-
-## of n arbitrary elements with finer control
-```js
-const myArray = new Array(10).fill().map((e,i)=>({id:i}));
-// myArray is now [{id: 0}, {id: 1}, {id: 2}, {id: 3}, ...];
+const arrayOfArrays = new Array(10).fill().map(()=>[]);
+// [[], [], [], ...]
+const arrayOfObjects = new Array(10).fill().map((e,i)=>({id:i}));
+// [{id: 0}, {id: 1}, {id: 2}, {id: 3}, ...];
 ```
 
 ## Copy an object
