@@ -3,6 +3,12 @@
 - Copying an object without mutating it
 - Async await
 
+## Conditionals
+```js
+// Set value to baz ONLY if foo or bar is true
+const myValue = foo || bar ? baz : null;
+```
+
 ## Create an array
 
 ## of n sequential numbers
