@@ -3,6 +3,12 @@
 - Copying an object without mutating it
 - Async await
 
+## Optional Chaining
+```js
+// find array value
+const id = response?.data?.employees?.[0]?.name;
+```
+
 ## Conditionals
 ```js
 // Set value to baz ONLY if foo or bar is true
