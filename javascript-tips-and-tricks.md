@@ -26,6 +26,10 @@ const myArray = Array.from(Array(10).keys());
 Array.from(Array(10).fill([]));
 ```
 
+## Fill()
+Fill() is required to make the array enumarable. `new Array(10)` gives an array that has length of 10, but that's all. You can't map over it.
+
+
 ## of n arbitrary elements
 The above approach won't work for these examples because the above will fill the array with the same object
 ```js
