@@ -44,7 +44,7 @@ There are three main things that class components enable us to handle that funct
 3. Invoke the side effect
 
 *Cleanup*
-The following pattern can be used to avoid setting state on an unmounted component
+The following pattern can be used to avoid setting state on an unmounted component. [Sandbox example](https://codesandbox.io/s/cleanup-useeffect-example-d3n62?file=/src/App.js).
 ```js
 const [items, setItems] = useState([]);
 useEffect(() => {
