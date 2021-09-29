@@ -47,7 +47,7 @@ There are three main things that class components enable us to handle that funct
 The following pattern can be used to avoid setting state on an unmounted component
 ```js
 const [items, setItems] = useState([]);
-useState(() => {
+useEffect(() => {
   let isMounted = true;
   fetchItems().then(response => {
     if(isMounted) {
