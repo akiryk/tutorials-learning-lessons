@@ -43,6 +43,21 @@ There are three main things that class components enable us to handle that funct
 2. Run the cleanup function
 3. Invoke the side effect
 
+*Cleanup*
+The following pattern can be used to avoid setting state on an unmounted component
+```js
+const [items, setItems] = useState([]);
+useState(() => {
+  let isMounted = true;
+  fetchItems().then(response => {
+    if(isMounted) {
+      setItems(response.items);
+    }
+  });
+  return () => isMounted = false;
+}, [])
+```
+
 ## Custom Hooks
 *Why use them?* They enable us to share non-visual logic. They are an alternative to Higher Order Components, e.g. `withHover`, and Render Props. 
 
