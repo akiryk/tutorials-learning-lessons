@@ -30,6 +30,23 @@ There are three main things that class components enable us to handle that funct
 - pass a value when it doesn't depend on the previous value
 - pass a function when it does: `setCounter(prevCount => prevCount + 1)`
 
+Note that `setState` will be batched if there are 2+ in a handleClick function. However, if you put them in an async function they will not be batched!
+```js
+// only one re-render
+function handleClick() {
+  updateCount((count) => count + 1);
+  updateIsOdd((isOdd) => !isOdd); 
+}
+
+// One re-render per update!
+function handleClick() {
+  fetchSomeData.then(() => {
+    updateCount((count) => count + 1);
+    updateIsOdd((isOdd) => !isOdd); 
+  });
+}
+```
+
 ## useEffect
 1. Add an effect with `useEffect()`
 2. Skip re-invoking an effect by passing an array
