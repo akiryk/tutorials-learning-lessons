@@ -6,7 +6,8 @@
 - [docs for CLI commands](https://classic.yarnpkg.com/en/docs/cli/)
 - [manage dependencies](https://classic.yarnpkg.com/en/docs/managing-dependencies) e.g.:
 
-if you want the following:
+### Examples
+If you want to add a peer dependency with more than one optional version:
 ```json
 "peerDependencies": {
   "grunt": "^1.3 || ^1.4",
