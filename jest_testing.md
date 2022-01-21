@@ -1,5 +1,23 @@
 # Jest Testing
 
+### Test lazy loaded components
+Mock the library and still test components that were lazy loaded with `@loadable/component`
+```js
+// Mock loadable so we can test the lazy-loaded files without having to actually
+// lazy load them.
+jest.mock('@loadable/component', () => {
+  return function loadable(load) {
+    let Component;
+    // Capture the component from the module load function
+    const loadPromise = load().then((val) => (Component = val.default));
+    // Create a react component which renders the loaded component
+    const Loadable = (props) => <Component {...props} />;
+    Loadable.load = () => loadPromise;
+    return Loadable;
+  };
+});
+```
+
 ### Act Errors
 
 Act errors are telling you that something in your test changed state, and you may be missing things because of it. Kent Dodds has a good article: https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning
