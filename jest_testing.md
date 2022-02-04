@@ -78,6 +78,15 @@ it('updates state after a promise is resolved', async () => {
         'atrButton.loadingButton.adding'
       );
 });
+
+// When the simple act of mounting updates state
+act(() => {
+  wrapper = mount(
+    <MockContextProvider>
+      <ComponentWithHook />
+    </MockContextProvider>
+  );
+});
 ```
 
 ### Mocking 
