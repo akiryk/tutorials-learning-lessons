@@ -1,6 +1,6 @@
 # PHP
 
-#### Create a new array
+### Create a new array
 ```php
 // empty
 $this->listOfStuff = [];
@@ -13,7 +13,7 @@ $this->listOfStuff = [];
     ];
 ```
 
-#### Loops
+### Loops
 ```php
 // an array
 $this->categoryList = [];
@@ -41,8 +41,8 @@ foreach($keyvals as $key => $val){
 }
 ```
 
-#### Useful operators
-### Spaceship operator
+### Useful operators
+#### Spaceship operator
 Return `-1` if the first value is less than the second;
 return `0` if they are equal
 return `1` if the first is greater
@@ -51,10 +51,18 @@ return `1` if the first is greater
 $val = 5 <=>3;
 ```
 
-### Null Coalescing Operator
+#### Null Coalescing Operator
 Return the first value if it exists and is not null. Otherwise return the second value.
 ```php
 $val = $someUnknownValue ?? 'default';
+```
+
+### Built in functions
+You can sort arrays
+```php
+  usort($names, function($a, $b) {
+    return [$a->get_first(), $a->get_last()] <=> [$b->get_first(), $b->get_last()];
+  });
 ```
 
 #### Mock Error
