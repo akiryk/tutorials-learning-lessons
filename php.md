@@ -30,9 +30,14 @@ for($i = 0; $i < count($categoryIds); $i++) {
       ];
     }
     
-// foreach is a specially designed loop for arrays
+// foreach is a specially-designed loop for arrays
 for ($myArray as $itemInArray) {
    echo $itemInArray;
+}
+
+// with a key value array
+foreach($keyvals as $key => $val){
+  echo "<li>$key is $val</li>";
 }
 ```
 
