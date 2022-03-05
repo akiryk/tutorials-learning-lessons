@@ -18,6 +18,7 @@ $this->listOfStuff = [];
 // an array
 $this->categoryList = [];
 
+// count and sizeof are the same thing
 for($i = 0; $i < count($categoryIds); $i++) {
     $category = $storefront->get_category($categoryIds[$i]);
     $this->categoryList[] = [
@@ -28,6 +29,11 @@ for($i = 0; $i < count($categoryIds); $i++) {
       'itemsRequired' => count($category->get_child_categories()),
       ];
     }
+    
+// foreach is a specially designed loop for arrays
+for ($myArray as $itemInArray) {
+   echo $itemInArray;
+}
 ```
 
 #### Mock Error
