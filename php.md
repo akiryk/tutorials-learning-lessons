@@ -41,6 +41,22 @@ foreach($keyvals as $key => $val){
 }
 ```
 
+#### Useful operators
+### Spaceship operator
+Return `-1` if the first value is less than the second;
+return `0` if they are equal
+return `1` if the first is greater
+```php 
+// $val = 1
+$val = 5 <=>3;
+```
+
+### Null Coalescing Operator
+Return the first value if it exists and is not null. Otherwise return the second value.
+```php
+$val = $someUnknownValue ?? 'default';
+```
+
 #### Mock Error
 ```php
 // pretend some endpoint fails
