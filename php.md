@@ -1,5 +1,9 @@
 # PHP
 
+## Debugging
+### var_dump
+`var_dump($someVar)`
+
 ### Create a new array
 ```php
 // empty
