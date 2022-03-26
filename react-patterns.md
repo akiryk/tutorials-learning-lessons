@@ -1,5 +1,13 @@
 # React Patterns
 
+## State
+`useState` can default to a different value depending on a condition
+```js
+const [state, setState] = () => {
+  return someCondition ? 'oneState' : 'anotherState'
+}
+```
+
 ## Component Patterns
 
 ### Compound Components
