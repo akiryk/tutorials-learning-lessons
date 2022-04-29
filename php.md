@@ -74,3 +74,35 @@ You can sort arrays
 // pretend some endpoint fails
 throw new \Exception('my error!');
 ```
+
+#### Controller functions
+```php
+ /**
+   * Break a string into an array
+   * Limit one element
+   *
+   * @param string $emailsString the string of inputted emails
+   *
+   * @return string imploded string of the santized emails to send to
+   */
+  private function sanitize_emails($emailsString) {
+    $emails = explode(',', $emailsString);
+
+    $emailsAssociatedArray = [];
+    foreach ($emails as $email) {
+      // if this is not a subaddressed email we want to just store the email
+      if (!strpos($email, '+')) {
+        $key = $email;
+      } else {
+        // look at the email without any subaddressing
+        $username = explode('+', $email)[0];
+        $domain = explode('@', $email)[1];
+        $key = $username . "@" . $domain;
+      }
+        $emailsAssociatedArray[$key] = $email;
+    }
+
+    // implode the array and return
+    return implode(',', array_values($emailsAssociatedArray));
+  }
+```
