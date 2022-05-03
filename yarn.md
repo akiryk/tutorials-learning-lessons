@@ -1,5 +1,8 @@
 # Yarn
 
+## Dependency Management
+https://cpojer.net/posts/dependency-managers-dont-manage-your-dependencies
+
 ## Resources
 - [All about versions and operators](https://classic.yarnpkg.com/en/docs/dependency-versions)
 - [Common yarn commands](https://classic.yarnpkg.com/en/docs/usage) (`yarn` and `yarn install` do the same thing)
