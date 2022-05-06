@@ -6,6 +6,7 @@
 - warning error: won't terminate code but will warn. 
 - fatal error: e.g. calling a function isn't defined
 - notice error: an undefined variable
+- undefined offset: try accessing an array item that isn't in the array
 - 
 ### var_dump 
 `var_dump($someVar)`
