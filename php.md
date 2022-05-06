@@ -1,7 +1,13 @@
 # PHP
 
-## Debugging
-### var_dump
+## Troubleshooting
+### Types of errors
+- parse errors: where syntax is broken
+- warning error: won't terminate code but will warn. 
+- fatal error: e.g. calling a function isn't defined
+- notice error: an undefined variable
+- 
+### var_dump 
 `var_dump($someVar)`
 
 ### Create a new array
