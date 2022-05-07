@@ -3,7 +3,7 @@
 Notes about different code-related topics.
 
 ## Lessons
--[ ] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2), _linkedInLearning_
+- [x] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2), _linkedInLearning_
 
 ## Posts 
 
