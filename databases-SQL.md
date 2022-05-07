@@ -1,5 +1,12 @@
 # Databases
 
+## Patterns
+### DAO
+A way to isolate the persistence layer (i.e. a database) from the business layer (i.e. the application) so that the application doesn't need to know about all the complexity of CRUD operations. It permits easier testing and for each layer to evolve independently. 
+
+### ORM
+Object Relational Mapping. A technique that lets you query for and manipulate data using an object-oriented approach. Instead of writing out SQL, you'd write something like `BookTable.query({author="Vims"})`. It can work in conjunction with a DAO.
+
 ## SQL
 First, just go watch the [Frontend Masters course](https://frontendmasters.com/courses/databases/introducing-join/).
 
