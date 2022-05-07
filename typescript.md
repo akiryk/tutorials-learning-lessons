@@ -1,5 +1,7 @@
 # Typescript
 
+Skip to the bottom to see random examples
+
 ## Resources
 * [FrontEnd Masters Typescript](https://frontendmasters.com/courses/typescript-v2) course. 
 * [Github repo](https://github.com/mike-works/typescript-fundamentals)
@@ -302,3 +304,11 @@ You can have `.js` and `.ts` modules side by side. You can import one from the o
 }
 ```
 Also, try really hard to avoid casting with `as` keyword, where you force TypeScript to regard something as a particular type.
+
+## Random Examples
+```tsx
+type LoaderData = {
+  // this is a handy way to say: "posts is whatever type getPosts resolves to"
+  posts: Awaited<ReturnType<typeof getPosts>>;
+};
+```
