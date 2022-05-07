@@ -3,7 +3,10 @@
 Notes about different code-related topics.
 
 ## Lessons
-- [x] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2), _linkedInLearning_
+- [ ] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2), _linkedInLearning_
+- [x] [Learning PHP](https://www.linkedin.com/learning/learning-php-4/get-vs-post?autoplay=true&u=85880466), _linkedInLearning_
+- [x] [Learning Java](https://www.linkedin.com/learning/learning-java-4/next-steps-for-learning-java?autoplay=true&u=85880466)
+- [ ] [Spring Boot Essential Training](https://www.linkedin.com/learning/spring-boot-2-0-essential-training-2)
 
 ## Posts 
 
