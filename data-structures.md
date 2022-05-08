@@ -25,3 +25,10 @@ The amount of time increases with the lenth of the list.
 
 **Why use an array as your data structure**
 If you plan on inserting once and then accessing a lot, arrays are a good choice.  
+
+### Linked List
+A linked list is comprised of "nodes". Each `node` has a `next` pointer that points to the next node. 
+
+The first node is called the "Head". The last node is called the "Tail", and points to `null`.
+
+Link lists have several actions to **add**, **access**, **delete**, **search**, and **insert info** the list.
