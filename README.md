@@ -5,8 +5,8 @@ Notes about different code-related topics.
 ## Lessons
 - [ ] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2), _linkedInLearning_
 - [x] [Learning PHP](https://www.linkedin.com/learning/learning-php-4/get-vs-post?autoplay=true&u=85880466), _linkedInLearning_
-- [x] [Learning Java](https://www.linkedin.com/learning/learning-java-4/next-steps-for-learning-java?autoplay=true&u=85880466)
-- [ ] [Java OOP](https://www.linkedin.com/learning/java-object-oriented-programming-2/), LinkedIn
+- [x] [Learning Java](https://www.linkedin.com/learning/learning-java-4/next-steps-for-learning-java?autoplay=true&u=85880466) : [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/java.md)
+- [ ] [Java OOP](https://www.linkedin.com/learning/java-object-oriented-programming-2/) : [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/java-oop.md)
 - [ ] [Spring Boot Essential Training](https://www.linkedin.com/learning/spring-boot-2-0-essential-training-2)
 - [ ] [Build a JavaScript test framework](https://cpojer.net/posts/building-a-javascript-testing-framework)
 - [ ] [Learn Remix](https://remix.run/docs/en/v1/tutorials/blog)
