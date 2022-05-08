@@ -38,7 +38,7 @@ public class Tree {
 Every Java application must have a main function, which starts everything going. It can be in any class you'd like, but we can also just use a Main class:
 ```java
 public class Main {
-    <!--  the main function takes String[] as arts; this is required-->
+    // the main function takes String[] as arts; this is required-->
     public static void main(String[] args) {
         <!-- the main function -->
     }
