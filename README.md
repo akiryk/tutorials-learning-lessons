@@ -8,6 +8,7 @@ Notes about different code-related topics.
 - [x] [Learning Java](https://www.linkedin.com/learning/learning-java-4/next-steps-for-learning-java?autoplay=true&u=85880466)
 - [ ] [Spring Boot Essential Training](https://www.linkedin.com/learning/spring-boot-2-0-essential-training-2)
 - [ ] [Build a JavaScript test framework](https://cpojer.net/posts/building-a-javascript-testing-framework)
+- [ ] [Learn Remix](https://remix.run/docs/en/v1/tutorials/blog)
 
 ## Posts 
 
