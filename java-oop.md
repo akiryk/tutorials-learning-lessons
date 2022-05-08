@@ -25,9 +25,11 @@ When you create a class, make a constructor using the name of the class.
 
 ```java
 public class Tree {
+  // double, int, boolean, String, etc
+  double height;
+  
   Tree(double height, double width, TreeType type) {
     this.height = height;
-    this.width = width;
     // type is an Enum
     this.type = type;
   }
@@ -40,7 +42,7 @@ Every Java application must have a main function, which starts everything going.
 public class Main {
     // the main function takes String[] as arts; this is required-->
     public static void main(String[] args) {
-        <!-- the main function -->
+        // The main function...
     }
 }
 ```
