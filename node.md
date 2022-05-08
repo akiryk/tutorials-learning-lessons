@@ -2,6 +2,14 @@
 
 This is a good course: [front-end-masters-node](https://frontendmasters.com/courses/digging-into-node/file-handling-with-streams/)
 
+## Exports / Module.exports
+`module` is a plain javascript object representing the current module.
+It has an `exports` property.
+`exports` = `module.exports`.
+- If you want to export a single class/variable/function, as in `export default`, we can use `module.exports`
+- if you want to export multiple variables/function, use `exports`
+
+
 ## Streams
 Rather than loading entire files into the buffer, use streams, which are well explained in [the streams handbook](https://github.com/substack/stream-handbook)
 There is also a [front-end-masters-course](https://frontendmasters.com/courses/networking-streams/) on streams
