@@ -6,12 +6,16 @@
 
 ### Key Attributes
 
-- Abstraction
-- Inheritance
-- Encapsulation
-- Polymorphism
-
 The goal of these pillars is to reduce complexity and enable code reusability.
+
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
+
+**Encapsulation**
+Binding an object's state and behavior into one unit.
+
 
 ### Types of Java Classes
 
@@ -46,3 +50,5 @@ public class Main {
     }
 }
 ```
+
+
