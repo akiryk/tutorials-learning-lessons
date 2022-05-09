@@ -31,4 +31,8 @@ A linked list is comprised of "nodes". Each `node` has a `next` pointer that poi
 
 The first node is called the "Head". The last node is called the "Tail", and points to `null`.
 
-Link lists have several actions to **add**, **access**, **delete**, **search**, and **insert info** the list.
+Linked lists have several actions to **add**, **access**, **delete**, **search**, and **insert info** the list.
+
+Big O notation for linked lists varies on the action. For accessing an entry, best case is constant time but worst case is linear time.
+Add, delete, and search are all also 0(n), because each potentially requires going through the entire list. 
+Insert can be 0(1), assuming we insert to the head and not somewhere internal.
