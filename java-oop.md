@@ -15,6 +15,12 @@ The goal of these pillars is to reduce complexity and enable code reusability.
 
 **Encapsulation**
 Binding an object's state and behavior into one unit.
+Java provides 3 access modifiers to manage encapsulation:
+- public
+- private
+- protected
+
+In Java, getters and setters don't _need_ to use the `this` keywords.
 
 
 ### Types of Java Classes
