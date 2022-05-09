@@ -37,14 +37,16 @@ Big O notation for linked lists varies on the action. For accessing an entry, be
 Add, delete, and search are all also 0(n), because each potentially requires going through the entire list. 
 Insert can be 0(1), assuming we insert to the head and not somewhere internal.
 
-### Stack
-**Definition:** Like an array but with LIFO behavior only -- i.e. like array. Unlike an array, it has specific actions, usually:
+### Stacks and Queues
+
+**Stack Definition:** Like an array but with LIFO behavior only -- i.e. like array. Unlike an array, it has specific actions, usually:
 `push`, `pop`, `peek` and sometimes `search`.
 
-**Good for:** Stacks are great to keeping track of state or the order of when things have occurred. There is no indexing in stacks; if you want to access the next item, you must first pop off the element that's currently at the top of the stack. They are also good for anything where you want to rewind a sequence of events, e.g. with error handling.
+**Stacks are good for:** Stacks are great to keeping track of state or the order of when things have occurred. There is no indexing in stacks; if you want to access the next item, you must first pop off the element that's currently at the top of the stack. They are also good for anything where you want to rewind a sequence of events, e.g. with error handling.
 
-### Queue
-**Definition:** Like an array but with FIFO behavior only. Unlike an array, it has specific actions:
+**Queue Definition:** Like an array but with FIFO behavior only. Unlike an array, it has specific actions:
 `enqueue`, `dequeue`, `peek` and sometimes `search`. 
 
-**Good for:** Queues are great to keeping track of when things need to happen.
+**Queues are good for:** Queues are great to keeping track of when things need to happen.
+
+Neither is particularly good for searching or for retrieving an item that isn't at the top (of the stack) or the bottom (of the queue). It can be O(n) time for these operations. 
