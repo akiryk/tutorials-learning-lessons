@@ -38,6 +38,13 @@ Add, delete, and search are all also 0(n), because each potentially requires goi
 Insert can be 0(1), assuming we insert to the head and not somewhere internal.
 
 ### Stack
-**Definition:** Like an array but with LIFO behavior only -- i.e. an array with `push` and `pop` behavior only.
+**Definition:** Like an array but with LIFO behavior only -- i.e. like array. Unlike an array, it has specific actions, usually:
+`push`, `pop`, `peek` and sometimes `search`.
 
 **Good for:** Stacks are great to keeping track of state or the order of when things have occurred. There is no indexing in stacks; if you want to access the next item, you must first pop off the element that's currently at the top of the stack. They are also good for anything where you want to rewind a sequence of events, e.g. with error handling.
+
+### Queue
+**Definition:** Like an array but with FIFO behavior only. Unlike an array, it has specific actions:
+`enqueue`, `dequeue`, `peek` and sometimes `search`. 
+
+**Good for:** Queues are great to keeping track of when things need to happen.
