@@ -24,8 +24,10 @@ o(n) linear time
 o(n log n) log linear time
 o(n*n) quadratic time
 
-| --- | --- | --- |
+
+
 | Notation | Description | Example | 
+| -------- | ----------- | ------- |
 | o(1) | Constant Time | Look up an element in array by index |
 | o(log n) | Logarithmic Time | Find element in sorted array with binary search |
 | o(n) | Linear Time | search an unsorted array for a value | 
