@@ -13,7 +13,7 @@ An algorithm accepts certain inputs and outputs certain results.
 ## Common Algorithms
 - Search
 - Sort
-- Computation:
+- Computation: derives a new set of data from an existing set of data?
 - collection: manipulate or navigate
 
 ## Measuring Performance
