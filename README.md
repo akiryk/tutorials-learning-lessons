@@ -10,6 +10,7 @@ Notes about different code-related topics.
 - [ ] [Spring Boot Essential Training](https://www.linkedin.com/learning/spring-boot-2-0-essential-training-2)
 - [ ] [Build a JavaScript test framework](https://cpojer.net/posts/building-a-javascript-testing-framework)
 - [ ] [Learn Remix](https://remix.run/docs/en/v1/tutorials/blog)
+- [ ] [Python Essential Training](https://www.linkedin.com/learning/python-essential-training-2018/welcome?autoplay=true&u=85880466)
 - [ ] [PHP Developer Learning Path](https://www.linkedin.com/learning/paths/become-a-php-developer-2?u=85880466)
     - [ ] [Programming Foundations: Algorithms](https://www.linkedin.com/learning/programming-foundations-algorithms/algorithms-power-the-world?autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A57bdd8a292015ae4c0cb990f&u=85880466)
 
