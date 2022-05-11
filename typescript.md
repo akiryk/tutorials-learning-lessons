@@ -312,3 +312,11 @@ type LoaderData = {
   posts: Awaited<ReturnType<typeof getPosts>>;
 };
 ```
+
+## Arrays
+There are two ways to type arrays. For an array of numbers, for example:
+
+1. Generic: `Array<number>` 
+2. Shorthand: `number[]`
+
+These are equivalent.
