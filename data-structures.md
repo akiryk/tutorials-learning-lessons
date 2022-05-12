@@ -8,6 +8,10 @@ These notes are from a few sources:
 [Linked Lists, Java](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38217226?autoplay=true&resume=false&u=85880466)
 [Stacks and Queues](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38215986?autoplay=true&resume=false&u=85880466)
 [Hash Tables Quiz](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38219100?autoSkip=true&autoplay=true&resume=false&u=85880466)
+[Common Data Structures](https://www.linkedin.com/learning/programming-foundations-algorithms/quiz/urn:li:learningApiAssessment:9897115?autoplay=true&resume=false&u=85880466)
+
+What makes an algorithm efficient? 
+The scenario (such as sort this list) and available data structure types (such as an array).
 
 ## Numerical types in Java
 
@@ -36,7 +40,7 @@ If you plan on inserting once and then accessing a lot, arrays are a good choice
 ## Ways to store data
 
 ### Linked List
-A linked list is comprised of "nodes". Each `node` has a `next` pointer that points to the next node. 
+A linked list is comprised of "nodes". Each `node` has a `next` pointer that points to the next node. Doubly linked lists also point backwards.
 
 The first node is called the "Head". The last node is called the "Tail", and points to `null`.
 
@@ -45,6 +49,10 @@ Linked lists have several actions to **add**, **access**, **delete**, **search**
 Big O notation for linked lists varies on the action. For accessing an entry, best case is constant time but worst case is linear time.
 Add, delete, and search are all also 0(n), because each potentially requires going through the entire list. 
 Insert can be 0(1), assuming we insert to the head and not somewhere internal.
+
+Good: it's easy to add and remove items and that there's no need to reorganize the underlying memory that holds the data, unlike with arrays. 
+
+Bad: It can't look up an item quickly by index.
 
 ### Stacks and Queues
 
@@ -62,9 +70,9 @@ In both Stacks and Queues, the "head" is the item that will be returned first. "
 
 Neither is particularly good for searching or for retrieving an item that isn't at the top (of the stack) or the bottom (of the queue). It can be O(n) time for these operations. 
 
-### Hash Based Data Structures
+### Hash Tables
 
-**Associative Array** a collection of key:value pairs, order isn't important.
+A **hash table** is an form of an **associative array** — a collection of key:value pairs in which order isn't important. We use the terms "put", "add", or "insert", depending on language, for adding a new key/value pair to the table. We always add in pairs. A hash table is very much like a dictionary; the difference is that a hash table requires  applying a hash function to a key and mapping that to a bucket.
 
 **Hashing** A way to mix together some raw data to form a smaller, single piece of data. The process of converting the raw values into the hash a _hash function_.
 
@@ -81,10 +89,9 @@ This process is _not_ like encryption, because in hashing there isn't a way to d
 
 In programming, we often use hashing to get to or to store a value at a certain location.
 
-A **hash table** is an implementation of the associative array data structure. We use the terms "put", "add", or "insert", depending on language, for adding a new key/value pair to the table. We always add in pairs. A hash table is very much like a dictionary; the difference is that a hash table requires  applying a hash function to a key and mapping that to a bucket.
 
 In Java, every object has a `hashCode` function that will return an int. The object's hash value in any language is often based on its underlying `ID` or memory address. 
 In JavaScript, you need to import an npm package like slashjs for hash functionality.
 
-**Pros/Cons** 
-Fast for retrieving values, but take up more space. Hash map operations are O(1), they always take the same amount of time irrespective of the size of the table. Search, insertion, and deletion all take constant time. The caveat is if you have collisions and must implement linked list in your buckets.
+**Good**: Fast for retrieving values, but take up more space. Hash map operations are O(1), they always take the same amount of time irrespective of the size of the table. Search, insertion, and deletion all take constant time. 
+**Bad**: Don't order their entries; if the data set is small, an array is often more efficient. Collisions can impact performance if there are a lot of them.
