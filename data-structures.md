@@ -1,4 +1,8 @@
-# LinkedIn Learning Course: Programming Foundations, Data Structures
+# Data Structure & Algorithms 
+
+These notes are from a few sources:
+- [Programming Foundations, Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures)
+- [Programing Foundations: Algorithms](https://www.linkedin.com/learning/programming-foundations-algorithms)
 
 ## Short cut to quizes
 [Linked Lists, Java](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38217226?autoplay=true&resume=false&u=85880466)
