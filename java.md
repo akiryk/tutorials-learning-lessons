@@ -11,7 +11,10 @@ To run, hover over the Main class in sidebar and choose `Run main.main()`
 
 ## Types
 Java uses generic types just like TypeScript. 
-```java
+```Java
 // Create a new class that extends from ArrayList and takes any type
 public class ModArraylist<D> extends Arraylist<D> {
+
+  // later, you can set D as your type in a function
+  public void addElement(D element) {}  
 ```
