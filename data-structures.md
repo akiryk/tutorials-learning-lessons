@@ -1,5 +1,10 @@
 # LinkedIn Learning Course: Programming Foundations, Data Structures
 
+## Short cut to quizes
+[Linked Lists, Java](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38217226?autoplay=true&resume=false&u=85880466)
+[Stacks and Queues](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38215986?autoplay=true&resume=false&u=85880466)
+[Hash Tables Quiz](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38219100?autoSkip=true&autoplay=true&resume=false&u=85880466)
+
 ## Numerical types in Java
 
 Whole numbers: int, short, long
@@ -39,14 +44,43 @@ Insert can be 0(1), assuming we insert to the head and not somewhere internal.
 
 ### Stacks and Queues
 
-**Stack Definition:** Like an array but with LIFO behavior only -- i.e. like array. Unlike an array, it has specific actions, usually:
-`push`, `pop`, `peek` and sometimes `search`.
+In both Stacks and Queues, the "head" is the item that will be returned first. "Peek()" will display informationa about the head.
+
+**Stack Definition:** A list with LIFO behavior. It generally has these actions:
+`push`, `pop`, `peek` (show the head of the list) and sometimes `search`.
 
 **Stacks are good for:** Stacks are great to keeping track of state or the order of when things have occurred. There is no indexing in stacks; if you want to access the next item, you must first pop off the element that's currently at the top of the stack. They are also good for anything where you want to rewind a sequence of events, e.g. with error handling.
 
 **Queue Definition:** Like an array but with FIFO behavior only. Unlike an array, it has specific actions:
 `enqueue`, `dequeue`, `peek` and sometimes `search`. 
 
-**Queues are good for:** Queues are great to keeping track of when things need to happen.
+**Queues are good for:** when things need to happen.
 
 Neither is particularly good for searching or for retrieving an item that isn't at the top (of the stack) or the bottom (of the queue). It can be O(n) time for these operations. 
+
+### Hash Based Data Structures
+
+**Associative Array** a collection of key:value pairs, order isn't important.
+
+**Hashing** A way to mix together some raw data to form a smaller, single piece of data. The process of converting the raw values into the hash a _hash function_.
+
+A major benefit of hash functions is that they are one-way — not reversable.
+
+**How they work** 
+Take the starting data, say a string like "PASSWORD", and do something to each character — say, convert it to its ASCII value, 174,324,19, etc. That would be extremely simple, but it's the general idea.
+
+Some terms:
+`collision`: When two pieces of data result in the same hash value, we call it a "collision."
+`bucket`: the place where the value of the key is stored
+
+This process is _not_ like encryption, because in hashing there isn't a way to decrypt the encoded value. 
+
+In programming, we often use hashing to get to or to store a value at a certain location.
+
+A **hash table** is an implementation of the associative array data structure. We use the terms "put", "add", or "insert", depending on language, for adding a new key/value pair to the table. We always add in pairs. A hash table is very much like a dictionary; the difference is that a hash table requires  applying a hash function to a key and mapping that to a bucket.
+
+In Java, every object has a `hashCode` function that will return an int. The object's hash value in any language is often based on its underlying `ID` or memory address. 
+In JavaScript, you need to import an npm package like slashjs for hash functionality.
+
+**Pros/Cons** 
+Fast for retrieving values, but take up more space. Hash map operations are O(1), they always take the same amount of time irrespective of the size of the table. Search, insertion, and deletion all take constant time. The caveat is if you have collisions and must implement linked list in your buckets.
