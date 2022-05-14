@@ -3,6 +3,26 @@
 - Copying an object without mutating it
 - Async await
 
+## Array.some() and Boolean function
+In javascript, `Boolean` is a function. Who knew? You can use it like this:
+```js
+const x = [];
+Boolean(x.length); // false
+Boolean(x.length === 0]); // true
+```
+It makes a handy way to work with `Array.sort()`
+```js
+const {name, content} = formData; // imagine we can extract these fields from the data;
+const fieldErrors = {
+   name: validateNameField(name), // returns a string with error message
+   content: validateContentField(content),
+}
+// Now, check if either of the fieldErrors are truthy!
+if (Object.values(fieldErrors).some(Boolean)) {
+  return badRequest({ fieldErrors, fields });
+}
+```
+
 ## Optional Chaining
 ```js
 // find array value
