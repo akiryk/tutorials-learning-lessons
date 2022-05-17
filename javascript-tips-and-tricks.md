@@ -3,6 +3,33 @@
 - Copying an object without mutating it
 - Async await
 
+## Key/Value hashes
+Spread an array into an object to create a key/value hash
+```js
+const colors = ['red', 'blue', 'green'];
+const map = {...colors};
+/*
+{
+  0: 'red',
+  1: 'blue',
+  2: 'green'
+}
+*/
+```
+
+Use `Object.fromEntries()` to transform key/value pairs into an object
+```js
+const jobs = [["Phil", "Baker"],["Scott", "Dancer"], ["Ellen", "Trainer"]];
+Object.fromEntries(jobs);
+/*
+{
+  Ellen: "Trainer",
+  Phil: "Baker",
+  Scott: "Dancer"
+}
+*/
+```
+
 ## Array.some() and Boolean function
 In javascript, `Boolean` is a function. Who knew? You can use it like this:
 ```js
