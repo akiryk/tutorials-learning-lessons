@@ -10,6 +10,32 @@ Skip to the bottom to see random examples
 * [DTS Lint](https://github.com/Microsoft/dtslint) - a good resource for testing that your types get what they expect and error correctly
 * [Typescript Playground](https://www.typescriptlang.org/play)
 
+## Quiz Show Course
+### Variadic Tuples
+Example tuple could be a color. A color has RGB values, so it might look like this: `[[r: 123], [g: 34], [b: 233]]`
+
+Before TS4, we had to do this:
+```js
+// MyTyple is an array of a number followed by any number of elements of type T
+type MyTuple<T> = [number, ...T[]]
+
+const x1:MyTuple<string> = [4, "cat", "dog", "bear"]; // this works
+const y:MyTuple<Array<number>> = [44, [1,2,4,3,6]]; // also works!
+const z:MyTuple<Array<number>> = [44, 2,3,4,5]; // no, can't assign numbers to this type
+
+// We can now do stuff like this:
+type Pork = [
+    ...[number, number],
+    ...[string, string, string]
+]
+
+const p:Pork = [3, 4, 'red', 'blue', 'yelllow']; // yes
+const p1:Pork = [3,4, 'red', 'blue']; // no!
+
+// you can use rest anywhere:
+type Salmon = [string, ...number[], string];
+const s:Salmon = ['red', 4, 5, 6, 'blue']; // yes!
+```
 ## Why?
 
 * Encode constraints and assumptions of the developer
