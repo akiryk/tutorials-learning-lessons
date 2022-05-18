@@ -3,7 +3,7 @@
 Notes about different code-related topics.
 
 ## Lessons
-- [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/)) : [Class Notes]([url](https://www.typescript-training.com/course/making-typescript-stick) [My Typescript Notes](google.com)
+- [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) [My Typescript Notes](google.com)
 - [ ] [Java OOP](https://www.linkedin.com/learning/java-object-oriented-programming-2/): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/java-oop.md)
 - [ ] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial)
 - [ ] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/data-structures.md)
