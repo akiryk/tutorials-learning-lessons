@@ -26,3 +26,13 @@ main().then(() => {
   console.log("moose")
 })
 ```
+
+Answer to question above:
+
+```js
+The answer to the above is
+...
+...
+// dog, cat, elephant, giraffe, zebra, koala, lion, moose
+```
+Why? Because when you come to a promise that resolves right away, it runs right away -- so we get giraffe and zebra right after elephant. But the   `thenable` part waits until there's a `then`, so we get lion later, after Koala.
