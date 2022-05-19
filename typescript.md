@@ -51,6 +51,30 @@ const grid:Cells = {
 }
 ```
 
+This works very well with the new **[key remapping feature](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#key-remapping-via-as)**.
+
+### Checked Index Access
+There's a new TS configuration option, `noUncheckedIndexedAccess`, that adds 'undefined' to any undeclared field in the type.
+```js
+// We have a dictionary comprised of keys and values, in which value is whatever we set it to, T.
+type Dict<T> = {[K: string]: T };
+
+// Make an instance of Dictionary in which values are arrays of strings
+const d:Dict<string[]> = {};
+
+// declare a field
+d.color = ['one', 'two']; // yes!
+
+// try doing something with an undeclared field:
+d.size.push('fresh'); // no! 
+
+// solve by adding a guard
+if (d.size) { d.size.push('fresh'); } // yes!
+
+// alternate way to handle this is to explicitly add undefined to the type declaration
+type Dict<T> = { [K: string]: T | undefined }
+```
+
 ## Why?
 
 * Encode constraints and assumptions of the developer
