@@ -59,8 +59,23 @@ Java provides 3 access modifiers to manage encapsulation:
 In Java, getters and setters don't _need_ to use the `this` keywords.
 
 ## Polymorphism
+An object or function can take many forms — an object can use functionality from different classes depending on the context. For example, a Baker class inherits from a Worker class. `Baker.getWage()` will use a function on `Worker`, but `Baker.measureFlour()` will use `Baker`.
+
+- Polymorphism helps us reduce complexity
+- helps us write more reusable code
+
+_Runtime_ vs _Compile-time_ polymorphism 
+RunTime is when the specific implementation is determined at runtime. Say you have OddList that extends ArrayList. If you call `.add()` for an instance of OddList and `.add()` for an instance of ArrayList, they both are considered ArrayList -- but the implementation is different. 
+
+Compile Time polymorphism enables you to **overload** a constructor. You can have one that takes, e.g., an array of numbers and another that takes a list of numbers. Java will determin at compile time which constructor to use based on the arguments.
+
+### Override a class method
+Duplicate the method exactly. If it takes an element of type `Integer`, you need your method to accept an element of type `Integer`. If it returns boolean, you need to return boolean.
+
 
 ## Abstraction
 There are two ways to use abstraction:
 - `abstract` classes and class methods
 - `Interface`
+
+Neither can be instantiated; both must be extended. Implement an interface as a way to enforce a contract: if you extend the `EventInterface`, you must have certain methods and properties. Implement and abstract class if you want to inherit certain methods or properties but for children to implement certain methods. 
