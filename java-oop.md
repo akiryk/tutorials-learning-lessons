@@ -79,3 +79,5 @@ There are two ways to use abstraction:
 - `Interface`
 
 Neither can be instantiated; both must be extended. Implement an interface as a way to enforce a contract: if you extend the `EventInterface`, you must have certain methods and properties. Implement and abstract class if you want to inherit certain methods or properties but for children to implement certain methods. 
+
+A Java class can only extend one `abstract` class, but it can implement as many interfaces as it wants. 
