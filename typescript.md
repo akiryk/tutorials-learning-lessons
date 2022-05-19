@@ -36,6 +36,21 @@ const p1:Pork = [3,4, 'red', 'blue']; // no!
 type Salmon = [string, ...number[], string];
 const s:Salmon = ['red', 4, 5, 6, 'blue']; // yes!
 ```
+
+### Template Literal Types
+```js
+type Key = `${number}::${number}`;
+
+type Cells = {
+  [key: Key]: number
+}
+
+const grid:Cells = {
+    "0::0": 3, // yes!
+    "0:1": 4, // no!
+}
+```
+
 ## Why?
 
 * Encode constraints and assumptions of the developer
