@@ -2,9 +2,7 @@
 
 [LinkedIn Learning Class](https://www.linkedin.com/learning/java-object-oriented-programming-2/)
 
-## Intro
-
-### Key Attributes
+## Key Attributes
 
 The goal of these pillars is to reduce complexity and enable code reusability.
 
@@ -13,23 +11,16 @@ The goal of these pillars is to reduce complexity and enable code reusability.
 - Polymorphism
 - Abstraction
 
-**Encapsulation**
-Binding an object's state and behavior into one unit.
-Java provides 3 access modifiers to manage encapsulation:
-- public
-- private
-- protected
+## Basics
 
-In Java, getters and setters don't _need_ to use the `this` keywords.
+### Create a class
 
-
-### Types of Java Classes
+Types of Java Classes
 
 - Class
 - Enum
 - interface
 
-### Create a Class
 
 When you create a class, make a constructor using the name of the class.
 
@@ -46,7 +37,7 @@ public class Tree {
 }
 ```
 
-### The main function
+**The main function**
 Every Java application must have a main function, which starts everything going. It can be in any class you'd like, but we can also just use a Main class:
 ```java
 public class Main {
@@ -58,3 +49,18 @@ public class Main {
 ```
 
 
+## Encapsulation
+Binding an object's state and behavior into one unit.
+Java provides 3 access modifiers to manage encapsulation:
+- public
+- private
+- protected
+
+In Java, getters and setters don't _need_ to use the `this` keywords.
+
+## Polymorphism
+
+## Abstraction
+There are two ways to use abstraction:
+- `abstract` classes and class methods
+- `Interface`
