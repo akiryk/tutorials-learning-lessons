@@ -15,6 +15,12 @@ Notes about different code-related topics.
 - [ ] [Python Essential Training](https://www.linkedin.com/learning/python-essential-training-2018/welcome?autoplay=true&u=85880466): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/python.md)
 - [ ] [PHP Developer Learning Path](https://www.linkedin.com/learning/paths/become-a-php-developer-2?u=85880466)
     - [ ] [Programming Foundations: Algorithms](https://www.linkedin.com/learning/programming-foundations-algorithms/algorithms-power-the-world?autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A57bdd8a292015ae4c0cb990f&u=85880466): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/data-structures.md)
+- [ ] FullStack Learning Path
+    - [ ] [DevOps Overview](https://www.linkedin.com/learning/devops-foundations)
+    - [ ] [Node JS Essentials](https://www.linkedin.com/learning/node-js-essential-training-2)
+    - [ ] [NoSQL Intro](https://www.linkedin.com/learning/nosql-essential-training)
+    - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
+    - [ ] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis)
 
 ## Posts 
 
