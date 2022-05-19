@@ -86,3 +86,31 @@ For an interface, use the `implement` keyword:
 ```java
 public class MyClass implements SomeInterface {
 ```
+
+Example:
+```java
+// an interface defines methods that implementers must use
+public interface Event {
+    Long getTimeStamp();
+    void process();
+}
+
+// this implementer is an abstract class
+public abstract class AbstractEvent implements Event {
+    protected final Long createdTimestamp;
+    protected final String id;
+    AbstractEvent(String id) {
+        this.id = id;
+        this.createdTimestamp = new Timestamp(System.currentTimeMillis()).getTime();
+    }
+
+    // It implements getTimeStampe
+    @Override
+    public Long getTimeStamp() { return this.createdTimestamp; };
+    
+    // but it uses abstract for process, which must be implemented by the abstract class's implementors
+    public abstract void process();
+}
+
+
+
