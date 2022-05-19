@@ -50,7 +50,8 @@ public class Main {
 
 
 ## Encapsulation
-Binding an object's state and behavior into one unit.
+Binding an object's state and behavior into one unit. AKA, "bundling of data, along with the methods that operate on that data, into a single unit" — i.e. the `Class`.
+
 Java provides 3 access modifiers to manage encapsulation:
 - public
 - private
