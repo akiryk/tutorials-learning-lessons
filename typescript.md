@@ -378,6 +378,19 @@ type LoaderData = {
 };
 ```
 
+## Handle undefined types
+```js
+// isDefined takes an argument of type T or undefined
+// it returns true if the argument is not undefined. 
+// The `is` keyword is part of a type predicate and gives more control than making the return a boolean.
+// see: https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates
+function isDefined<T>(x: T | undefined): x is T {
+  return typeof x !== "undefined";
+
+// use like so:
+someArray.filter(isDefined);
+```
+
 ## Arrays
 There are two ways to type arrays. For an array of numbers, for example:
 
