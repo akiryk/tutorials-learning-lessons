@@ -1,5 +1,7 @@
 # Data Structure & Algorithms 
 
+It's important to distinguish these two things. A data structure is used to organize information so it can be processed by an algorithm. We choose the data structure to fit our needs — do we need to do a lot of inserting and deleting? Searching? Priority-management? These will determine the best data structure. 
+
 These notes are from a few sources:
 - [Programming Foundations, Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures)
 - [Programing Foundations: Algorithms](https://www.linkedin.com/learning/programming-foundations-algorithms)
@@ -12,15 +14,6 @@ These notes are from a few sources:
 
 What makes an algorithm efficient? 
 The scenario (such as sort this list) and available data structure types (such as an array).
-
-## Numerical types in Java
-
-Whole numbers: int, short, long
-Decimals: double, float
-Float is more performant, but gives a smaller range.
-
-When we say a language represents `int` values with 32 bits, we mean that every <code>int</code> will have 32 1s and 0s. For example:
-<code>00000000000000000000000000000011</code> represents 3. In Java, a double is 64 bits.
 
 ## Search types
 
