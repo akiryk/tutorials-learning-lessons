@@ -7,6 +7,8 @@ Notes about different code-related topics.
 - [ ] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial)
 - [ ] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/data-structures.md)
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057)
+- [ ] [React Software Architecture](https://www.linkedin.com/learning/react-software-architecture/learn-software-architecture-with-react?u=85880466)
+- [ ] [JavaScript Code Challenges](https://www.linkedin.com/learning/javascript-code-challenges/available-books?autoSkip=true&autoplay=true&resume=false&u=85880466)
 - [ ] FullStack Learning Path
     - [ ] [DevOps Overview](https://www.linkedin.com/learning/devops-foundations)
     - [ ] [Node JS Essentials](https://www.linkedin.com/learning/node-js-essential-training-2)
