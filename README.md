@@ -6,6 +6,7 @@ Notes about different code-related topics.
 - [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) [My Typescript Notes](google.com)
 - [ ] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial)
 - [ ] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/data-structures.md)
+- [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057)
 - [ ] FullStack Learning Path
     - [ ] [DevOps Overview](https://www.linkedin.com/learning/devops-foundations)
     - [ ] [Node JS Essentials](https://www.linkedin.com/learning/node-js-essential-training-2)
