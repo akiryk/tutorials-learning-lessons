@@ -9,6 +9,15 @@ Create a new project and then go to `src` and create new class named `Main`.
 Add some code.
 To run, hover over the Main class in sidebar and choose `Run main.main()`
 
+## Numerical types in Java
+
+Whole numbers: int, short, long
+Decimals: double, float
+Float is more performant, but gives a smaller range.
+
+When we say a language represents `int` values with 32 bits, we mean that every <code>int</code> will have 32 1s and 0s. For example:
+<code>00000000000000000000000000000011</code> represents 3. In Java, a double is 64 bits.
+
 ## Extending Classes
 Java uses generic types just like TypeScript. 
 ```Java
