@@ -34,6 +34,8 @@ Example: Find an element by index. It doesn't matter if the array has a million 
 Linear Time: O(n)
 The amount of time increases with the lenth of the list. 
 
+O of log n time, O(log N): means time goes up linearly while the n goes up exponentially. If it takes 1 second to compute 10 elements, it will take 2 seconds to compute 100 elements, 3 seconds to compute 1000 elements, and so on.
+
 **Why use an array as your data structure**
 If you plan on inserting once and then accessing a lot, arrays are a good choice.  
 
@@ -129,3 +131,16 @@ const mySet = new Set(a);
 // mySet will have the two "Phil" objects, but just one j.
 ```
 
+## Trees
+A tree can be thought of as a relative to the linked list; unlike a linked list, tree nodes can each have many nodes.
+- A node without parent is called the `root` node.
+- A node without children is called a `leaf` node.
+- Nodes that share the same parent are called `siblings`
+
+**Binary Search Tree** (BST) has the constraint where each node can only have 2 children. We call them the `left` and `right` nodes. The left is always less and the right always more than the parent, which makes it easy to quickly find a particular value. BSTs are a great way to keep your keys in a sorted order, although they must be kept in balance — i.e. the same number of items on the left as on the right — or they are less efficient. They are often used behind the scenes, as in C++ uses them for implementing sets; Java uses them for TreeMap. 
+
+A balanced tree has a big O of 0(log(N)) because each step removes half of the data for the search. If unbalanced, it bould be up to linear time O(n), because all the data could be on one side of the tree.
+
+**Heaps**
+Like a BST but with a much simpler sorting algorithm. Min heaps keep the lowest value on top; max heaps do the opposite. In a min heap, if you start with 10 and then add 20, 10 is the parent of 20 and 20 is the left node. If you then add 30, 30 becomes the right node, and the second child of 10. If you finally add 5, it _would_ become the left child of 20, but it's lesser so it swaps with its parent and again swaps with 10. 
+Heaps are often used behind the scenes for priority queues and other structures of programming languages. 
