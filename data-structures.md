@@ -95,3 +95,37 @@ In JavaScript, you need to import an npm package like slashjs for hash functiona
 
 **Good**: Fast for retrieving values, but take up more space. Hash map operations are O(1), they always take the same amount of time irrespective of the size of the table. Search, insertion, and deletion all take constant time. 
 **Bad**: Don't order their entries; if the data set is small, an array is often more efficient. Collisions can impact performance if there are a lot of them.
+
+## Sets
+- A collection of unique items
+- order doesn't matter
+
+In JavaScript, you can make a set from an array to remove duplicates (although not duplicate objects unless they are truly the same).
+
+Use a set because:
+- you want to eliminate duplication 
+- you want to be able to quickly check if a collection contains a particular value. Using `mySet.has(someValue)` is generally faster than `someArray.includes(someValue)`.
+
+```js
+const j = {
+  name: "Jay",
+  id: 1
+}
+
+const arr = [
+  {
+    name: "Phil",
+    id: 3
+  },
+  {
+    name: "Phil",
+    id: 3
+  },
+  j,
+  j,
+]
+
+const mySet = new Set(a);
+// mySet will have the two "Phil" objects, but just one j.
+```
+
