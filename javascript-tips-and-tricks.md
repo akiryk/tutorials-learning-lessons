@@ -3,6 +3,9 @@
 - Copying an object without mutating it
 - Async await
 
+## Deep dive into keyboard events
+https://www.youtube.com/watch?v=jLqTXkFtEH0
+
 ## Key/Value hashes
 Spread an array into an object to create a key/value hash
 ```js
