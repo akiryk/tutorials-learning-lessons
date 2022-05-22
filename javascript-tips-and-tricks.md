@@ -37,7 +37,7 @@ const x = [];
 Boolean(x.length); // false
 Boolean(x.length === 0]); // true
 ```
-It makes a handy way to work with `Array.sort()`
+It makes a handy way to work with `Array.some()` and the like
 ```js
 const {name, content} = formData; // imagine we can extract these fields from the data;
 const fieldErrors = {
@@ -48,6 +48,10 @@ const fieldErrors = {
 if (Object.values(fieldErrors).some(Boolean)) {
   return badRequest({ fieldErrors, fields });
 }
+
+const arrOfObjects = [{id: 1}, {id: 33}, null, {id: 32}];
+arrayOfObjects.filter(Boolean);
+// [{id: 1}, {id: 33}, {id: 32}];
 ```
 
 ## Optional Chaining
