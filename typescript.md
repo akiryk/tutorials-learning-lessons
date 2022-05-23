@@ -75,6 +75,24 @@ if (d.size) { d.size.push('fresh'); } // yes!
 type Dict<T> = { [K: string]: T | undefined }
 ```
 
+## Type Guards
+Use a conditional block to narrow down the type, [per docs](https://www.typescripttutorial.net/typescript-tutorial/typescript-type-guards/).
+
+- use `typeof` of `instanceof`
+- or use a user-defined typeguard with the `is` keyword, as in `arg is someType` 
+
+```ts
+class Dog { // we have a class for Dogs }
+function getIsTypePet(arg: any): arg is Dog {
+  return arg instanceof Dog;
+}
+
+// general is undefined check:
+function isDefined<T>(arg: T | undefined): arg is T {
+   return typeof arg !== "undefined";
+}
+```
+
 ## Why?
 
 * Encode constraints and assumptions of the developer
