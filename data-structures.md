@@ -156,6 +156,7 @@ countdown(3);
 # then what, if anything?
 ```
 ## Bubble sort
+Starting at the beginning of a list, compare each value with the value to its right and swap positions if it's greater. Then loop again and again, each time stopping 1 short of the previous iteration. E.g. `5, 1, 9, 6, 3` after first run is `1, 5, 6, 3, 9` then `1, 5, 3, 6, 9` then `1, 3, 5, 6, 9`
 Not useful because big O is quadratic time of O(n*n), but useful for learning.
 It generally has a for loop inside a for loop or inside a while loop. 
 ```py
