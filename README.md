@@ -6,7 +6,7 @@ Notes about different code-related topics.
 Focus on these:
 - [ ] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial)
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057)
-- [ ] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
+- [ ] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis)| [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
 
 Work your way through these slowly
 - [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) [My Typescript Notes](google.com)
