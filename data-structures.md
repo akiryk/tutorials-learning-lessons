@@ -137,3 +137,21 @@ A balanced tree has a big O of 0(log(N)) because each step removes half of the d
 **Heaps**
 Like a BST but with a much simpler sorting algorithm. Min heaps keep the lowest value on top; max heaps do the opposite. In a min heap, if you start with 10 and then add 20, 10 is the parent of 20 and 20 is the left node. If you then add 30, 30 becomes the right node, and the second child of 10. If you finally add 5, it _would_ become the left child of 20, but it's lesser so it swaps with its parent and again swaps with 10. 
 Heaps are often used behind the scenes for priority queues and other structures of programming languages. 
+
+## Recursion
+A little quiz:
+```py
+def countdown(n):
+  if (n == 0):
+    return n
+  else:
+    print("count is ", n)
+    countdown(n - 1)
+    print("over...", n)
+
+countdown(3);
+# count is 3
+# count is 2
+# count is 1
+# then what, if anything?
+```
