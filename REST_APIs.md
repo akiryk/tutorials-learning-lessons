@@ -17,7 +17,10 @@ The key abstraction of REST is a **resource**: an image, a document, a service, 
 The REST service provides us with a _representation_ of the resource, not the resource itself. A copy that can be modified to fit various purposes, formats, etc.
 
 ## Verbs
-- <code>GET</code>
-- `POST`
-- PUT
-- PATCH
+- <code>GET</code>: success gives a 200 response vs 404
+- `POST` gives a 201 success response; errors include 401 (unauthorized); 409 (conflict); 404 not found
+- `PUT` is used to replace data at an existing resource with the new data
+- `PATCH` modifies an existing resource. It can modify the resource without replacing everything
+- `DELETE` can only be used with singleton resource. 
+- `OPTIONS` includes description of options
+- `HEAD` returns just the head of the response
