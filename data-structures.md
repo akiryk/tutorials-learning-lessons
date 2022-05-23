@@ -155,3 +155,19 @@ countdown(3);
 # count is 1
 # then what, if anything?
 ```
+## Bubble sort
+Not useful because big O is quadratic time of O(n*n), but useful for learning.
+It generally has a for loop inside a for loop or inside a while loop. 
+```py
+def bubbleSort(nums):
+  x = len(nums)
+  while(x > 1):
+    for i in range(0, x - 1):
+      current = nums[i]
+      next = nums[i+1]
+      if (current > next):
+        nums[i] = next
+        nums[i+1] = current
+    x=x-1
+  return nums
+```
