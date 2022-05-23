@@ -14,9 +14,9 @@ Skip to the bottom to see random examples
 ### Variadic Tuples
 Example tuple could be a color. A color has RGB values, so it might look like this: `[[r: 123], [g: 34], [b: 233]]`
 
-Before TS4, we had to do this:
 ```js
-// MyTyple is an array of a number followed by any number of elements of type T
+// Before TS4, we had to do this:
+// MyTyple is an array comprised of a single number followed by any number of elements of type T
 type MyTuple<T> = [number, ...T[]]
 
 const x1:MyTuple<string> = [4, "cat", "dog", "bear"]; // this works
