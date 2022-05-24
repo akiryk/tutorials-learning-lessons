@@ -22,7 +22,7 @@ FullStack Learning Path
 - [ ] [NoSQL Intro](https://www.linkedin.com/learning/nosql-essential-training)
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
 - [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis)
-- [ ] [APIs and Web Services(https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
+- [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
 - [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis)
 
 Done
