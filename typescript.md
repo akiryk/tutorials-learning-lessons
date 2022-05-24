@@ -1,5 +1,12 @@
 # Typescript
 
+## LinkedIn Learning Course
+
+### Setup
+When setting up `tsconfig.json`, use the `noEmit: true` prop to tell TS not to create any other files. Do this if you'll use Babel or something else as your compiler. Otherwise, set it false, and TS will output `.js` files where you tell it in the `outDir` directory.
+
+Add `allowJs: true` to allow existing JS files and `checkJs: false` to avoid checking js files. 
+
 Skip to the bottom to see random examples
 
 ## Resources
