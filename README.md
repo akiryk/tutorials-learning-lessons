@@ -9,7 +9,7 @@ Focus on these:
 - [ ] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
 
 Work your way through these slowly
-- [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) [My Typescript Notes](google.com)
+- [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) | [My Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
 - [ ] [Programming Foundations: Algorithms](https://www.linkedin.com/learning/programming-foundations-algorithms/algorithms-power-the-world?autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A57bdd8a292015ae4c0cb990f&u=85880466): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/data-structures.md). Currently up to bubble sort video. 
 
 In no real order:
