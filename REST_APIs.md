@@ -24,3 +24,10 @@ The REST service provides us with a _representation_ of the resource, not the re
 - `DELETE` can only be used with singleton resource. 
 - `OPTIONS` includes description of options
 - `HEAD` returns just the head of the response
+
+## Tools
+There are tools like Postman for sending RESTful requests, but you can easily use VSCode as well with the `REST Client` extension.
+Test with an actual site such as this by creating a new document and using `GET` or `OPTIONS` or `HEAD`.
+```
+GET https://www.lireo.com/wp-json/wp/v2/posts
+```
