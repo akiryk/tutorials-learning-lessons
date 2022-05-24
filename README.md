@@ -23,6 +23,9 @@ FullStack Learning Path
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
 - [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis)
 - [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
+- [ ] [Software Architecture](https://www.linkedin.com/learning/software-architecture-foundations)
+- [ ] [Architecture Patterns for Devs](https://www.linkedin.com/learning/software-architecture-patterns-for-developers)
+- [ ] [Microservices Patterns](https://www.linkedin.com/learning/microservices-foundations)
 - [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis)
 
 Done
