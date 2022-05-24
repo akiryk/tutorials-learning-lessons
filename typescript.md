@@ -11,6 +11,9 @@ Skip to the bottom to see random examples
 * [Typescript Playground](https://www.typescriptlang.org/play)
 
 ## Quiz Show Course
+
+Look through the notes for the different quizes and challenges: https://www.typescript-training.com/course/making-typescript-stick/05-does-it-compile/
+
 ### Variadic Tuples
 Example tuple could be a color. A color has RGB values, so it might look like this: `[[r: 123], [g: 34], [b: 233]]`
 
