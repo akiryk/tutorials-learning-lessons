@@ -21,7 +21,9 @@ FullStack Learning Path
 - [ ] [Node JS Essentials](https://www.linkedin.com/learning/node-js-essential-training-2)
 - [ ] [NoSQL Intro](https://www.linkedin.com/learning/nosql-essential-training)
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
-- [ ] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis)
+- [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis)
+- [ ] [APIs and Web Services(https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
+- [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis)
 
 Done
 - [x] [Java OOP](https://www.linkedin.com/learning/java-object-oriented-programming-2/): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/java-oop.md)
