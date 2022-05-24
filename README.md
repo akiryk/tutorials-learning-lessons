@@ -6,7 +6,7 @@ Notes about different code-related topics.
 Focus on these:
 - [ ] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial)
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057)
-- [ ] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
+- [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis)
 
 Work your way through these slowly
 - [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) | [My Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
@@ -21,12 +21,11 @@ FullStack Learning Path
 - [ ] [Node JS Essentials](https://www.linkedin.com/learning/node-js-essential-training-2)
 - [ ] [NoSQL Intro](https://www.linkedin.com/learning/nosql-essential-training)
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
-- [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis)
 - [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
 - [ ] [Software Architecture](https://www.linkedin.com/learning/software-architecture-foundations)
 - [ ] [Architecture Patterns for Devs](https://www.linkedin.com/learning/software-architecture-patterns-for-developers)
 - [ ] [Microservices Patterns](https://www.linkedin.com/learning/microservices-foundations)
-- [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis)
+- [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
 
 Done
 - [x] [Java OOP](https://www.linkedin.com/learning/java-object-oriented-programming-2/): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/java-oop.md)
