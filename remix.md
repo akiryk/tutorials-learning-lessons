@@ -7,20 +7,15 @@ https://remix.run/docs/en/v1/tutorials/jokes#expected-errors
 [Nested routes description](https://blog.logrocket.com/understanding-routes-route-nesting-remix/) 
 
 ```
-project
+remix-project
 │   README.md
-│   file001.txt    
 │
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
+└───app
+│   │   root.tsx
 │   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
+│   └───routes
+│       │   parent.tsx
+│       │
+│       └───parent
+│       │   nested.tsx
 ```
