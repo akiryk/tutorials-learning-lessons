@@ -4,9 +4,9 @@ Notes about different code-related topics.
 
 ## Lessons
 Focus on these:
-- [ ] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial)
-- [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057)
-- [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis)
+- [ ] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/remix.md)
+- [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
+- [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
 
 Work your way through these slowly
 - [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) | [My Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
