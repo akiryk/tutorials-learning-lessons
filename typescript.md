@@ -9,6 +9,46 @@ Add `allowJs: true` to allow existing JS files and `checkJs: false` to avoid che
 
 Skip to the bottom to see random examples
 
+### Interfaces and Types
+```
+interface Contact {
+  name: string,
+  phone: string
+}
+
+interface Address {
+  street: string,
+  zipcode: number
+}
+
+type FullContact = Contact & Address;
+
+const c: FullContact = {
+  name: "Bill",
+  phone: "234-3434",
+  street: "whatever",
+  zipcode: 32433
+}
+```
+
+### Enums 
+```ts
+enum Status {
+    ACTIVE,
+    INACTIVE,
+    ERROR
+}
+
+type Person = {
+    status: Status,
+    name: string
+}
+
+const carl: Person = {
+    status: Status.ERROR,
+    name: "Carl"
+}
+```
 ## Resources
 * [FrontEnd Masters Typescript](https://frontendmasters.com/courses/typescript-v2) course. 
 * [Github repo](https://github.com/mike-works/typescript-fundamentals)
