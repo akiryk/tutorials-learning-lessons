@@ -10,10 +10,11 @@ Add `allowJs: true` to allow existing JS files and `checkJs: false` to avoid che
 Skip to the bottom to see random examples
 
 ### Interfaces and Types
-```
+```ts
 interface Contact {
   name: string,
-  phone: string
+  phone: number,
+  sayHi(name: string): Contact
 }
 
 interface Address {
@@ -25,7 +26,7 @@ type FullContact = Contact & Address;
 
 const c: FullContact = {
   name: "Bill",
-  phone: "234-3434",
+  phone: 23234234,
   street: "whatever",
   zipcode: 32433
 }
@@ -49,6 +50,33 @@ const carl: Person = {
     name: "Carl"
 }
 ```
+If you must use strings, do it like this:
+```ts
+enum Status {
+    ACTIVE = "ACTIVE,
+    INACTIVE = "INACTIVE",
+    ERROR = "ERROR"
+}
+```
+
+### Generics
+```ts
+// clone will can be called with any type, T, as long as that type is also returned.
+function clone<T>(source: T): T {
+  return source;
+}
+// note that this doesn't work with arrow functions
+
+// Multiple generics are allowed:
+function handle<T1, T2>(value: T1): T2 {
+  //... something  
+}
+
+// call with this syntax
+handle<number, string>(500);
+    
+```
+
 ## Resources
 * [FrontEnd Masters Typescript](https://frontendmasters.com/courses/typescript-v2) course. 
 * [Github repo](https://github.com/mike-works/typescript-fundamentals)
