@@ -31,3 +31,35 @@ Test with an actual site such as this by creating a new document and using `GET`
 ```
 GET https://www.lireo.com/wp-json/wp/v2/posts
 ```
+
+## Designing a REST API
+First, understand the business process. What needs to happen?
+
+Next, it's hard. It's about trade-offs. What functionality to expose and how to expose it? 
+
+### Challenges
+- name things clearly
+- clear directions 
+- iteration with versioning and backwards compatibility
+
+### Approaches
+- Bolt on: when you need an API after the fact for existing systems. Fast, but ends up with old badly named terms.
+- Greenfield: you have complete freedom. API First. Easiest scenario in many ways but can be hard.
+- Facade strategy. Take advantage of existing systems but re-work them.
+
+### Tips for modeling your API
+1. Don't worry about the tools as long as you can take notes. 
+2. Have a consistent process and document clearly. Involve team early
+3. It doesn't count unless it's written down. Assumptions, decisions, deferred tasks. 
+
+### Support the business
+
+Example: Ordering a cup of coffee
+ 
+1. Identify Participants: entities who/that will use our API
+Determine the boundaries early or you might take into account a too wide range of processes. We'll focus on customer and barista and cashier. We'll leave out the payment systems, inventory systems, etc.  
+
+2. Identify activities.
+What needs to happen for success? Customer makes order. Barista takes order. Cashier takes money. Focus on _who_ does _what_
+
+3. Take note of the key steps and map it out. 
