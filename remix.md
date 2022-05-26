@@ -20,3 +20,19 @@ remix-project
 │   │   └───parent
 │   │   │   │   nested.tsx
 ```
+
+## `HTML`
+You are responsible for your markup. In `root.tsx`, you'll see the `<html>` tags. This is on you. Do you want JS? Then you need to add it!
+```js
+import {Scripts} from '@remix-run/react';
+
+return (
+  <html>
+    // etc
+    <body>
+      {children}
+      <Scripts />
+    </body
+  </html>
+)
+```
