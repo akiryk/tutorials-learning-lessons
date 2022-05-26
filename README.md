@@ -4,9 +4,9 @@ Notes about different code-related topics.
 
 ## Lessons
 Focus on these:
-- [ ] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/remix.md)
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
 - [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
+- [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
 
 Work your way through these slowly
 - [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) | [My Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
@@ -20,7 +20,6 @@ FullStack Learning Path
 - [ ] [DevOps Overview](https://www.linkedin.com/learning/devops-foundations)
 - [ ] [Node JS Essentials](https://www.linkedin.com/learning/node-js-essential-training-2)
 - [ ] [NoSQL Intro](https://www.linkedin.com/learning/nosql-essential-training)
-- [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
 - [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
 - [ ] [Software Architecture](https://www.linkedin.com/learning/software-architecture-foundations)
 - [ ] [Architecture Patterns for Devs](https://www.linkedin.com/learning/software-architecture-patterns-for-developers)
@@ -28,6 +27,7 @@ FullStack Learning Path
 - [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
 
 Done
+- [x] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/remix.md)
 - [x] [Java OOP](https://www.linkedin.com/learning/java-object-oriented-programming-2/): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/java-oop.md)
 - [x] [Learning PHP](https://www.linkedin.com/learning/learning-php-4/get-vs-post?autoplay=true&u=85880466): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/php-linkedin-leaning.md)
 - [x] [Learning Java](https://www.linkedin.com/learning/learning-java-4/next-steps-for-learning-java?autoplay=true&u=85880466): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/java.md)
