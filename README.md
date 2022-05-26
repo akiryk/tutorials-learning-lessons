@@ -15,6 +15,7 @@ Work your way through these slowly
 In no real order:
 - [ ] [React Software Architecture](https://www.linkedin.com/learning/react-software-architecture/learn-software-architecture-with-react?u=85880466)
 - [ ] [JavaScript Code Challenges](https://www.linkedin.com/learning/javascript-code-challenges/available-books?autoSkip=true&autoplay=true&resume=false&u=85880466)
+- [ ] [Docker for Developers](https://www.linkedin.com/learning/docker-for-developers-14493163)
 
 FullStack Learning Path
 - [ ] [DevOps Overview](https://www.linkedin.com/learning/devops-foundations)
