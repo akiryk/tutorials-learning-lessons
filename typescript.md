@@ -34,6 +34,23 @@ const c: FullContact = {
 
 ### Enums 
 ```ts
+// It's often easier to use a Union rather than an enum:
+const ERROR = "error";
+const ACTIVE = "active";
+const INACTIVE = "inactive";
+
+// then reference the pseudo-enums directly:
+type Status = "active" | "inactive" | "error";
+
+// Or use the typeof operator:
+type Status = typeof ERROR | typeof ACTIVE | typeof INACTIVE;
+
+// Either way:
+const myStatusA = "active"; // good!
+const myStatusB = ACTIVE;   // good!
+const myStatusC = "bergle"; // bad!
+
+// However, if you want an enum, use enum keyword:
 enum Status {
     ACTIVE,
     INACTIVE,
