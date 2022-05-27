@@ -61,11 +61,17 @@ enum Status {
 
 ### Generics
 ```ts
-// clone will can be called with any type, T, as long as that type is also returned.
+// clone can be called with any type, T, and will return something also of type T.
 function clone<T>(source: T): T {
   return source;
 }
 // note that this doesn't work with arrow functions
+
+// Generic can be used with constraints, e.g. this function takes any type T
+// as longs as T is an object with a numeric id property
+function getNextID<T extends {id: number}>(todoItems: Array<T>) {
+  const id = todoItems[0].id;
+}
 
 // Multiple generics are allowed:
 function handle<T1, T2>(value: T1): T2 {
