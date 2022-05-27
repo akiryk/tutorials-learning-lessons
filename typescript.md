@@ -146,6 +146,34 @@ getId(box);    // 1
 getId(parrot); // 2
 ```
 
+### Utility Types
+
+There are [several utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html), and they are worth using for certain use cases. 
+
+**Record** can map a new type to existing type
+```ts
+
+type Cell = {
+    id: number,
+    value?: string
+}
+
+
+const gridCells: Record<string, Cell> = {
+    cell0: {
+        id: 1,
+        value: "A"
+    },
+     cell1: {
+        id: 2,
+        value: "B"
+    },
+     cell2: {
+        id: 3,
+    },
+}
+  ```
+
 ## Resources
 * [FrontEnd Masters Typescript](https://frontendmasters.com/courses/typescript-v2) course. 
 * [Github repo](https://github.com/mike-works/typescript-fundamentals)
