@@ -100,6 +100,23 @@ handle<number, string>(500);
     
 ```
 
+### Advanced Types
+**Keyof** and **Index Acccess Types**
+```ts
+// Keyof enables you to access each key in a type or interface
+type Contact = {
+  name: string,
+  age: number
+}
+
+function getField<T>(source: T, property: keyof T) {
+  return source[property];
+}
+
+getField(c1, "name");  // yes!
+getField(c1, "email"); // no!
+```
+
 ## Resources
 * [FrontEnd Masters Typescript](https://frontendmasters.com/courses/typescript-v2) course. 
 * [Github repo](https://github.com/mike-works/typescript-fundamentals)
