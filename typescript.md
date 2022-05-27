@@ -110,11 +110,40 @@ type Contact = {
 }
 
 function getField<T>(source: T, property: keyof T): T[keyof T] {
-  return source[property];
+  return source[property]; // index access type, e.g. Contact["name"]
 }
 
 getField(c1, "name");  // yes!
 getField(c1, "email"); // no!
+
+function getId<T extends { id: number} >(thing: T) {
+    return thing.id;
+}
+
+type Shape = {
+    id: number,
+    width: number
+    name: string
+}
+
+type ZooAnimal = {
+    id: number
+    section: string
+}
+
+const box: Shape = {
+    id: 1,
+    width: 55,
+    name: "box"
+}
+
+const parrot: ZooAnimal = {
+    id: 2,
+    section: "jungle"
+}
+
+getId(box);    // 1
+getId(parrot); // 2
 ```
 
 ## Resources
