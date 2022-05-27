@@ -5,7 +5,7 @@ Notes about different code-related topics.
 ## Lessons
 Focus on these:
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
-- [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
+- [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md). Return to Part 2 after completion to be sure you understand the process of designing an API.
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
 
 Work your way through these slowly
