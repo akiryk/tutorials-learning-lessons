@@ -109,7 +109,7 @@ type Contact = {
   age: number
 }
 
-function getField<T>(source: T, property: keyof T) {
+function getField<T>(source: T, property: keyof T): T[keyof T] {
   return source[property];
 }
 
