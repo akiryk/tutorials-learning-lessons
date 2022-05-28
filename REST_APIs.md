@@ -22,6 +22,9 @@ Idempotency: a request is idempotent if it can be repeated and return the same r
 
 When a REST service runs on the web over HTTP, we call it a RESTful API. 
 
+### HATEOAS
+The REST API documents what resources it provides and how to access them. HATEOAS means client is given a way to navigate through the API purely through hypermedia, that is, by following links.
+
 ## Resource vs Representation
 The key abstraction of REST is a **resource**: an image, a document, a service, a collection... any information that can be named. 
 The REST service provides us with a _representation_ of the resource, not the resource itself. A copy that can be modified to fit various purposes, formats, etc.
