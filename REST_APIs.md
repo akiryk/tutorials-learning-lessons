@@ -75,3 +75,15 @@ Determine the boundaries early or you might take into account a too wide range o
 What needs to happen for success? Customer makes order. Barista takes order. Cashier takes money. Focus on _who_ does _what_
 
 3. Take note of the key steps and map it out. 
+
+### Validate your API
+
+### Hypermedia Approaches
+
+### Versioning
+Two approaches: use the `Accept Header` vs use the `URL`. Both have pluses and minuses so consistency is key. That said, using the accept header is considered "ideal" according to strict REST approach. The accept header is for "content negotiation." You say what sort of data you need in what format and what version. 
+
+### Media Types
+JSON is quite common and useful but has two disadvantages: it isn't easily extensible and it doesn't give detail about the data it contains. To solve this problem, an ecosystem of media types has emerged.
+- JSON collection
+- Hypertext Application Language (HAL): breaks data into two pieces, data and links that let us dive into specific data we need.
