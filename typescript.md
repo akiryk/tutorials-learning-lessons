@@ -152,12 +152,17 @@ There are [several utility types](https://www.typescriptlang.org/docs/handbook/u
 
 **Record** can map a new type to existing type
 ```ts
+// "string" refers to the key, e.g. id and value. 
+// "string | number" refers to the possible values.
+type MyRecordType = Record<string, string | number>
+const x: MyRecordType = { name: "Bill"}; // fine
+x.age = 33; // fine
+x.callback = () => return "Bill"; // NO!
 
 type Cell = {
     id: number,
     value?: string
 }
-
 
 const gridCells: Record<string, Cell> = {
     cell0: {
@@ -173,6 +178,26 @@ const gridCells: Record<string, Cell> = {
     },
 }
   ```
+ **Partial**
+ ```ts
+ // id, callback, and name are required
+ type X = {
+   id: number,
+   name: string,
+   callback: Function
+ }
+ 
+ type PartialX = Partial<X>;
+ 
+ // p passes because values are all optional now
+ const p = {
+   id: 1
+ }
+```
+**Other useful utilities** 
+- `Pick`
+- `Omit`
+- `Require`
 
 ## Resources
 * [FrontEnd Masters Typescript](https://frontendmasters.com/courses/typescript-v2) course. 
