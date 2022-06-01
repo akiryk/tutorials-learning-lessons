@@ -30,8 +30,23 @@ SELECT * FROM Countries LIMIT 10 OFFSET 10;
 # sqlserver uses the TOP keyword instead of LIMIT 
 SELECT TOP 10 * FROM Countries;
 ```
-Narrow the resulting fields with column names. Note that the clauses in SQL need to be in a particular sequence: generally, most implementations require `SELECT` > `FROM` > `WHERE` in that order.
-`ORDER BY` must follow any `WHERE` clause.
-`LIMIT` and `OFFSET` need to be last.
+Narrow the resulting fields with column names. 
+
+Note that the clauses in SQL need to be in a particular sequence: generally, most implementations require:
+
+`SELECT` > `FROM` > `WHERE` in that order.
+
+`ORDER BY` must follow any `WHERE` clause; `LIMIT` and `OFFSET` need to be last.
 ```sql
 SELECT Name, LifeExpectancy FROM Countries ORDER BY LifeExpectancy;
+```
+
+Use `COUNT` to print the number of records
+```sql
+SELECT COUNT(*) FROM Country WHERE Continent = "Europe";
+```
+
+More complex query:
+```sql
+SELECT Name AS Country, SurfaceArea AS "Surface Area" FROM Country WHERE SurfaceArea > 100000 AND Continent = "Europe" ORDER BY SurfaceArea DESC;
+```
