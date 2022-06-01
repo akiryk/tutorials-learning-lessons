@@ -24,6 +24,14 @@ A query is comprised of statements, which includes keywords such as `SELECT`, `F
 # sqllite uses limit
 SELECT * FROM Countries LIMIT 10;
 
-# sqlserver uses top 
+# Get the next 10
+SELECT * FROM Countries LIMIT 10 OFFSET 10;
+
+# sqlserver uses the TOP keyword instead of LIMIT 
 SELECT TOP 10 * FROM Countries;
 ```
+Narrow the resulting fields with column names. Note that the clauses in SQL need to be in a particular sequence: generally, most implementations require `SELECT` > `FROM` > `WHERE` in that order.
+`ORDER BY` must follow any `WHERE` clause.
+`LIMIT` and `OFFSET` need to be last.
+```sql
+SELECT Name, LifeExpectancy FROM Countries ORDER BY LifeExpectancy;
