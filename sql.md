@@ -20,6 +20,7 @@ Semicolon is not always required but often is, so best practice to use it.
 
 A query is comprised of statements, which includes keywords such as `SELECT`, `FROM`, `ORDER BY`, etc.
 
+## Retrieve Data
 ```sql
 # sqllite uses limit
 SELECT * FROM Countries LIMIT 10;
@@ -43,7 +44,11 @@ SELECT Name, LifeExpectancy FROM Countries ORDER BY LifeExpectancy;
 
 Use `COUNT` to print the number of records
 ```sql
-SELECT COUNT(*) FROM Country WHERE Continent = "Europe";
+# Gives all the rows in the table
+SELECT COUNT(*) FROM Country;
+
+# Gives only the rows that have a value for that column
+SELECT COUNT(LifeExpectancy) FROM Country;
 ```
 
 More complex query:
@@ -56,4 +61,16 @@ SELECT Name AS Country, SurfaceArea AS "Surface Area"
   LIMIT 5;
 ```
 The above returns something like this:
-<img width="252" alt="image" src="https://user-images.githubusercontent.com/2437758/171496647-e6ab6d7f-055e-4a75-bf69-f60fa12b51e7.png">
+
+<img width="512" alt="image" src="https://user-images.githubusercontent.com/2437758/171496799-a91d24eb-132b-4e6f-b11f-153178a25a22.png">
+
+## Create, Update, Delete
+```sql
+# Name the fields you want to insert into. 
+# The following will have NULL as the value for any other columns, e.g. zip or phone.
+INSERT INTO customer (name, address, state) 
+  VALUES ('Janet Gummy', '1 Old Log Avenue', 'Parkertown');
+
+UPDATE customer SET zip = 023313, city = "Boston", state = "Massachusetts" WHERE ID = 6;
+
+DELETE FROM customer WHERE ID = 5;
