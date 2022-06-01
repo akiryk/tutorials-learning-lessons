@@ -27,8 +27,7 @@ FullStack Learning Path
 - [ ] [Architecture Patterns for Devs](https://www.linkedin.com/learning/software-architecture-patterns-for-developers)
 - [ ] [Microservices Patterns](https://www.linkedin.com/learning/microservices-foundations)
 - [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490)
-- [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
-- [x] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md).
+- [ ] [Advanced SQL queries](https://www.linkedin.com/learning/advanced-sql-for-query-tuning-and-performance-optimization)
 
 Done
 - [x] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/remix.md)
@@ -37,6 +36,8 @@ Done
 - [x] [Learning Java](https://www.linkedin.com/learning/learning-java-4/next-steps-for-learning-java?autoplay=true&u=85880466): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/java.md)
 - [x] [Learn Remix](https://remix.run/docs/en/v1/tutorials/blog)
 - [x] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2): [Notes]
+- [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
+- [x] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md).
 
 Maybe
 - [ ] [Build a JavaScript test framework](https://cpojer.net/posts/building-a-javascript-testing-framework)
