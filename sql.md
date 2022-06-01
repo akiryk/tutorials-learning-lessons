@@ -21,9 +21,9 @@ Semicolon is not always required but often is, so best practice to use it.
 A query is comprised of statements, which includes keywords such as `SELECT`, `FROM`, `ORDER BY`, etc.
 
 ```sql
-// sqllite uses limit
+# sqllite uses limit
 SELECT * FROM Countries LIMIT 10;
 
-// sqlserver uses top 
+# sqlserver uses top 
 SELECT TOP 10 * FROM Countries;
 ```
