@@ -15,3 +15,15 @@ A table that relates to another table is connected via a `foreign key`. The imag
 
 <img width="1094" alt="image" src="https://user-images.githubusercontent.com/2437758/171489555-2ca17cc0-b82c-4656-b875-bd7641765a55.png">
 
+## Syntax
+Semicolon is not always required but often is, so best practice to use it.
+
+A query is comprised of statements, which includes keywords such as `SELECT`, `FROM`, `ORDER BY`, etc.
+
+```sql
+// sqllite uses limit
+SELECT * FROM Countries LIMIT 10;
+
+// sqlserver uses top 
+SELECT TOP 10 * FROM Countries;
+```
