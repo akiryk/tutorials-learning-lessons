@@ -101,6 +101,9 @@ handle<number, string>(500);
 ```
 
 ### Advanced Types
+
+QUIZ Challenge: https://www.linkedin.com/learning/typescript-essential-training-14687057/challenge-the-right-type?autoSkip=true&autoplay=true&resume=false&u=85880466
+
 **Keyof** and **Index Acccess Types**
 ```ts
 // Keyof enables you to access each key in a type or interface
@@ -149,6 +152,14 @@ const parrot: ZooAnimal = {
 
 getId(box);    // 1
 getId(parrot); // 2
+
+// Index Access Type
+// val can be of any of the types in type T. If T is Shape, that means val can be id of number, width of number or name of string
+function flexibleFn<T>(val: {
+    [TType in keyof T]: T[TType]
+}) {
+    
+}
 ```
 
 ### Utility Types
