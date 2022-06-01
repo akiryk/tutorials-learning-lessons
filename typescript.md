@@ -109,10 +109,15 @@ type Contact = {
   age: number
 }
 
+// assuming getField is called with Contact type:
+// keyof T will be "name" and "age"
+// T[keyof T] will be string and number
+// 
 function getField<T>(source: T, property: keyof T): T[keyof T] {
   return source[property]; // index access type, e.g. Contact["name"]
 }
 
+const c1: Contact = { // ... a contact }
 getField(c1, "name");  // yes!
 getField(c1, "email"); // no!
 
