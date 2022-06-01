@@ -26,6 +26,7 @@ FullStack Learning Path
 - [ ] [Software Architecture](https://www.linkedin.com/learning/software-architecture-foundations)
 - [ ] [Architecture Patterns for Devs](https://www.linkedin.com/learning/software-architecture-patterns-for-developers)
 - [ ] [Microservices Patterns](https://www.linkedin.com/learning/microservices-foundations)
+- [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490)
 - [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
 
 Done
