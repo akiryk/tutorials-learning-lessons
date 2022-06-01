@@ -1,4 +1,7 @@
 # REST
+
+See also [web-services](https://github.com/akiryk/tutorials-learning-lessons/blob/master/web-services.md)
+
 Representational State Transfer. 
 It isn't a specific techology or protocol, rather a data architecture and design methology.
 **REST is a set of principles and guiding restraints**
