@@ -48,5 +48,12 @@ SELECT COUNT(*) FROM Country WHERE Continent = "Europe";
 
 More complex query:
 ```sql
-SELECT Name AS Country, SurfaceArea AS "Surface Area" FROM Country WHERE SurfaceArea > 100000 AND Continent = "Europe" ORDER BY SurfaceArea DESC;
+SELECT Name AS Country, SurfaceArea AS "Surface Area" 
+  FROM Country 
+  WHERE SurfaceArea > 100000 
+  AND Continent = "Europe" 
+  ORDER BY SurfaceArea DESC
+  LIMIT 5;
 ```
+The above returns something like this:
+<img width="252" alt="image" src="https://user-images.githubusercontent.com/2437758/171496647-e6ab6d7f-055e-4a75-bf69-f60fa12b51e7.png">
