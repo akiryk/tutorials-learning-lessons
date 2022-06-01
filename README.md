@@ -5,7 +5,7 @@ Notes about different code-related topics.
 ## Lessons
 Focus on these:
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
-- [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
+- [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/tree/master)
 - [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
 
 Work your way through these slowly
