@@ -5,8 +5,8 @@ Notes about different code-related topics.
 ## Lessons
 Focus on these:
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
-- [ ] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md). Return to Part 2 after completion to be sure you understand the process of designing an API.
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3)
+- [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
 
 Work your way through these slowly
 - [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) | [My Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
@@ -23,12 +23,12 @@ FullStack Learning Path
 - [ ] [DevOps Overview](https://www.linkedin.com/learning/devops-foundations)
 - [ ] [Node JS Essentials](https://www.linkedin.com/learning/node-js-essential-training-2)
 - [ ] [NoSQL Intro](https://www.linkedin.com/learning/nosql-essential-training)
-- [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
 - [ ] [Software Architecture](https://www.linkedin.com/learning/software-architecture-foundations)
 - [ ] [Architecture Patterns for Devs](https://www.linkedin.com/learning/software-architecture-patterns-for-developers)
 - [ ] [Microservices Patterns](https://www.linkedin.com/learning/microservices-foundations)
 - [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490)
 - [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
+- [x] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md).
 
 Done
 - [x] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/remix.md)
