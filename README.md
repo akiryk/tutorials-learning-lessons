@@ -4,9 +4,9 @@ Notes about different code-related topics.
 
 ## Lessons
 Focus on these:
-- [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/tree/master)
 - [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490)
+- [ ] [MonoRepos in GitHub](https://www.linkedin.com/learning/building-monorepos-on-github)
 
 
 Work your way through these slowly
@@ -14,7 +14,6 @@ Work your way through these slowly
 - [ ] [Programming Foundations: Algorithms](https://www.linkedin.com/learning/programming-foundations-algorithms/algorithms-power-the-world?autoplay=true&contextUrn=urn%3Ali%3AlyndaLearningPath%3A57bdd8a292015ae4c0cb990f&u=85880466): [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/data-structures.md). Currently up to bubble sort video. 
 
 Frontend Learning Path:
-- [ ] [MonoRepos in GitHub](https://www.linkedin.com/learning/building-monorepos-on-github)
 - [ ] [React Software Architecture](https://www.linkedin.com/learning/react-software-architecture/learn-software-architecture-with-react?u=85880466)
 - [ ] [JavaScript Code Challenges](https://www.linkedin.com/learning/javascript-code-challenges/available-books?autoSkip=true&autoplay=true&resume=false&u=85880466)
 - [ ] [Docker for Developers](https://www.linkedin.com/learning/docker-for-developers-14493163)
@@ -40,6 +39,7 @@ Done
 - [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
 - [x] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md).
 - [x] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/web-services.md)
+- [x] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
 
 Maybe
 - [ ] [Build a JavaScript test framework](https://cpojer.net/posts/building-a-javascript-testing-framework)
