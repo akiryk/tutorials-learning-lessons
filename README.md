@@ -6,7 +6,8 @@ Notes about different code-related topics.
 Focus on these:
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/tree/master)
-- [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/web-services.md)
+- [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490)
+
 
 Work your way through these slowly
 - [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) | [My Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
@@ -26,7 +27,6 @@ FullStack Learning Path
 - [ ] [Software Architecture](https://www.linkedin.com/learning/software-architecture-foundations)
 - [ ] [Architecture Patterns for Devs](https://www.linkedin.com/learning/software-architecture-patterns-for-developers)
 - [ ] [Microservices Patterns](https://www.linkedin.com/learning/microservices-foundations)
-- [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490)
 - [ ] [Advanced SQL queries](https://www.linkedin.com/learning/advanced-sql-for-query-tuning-and-performance-optimization)
 - [ ] [Foundations: Databases](https://www.linkedin.com/learning/programming-foundations-databases-2)
 
@@ -39,6 +39,7 @@ Done
 - [x] [Foundations: Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures-2): [Notes]
 - [x] [REST APIs](https://www.linkedin.com/learning/learning-rest-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md)
 - [x] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md).
+- [x] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/web-services.md)
 
 Maybe
 - [ ] [Build a JavaScript test framework](https://cpojer.net/posts/building-a-javascript-testing-framework)
