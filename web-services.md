@@ -47,6 +47,9 @@ Paypal uses SOAP, for example.
 To make a SOAP endpoint in Java, use the `src.main.java.com.keysoft.soap` package and import `javax.jws.WebService` and `javax.jws.WebMethod`. Then you can annotate the class with a `@WebService` decorator above your Java class. 
 
 ## ACID Compliance
+
+A set of principles that ensure database transactions are processed reliably:
+
 - Atomicity
 - Consistency
 - Isolation
