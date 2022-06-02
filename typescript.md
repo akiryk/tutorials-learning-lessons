@@ -242,6 +242,7 @@ function authorize(roleID: string) {
      * @param {string} property - the name of the property the decorator is applied to
      * @param {object} PropertyDescriptor = an object containing metadata about the property. 
      *   It is the data about whether given object is enumerable, writable, etc. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
+     */
     return function authorizeDecorator(target: any, property: string, descriptor: PropertyDescriptor) {
         const wrapped = descriptor.value; 
         descriptor.value = function() {
@@ -251,7 +252,7 @@ function authorize(roleID: string) {
             return wrapped.apply(this, arguments);
         }
     }
-        
+}
 ```
 
 ## Resources
