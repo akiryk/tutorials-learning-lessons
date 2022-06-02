@@ -6,7 +6,7 @@ Notes about different code-related topics.
 Focus on these:
 - [ ] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
 - [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/tree/master)
-- [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services)
+- [ ] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/web-services.md)
 
 Work your way through these slowly
 - [ ] [Typescript FEM Game Show](https://frontendmasters.com/courses/typescript-practice/) : [Class Notes](https://www.typescript-training.com/course/making-typescript-stick) | [My Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
