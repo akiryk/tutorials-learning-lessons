@@ -28,6 +28,7 @@ FullStack Learning Path
 - [ ] [Microservices Patterns](https://www.linkedin.com/learning/microservices-foundations)
 - [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490)
 - [ ] [Advanced SQL queries](https://www.linkedin.com/learning/advanced-sql-for-query-tuning-and-performance-optimization)
+- [ ] [Foundations: Databases](https://www.linkedin.com/learning/programming-foundations-databases-2)
 
 Done
 - [x] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/remix.md)
