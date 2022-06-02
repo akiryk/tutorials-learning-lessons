@@ -215,6 +215,45 @@ const gridCells: Record<string, Cell> = {
 - `Omit`
 - `Require`
 
+## Decorators
+Decorators enable you to wrap classes, methods, and properties in functions that enhance or modify behavior. They are a Typescript implementation of a _proposed_ addition to JavaScript, so subject to change.
+
+Examples include:
+- decorate a class with `@singleton` to make any class a singleton
+- decorate a method with `@authorize` to enable any method to throw an error if user doesn't have correct permissions
+- decorate a property with `@auditable` to audit any time the property changes
+
+Note that these decorators and names are all custom and arbitrary. The way they are implemented depends on whether you are decorating a class, method, or property. 
+
+Decorating a **method** is the most straightforward. 
+
+```ts
+class Contacts {
+
+  @authorize("Editor"); // getContact should only be accessed by a user with "Editor" permissions
+  getContact() {
+    // ... do stuff
+}
+
+// outside of the class, create the decorator factory
+function authorize(roleID: string) {
+    /**
+     * @param {object} target - the object that the decorator is applied to; e.g. instance of the object that the method belongs to
+     * @param {string} property - the name of the property the decorator is applied to
+     * @param {object} PropertyDescriptor = an object containing metadata about the property. 
+     *   It is the data about whether given object is enumerable, writable, etc. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).
+    return function authorizeDecorator(target: any, property: string, descriptor: PropertyDescriptor) {
+        const wrapped = descriptor.value; 
+        descriptor.value = function() {
+            if (!currentUser.isAuthenticated()) { throw Error("No auth!") }
+            if (!currentUser.isInRole(roleID)) { throw Error(`Not right role, ${roleID}!`) }
+            
+            return wrapped.apply(this, arguments);
+        }
+    }
+        
+```
+
 ## Resources
 * [FrontEnd Masters Typescript](https://frontendmasters.com/courses/typescript-v2) course. 
 * [Github repo](https://github.com/mike-works/typescript-fundamentals)
