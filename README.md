@@ -8,7 +8,7 @@ Focus on these:
 - [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/php-linkedin-leaning.md)
 - [ ] [MonoRepos in GitHub](https://www.linkedin.com/learning/building-monorepos-on-github) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/monorepos.md)
 - [ ] [MonoRepos Robin Weiruch](https://www.robinwieruch.de/javascript-monorepos/)
-- [ ] [Google Cloud Certification Course](https://app.pluralsight.com/channels/details/1b0cc7b3-4ab1-49a4-ad6d-23f827d40996)
+- [ ] [Google Cloud Certification Course](https://app.pluralsight.com/channels/details/1b0cc7b3-4ab1-49a4-ad6d-23f827d40996) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/GCP/intro.md)
 
 
 Work your way through these slowly
