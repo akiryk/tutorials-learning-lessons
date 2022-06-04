@@ -102,7 +102,9 @@ Core storage options:
 - Google Big Table
 
 ### Cloud Storage 
-Cloud storage is b inary large-object storage. This means you hand over an arbitrary chunk of bytes and GCP gives you a key so you can access it later. The key is often in the form of a URL, so it works well with the web. 
+Cloud storage is frequently the ingestion point for getting data into the cloud and is frequently the long-term storage location for data. 
+
+What is it? It's binary large-object storage. This means you hand over an arbitrary chunk of bytes and GCP gives you a key so you can access it later. The key is often in the form of a URL, so it works well with the web. 
 - You don't need to provision capacity ahead of time. 
 - the objects are immutable; you don't change them in place but create new versions; 
 - there are various options for managing versioning and keeping or deleting old versions
@@ -111,4 +113,36 @@ Cloud storage is b inary large-object storage. This means you hand over an arbit
     - regional
     - nearline
     - coldline
- -
+ - there are various ways to get data into Cloud Storage, depending on how much you need to transfer
+
+### Big Table
+A managed NoSQL solution. It's ideal for data that has a single look up key. In fact, you could think of it as a persistent hash table. 
+Big table has some advantages over managing your own data:
+- scalability
+- all data is encrypted "in-flight" and "at rest"
+- it's the same db that powers Gmail and Maps and other Google services
+- Data can be read or written with a layer like an HBase REST Server.
+
+`HBase`: Apache Hadoop is a library for handline data. 
+
+### Cloud SQL
+Offers MySQL and PostgreSQL databases as a service. It is an RDBMS, "relational db management system", meaning it's a program that allows you to create, update, and administer a relational database. Traditionally, relational DBs are a lot of work to set up and manage; Cloud SQL does a lot of that work for you. 
+
+Scalability: It can scale vertically, by changing the machine type, or horizontally via read replicas (i.e. create a replica with near-realtime data updates to keep replica in sync with the original box). 
+
+Vertical vs Horizontal scaling: **Vertical** means improving the machine by upgrading, adding memory, CPU, etc. **Horizontal** means adding additional machines. 
+
+Alternative: You could run your own db in a virtual machine, but then it's up to you to manage. 
+
+### Cloud Spanner
+If you need more horizontal scaling, consider Cloud Spanner. It's great for when you need sharding and fits with transactional database uses such as inventory management. 
+
+### Cloud Data Store
+Also a NoSQL option. It's a horizontally scalable NoSQL db. 
+
+Unlike Cloud Big Table, it offers transactions that update multiple rows.
+
+## Compare options
+
+<img width="1208" alt="image" src="https://user-images.githubusercontent.com/2437758/172006160-c1d6057e-6625-4123-bd8a-3f987fef9206.png">
+
