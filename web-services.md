@@ -46,6 +46,9 @@ Paypal uses SOAP, for example.
 
 To make a SOAP endpoint in Java, use the `src.main.java.com.keysoft.soap` package and import `javax.jws.WebService` and `javax.jws.WebMethod`. Then you can annotate the class with a `@WebService` decorator above your Java class. 
 
+### Interoperability
+A fundamental characteristic of Web Services is that they are interoperable. This means that a client can invoke a Web Service regardless of the client's hardware or software. For example, an interoperable Web Service running on WebLogic Server on a Sun Microsystems computer running Solaris can be invoked from a Microsoft .NET Web Service client written in Visual Basic.
+
 ## ACID Compliance
 
 A set of principles that ensure database transactions are processed reliably:
