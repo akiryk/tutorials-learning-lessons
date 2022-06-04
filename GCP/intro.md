@@ -100,6 +100,7 @@ Core storage options:
 - Cloud Spanner
 - Cloud DataStore 
 - Google Big Table
+- Big Query
 
 ### Cloud Storage 
 Cloud storage is frequently the ingestion point for getting data into the cloud and is frequently the long-term storage location for data. 
@@ -115,6 +116,8 @@ What is it? It's binary large-object storage. This means you hand over an arbitr
     - coldline
  - there are various ways to get data into Cloud Storage, depending on how much you need to transfer
 
+**Use Cloud Storage if**: you need to store large immutable blobs, such as movies or large images. 
+
 ### Big Table
 A managed NoSQL solution. It's ideal for data that has a single look up key. In fact, you could think of it as a persistent hash table. 
 Big table has some advantages over managing your own data:
@@ -124,6 +127,8 @@ Big table has some advantages over managing your own data:
 - Data can be read or written with a layer like an HBase REST Server.
 
 `HBase`: Apache Hadoop is a library for handline data. 
+
+**Use Big Table if**: you need to store a large amount of structured objects; it does not support SQL like queries or multi-row transactions. 
 
 ### Cloud SQL
 Offers MySQL and PostgreSQL databases as a service. It is an RDBMS, "relational db management system", meaning it's a program that allows you to create, update, and administer a relational database. Traditionally, relational DBs are a lot of work to set up and manage; Cloud SQL does a lot of that work for you. 
@@ -135,12 +140,19 @@ Vertical vs Horizontal scaling: **Vertical** means improving the machine by upgr
 Alternative: You could run your own db in a virtual machine, but then it's up to you to manage. 
 
 ### Cloud Spanner
-If you need more horizontal scaling, consider Cloud Spanner. It's great for when you need sharding and fits with transactional database uses such as inventory management. 
+If you need more horizontal scaling (not just replication), consider Cloud Spanner. It's great for when you need sharding and fits with transactional database uses such as inventory management. 
 
-### Cloud Data Store
+**Use Cloud SQL or Cloud Spanner if**: you need full SQL support. 
+
+### Cloud Datastore
 Also a NoSQL option. It's a horizontally scalable NoSQL db. 
 
 Unlike Cloud Big Table, it offers transactions that update multiple rows.
+
+**Use Cloud Datastore if**: you need to store unstructured objects or if you require support for transactions and SQL like queries.
+
+### BigQuery
+THe usual reason to use it is for its big data analysis and interactive querying capabilities. You wouldn't use it as the backing store for an online application.
 
 ## Compare options
 
