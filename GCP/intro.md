@@ -92,3 +92,23 @@ Once the VM is made, you'll see it listed on the VM Instances panel. You can SSH
 ## Infrastructure Overview
 
 GCP provides a "solution continuum" from IaaS (infrastructure as a service) to SaaS (software as a service).
+
+## Storage in the Cloud
+Core storage options:
+- Cloud Storage
+- CloudSQL
+- Cloud Spanner
+- Cloud DataStore 
+- Google Big Table
+
+### Cloud Storage 
+Cloud storage is b inary large-object storage. This means you hand over an arbitrary chunk of bytes and GCP gives you a key so you can access it later. The key is often in the form of a URL, so it works well with the web. 
+- You don't need to provision capacity ahead of time. 
+- the objects are immutable; you don't change them in place but create new versions; 
+- there are various options for managing versioning and keeping or deleting old versions
+- there are also options for access, frequent vs infrequent — i.e. multiregional storage vs cold storage (for data access < 1 per year)
+    - multi-regional
+    - regional
+    - nearline
+    - coldline
+ -
