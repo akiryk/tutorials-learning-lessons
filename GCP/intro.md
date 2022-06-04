@@ -68,7 +68,7 @@ Go to console > marketplace and search for LAMP.
 Choose LAMP Bitnami and launch.
 Once it's launched, enter the shell and create a phpinfo.php page, which you can then view.
 
-## Virtual Machines in the Cloud
+## Compute Engine: Virtual Machines in the Cloud
 
 VPC (Virtual Private Cloud).
 
