@@ -166,3 +166,13 @@ Let's revisit IaaS compared to PaaS.
 **App Engine** is Platform as a Service, You pay to access a "family" of services, such as caching, DB, storage, Networking. Scaling happens easily and rapidly, but you don't have control over the underlying architecture. 
 
 **Kubernetes Engine** is like the best of both of these. It scales like PaaS but gives you nearly the flexibility of IaaS. The container abstraction gives you a lot of portability. You can treat the operating system and hardware as a black box. 
+
+Kubernetes is a tool for deploying containers to a set of nodes called a cluster. Each node in Kubernetes is a computing instance. In Google Cloud, each node is a virtual machine running in compute engine. 
+
+Kubernetes uses "pods". You can have a single container per pod or a bunch of stuff, but it's common to keep them limited to one container. Each pod gets a unique IP address. 
+
+A deployment is a group of replicas of the same pod. 
+
+`kubectl run nameofcontainer` will run a container. Say "cube-c-t-l".
+`kubectl get pods` will show you the running pods. 
+By default pods in a deployment are only accessible within a cluster. However, you can make them public by connecting a load balancer. You do this with `kubectl expose deployments`
