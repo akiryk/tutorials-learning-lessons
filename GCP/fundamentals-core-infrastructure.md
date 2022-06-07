@@ -187,6 +187,7 @@ kubectl get pods
 kubectl create deploy
 kubectl expose deployment
 kubectl get services 
+```
 
 ## App Engine
 Both GKE and GCE provide infrastructure for applications in which you choose the infrastructure in which it runs. GCE uses VMs and GKE uses containers. If you don't want to focus on the infrastructure at all, App Engine may be a good solution. App Engine manages the platform and hardware. You just hand it your code and it takes care of the rest. 
