@@ -180,3 +180,10 @@ By default pods in a deployment are only accessible within a cluster. However, y
 `kubectl get services` will show you your public IP address.
 
 The real strength of Kubernetes is not imperative but declarative. Instead of issueing commands, you provide a config file that says how you want your desired end-state to look. Kubernetes takes care of the how.
+
+### kubectl commands
+```sh
+kubectl get pods
+kubectl create deploy
+kubectl expose deployment
+kubectl get services 
