@@ -7,3 +7,5 @@ A: It means that Compute Engine gets access to VMs which you then configure to y
 Q: Can we see our Registry GKE clusters? How?
 
 Q: Wayfair uses GKE, not Application Engine or Compute Engine, right? 
+
+Q: What is Cloud Endpoints and how is it related to GKE, Compete Engine and App Engine? 
