@@ -1,8 +1,6 @@
-# Google Cloud Platform
+# Fundamentals: Core Infrastructure
 
-## Fundamentals: Core Infrastructure
-
-### Introduction
+## Introduction
 
 GCP offers 4 main kinds of services:
 
@@ -89,7 +87,7 @@ There are different types of load balances for HTTP, SSL, TCP, and other options
 Go to compute engine > VM Instances. Choose options and click Create.
 Once the VM is made, you'll see it listed on the VM Instances panel. You can SSH into each instance you create. In this exercise, we made a second instance and proved it could load the web page at the other instance. We did this by enabling HTTP access.
 
-## Infrastructure Overview
+### Infrastructure Overview
 
 GCP provides a "solution continuum" from IaaS (infrastructure as a service) to SaaS (software as a service).
 
@@ -154,7 +152,15 @@ Unlike Cloud Big Table, it offers transactions that update multiple rows.
 ### BigQuery
 THe usual reason to use it is for its big data analysis and interactive querying capabilities. You wouldn't use it as the backing store for an online application.
 
-## Compare options
+### Compare options
 
 <img width="1208" alt="image" src="https://user-images.githubusercontent.com/2437758/172006160-c1d6057e-6625-4123-bd8a-3f987fef9206.png">
 
+## Containers in the Cloud
+Kubernetes
+
+Let's revisit IaaS compared to PaaS. 
+
+**Compute Engine** is an Infrastructure as a Service. You pay to access virtualized insfrastructure that is based on real-world hardware. You install the OS of your choice and you get things like CPU, memory, file systems, networking, and scaling, but you don't have to manage the real hardware yourself. This has a lot of advantages, but it can take a while to boot up and if you need to scale quickly it can be hard.
+
+**App Engine** is Platform as a Service, You pay to access a "family" of services, such as caching, 
