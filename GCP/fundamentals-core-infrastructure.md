@@ -161,6 +161,8 @@ Kubernetes
 
 Let's revisit IaaS compared to PaaS. 
 
-**Compute Engine** is an Infrastructure as a Service. You pay to access virtualized insfrastructure that is based on real-world hardware. You install the OS of your choice and you get things like CPU, memory, file systems, networking, and scaling, but you don't have to manage the real hardware yourself. This has a lot of advantages, but it can take a while to boot up and if you need to scale quickly it can be hard.
+**Compute Engine** is an Infrastructure as a Service. You pay to access virtualized insfrastructure that is based on real-world hardware. You install the OS of your choice and you get things like CPU, memory, file systems, networking, but you don't have to manage the real hardware yourself. This has a lot of advantages, but it can take a while to boot up and if you need to scale quickly it can be hard.
 
-**App Engine** is Platform as a Service, You pay to access a "family" of services, such as caching, 
+**App Engine** is Platform as a Service, You pay to access a "family" of services, such as caching, DB, storage, Networking. Scaling happens easily and rapidly, but you don't have control over the underlying architecture. 
+
+**Kubernetes Engine** is like the best of both of these. It scales like PaaS but gives you nearly the flexibility of IaaS. The container abstraction gives you a lot of portability. You can treat the operating system and hardware as a black box. 
