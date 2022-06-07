@@ -156,8 +156,8 @@ THe usual reason to use it is for its big data analysis and interactive querying
 
 <img width="1208" alt="image" src="https://user-images.githubusercontent.com/2437758/172006160-c1d6057e-6625-4123-bd8a-3f987fef9206.png">
 
-## Containers in the Cloud
-Kubernetes
+## GKE: Containers in the Cloud
+Google Kubernetes Engine (GKE)
 
 Let's revisit IaaS compared to PaaS. 
 
@@ -175,4 +175,8 @@ A deployment is a group of replicas of the same pod.
 
 `kubectl run nameofcontainer` will run a container. Say "cube-c-t-l".
 `kubectl get pods` will show you the running pods. 
-By default pods in a deployment are only accessible within a cluster. However, you can make them public by connecting a load balancer. You do this with `kubectl expose deployments`
+By default pods in a deployment are only accessible within a cluster. However, you can make them public by connecting a load balancer. You do this with `kubectl expose deployments`. Kubernetes will then create a service that points to a single IP address for your pods. It's a networked load balancer. Any client that hits that IP address will be routed to a pod behind the service. 
+
+`kubectl get services` will show you your public IP address.
+
+The real strength of Kubernetes is not imperative but declarative. Instead of issueing commands, you provide a config file that says how you want your desired end-state to look. Kubernetes takes care of the how.
