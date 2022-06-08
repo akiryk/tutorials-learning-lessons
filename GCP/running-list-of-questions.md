@@ -3,6 +3,7 @@
 Course to take:
 https://app.pluralsight.com/paths/certificate/cloud-engineering-with-google-cloud
 https://app.pluralsight.com/channels/details/1b0cc7b3-4ab1-49a4-ad6d-23f827d40996
+Also: https://app.pluralsight.com/library/courses/getting-started-application-development-5/table-of-contents
 
 Q: What is the difference between App Engine and Compute Engine? 
 App Engine is "Platform" as a service whereas Compute Engine is "Infrastructure" as a service, but what does this mean? 
