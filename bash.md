@@ -18,6 +18,8 @@ ls -la
 ```
 
 ### Variables
+While it is possible to work with numbers, bash isn't the best tool. Variables are best thought of as strings and only strings. 
+
 You create a variable by simply `myvar="some value"`. No spaces! `x = 5` fails because bash thinks you have a command, `x` with an argument, `=`
 
 Retrieve the value with keyword `echo` and `$`, as in `echo $myvar`. Use `echo` to avoid running the script unintentionally. 
