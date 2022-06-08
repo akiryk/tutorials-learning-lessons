@@ -9,6 +9,11 @@ GCP offers 4 main kinds of services:
 3. Big Data
 4. Machine Learning
 
+These services exist along a continuum, from more managed to more dynamic:
+
+<img width="2460" alt="image" src="https://user-images.githubusercontent.com/2437758/172704064-a15ec47b-3e67-4da4-95fd-c7ea4b5d5804.png">
+
+
 This course focuses on Compute and Storage, together with the topic of networking.
 
 What is cloud? Pay for what you use; scale easily.
