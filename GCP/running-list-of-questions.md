@@ -13,3 +13,7 @@ Q: What is Cloud Endpoints and how is it related to GKE, Compete Engine and App 
 Q: Is there a reason we'd use StackDriver? How is it different from DataDog or other tools we use?
 
 Q: What are all the ways Wayfair uses GCP? 
+
+Q: How much do we have to handle load balancing? How to choose among these options?
+<img width="2394" alt="image" src="https://user-images.githubusercontent.com/2437758/172704372-015473ed-8651-4389-97c2-ac99cb0e44eb.png">
+
