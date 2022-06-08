@@ -20,6 +20,8 @@ ls -la
 ### Variables
 While it is possible to work with numbers, bash isn't the best tool. Variables are best thought of as strings and only strings. 
 
+In general, better to use lowercase names for variables because the pre-defined vars are all uppercase, and you could override them.
+
 You create a variable by simply `myvar="some value"`. No spaces! `x = 5` fails because bash thinks you have a command, `x` with an argument, `=`
 
 Retrieve the value with keyword `echo` and `$`, as in `echo $myvar`. Use `echo` to avoid running the script unintentionally. 
@@ -54,3 +56,8 @@ The above script can be used like so:
 ```sh
 # pass `claire` as first argument.
 ./scriptname claire
+```
+
+### Debugging
+- Add `-v` to `#!/bin/bash -v` so that every line gets printed before it runs. This way, you can see where a script hangs up. 
+- Add `-x` instead to print also the values being read, which can be more useful
