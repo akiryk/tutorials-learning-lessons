@@ -197,3 +197,24 @@ App Engine has to options, Standard and Flexible.
 ### Cloud Endpoints 
 It enables APIs using a proxy in front of your service. You can use REST and more. Cloud endpoints support apps running in GKE and Compute Engine. 
 
+## Developing and Deploying and Monitoring in the Cloud
+
+- Cloud Source Repositories are git repos hosted on GCP.
+- Cloud functions are like serverless functions: write in JavaScript for node environment that GCP provides. They can trigger on any number of events. 
+
+### Deployment Manager
+You create a yaml file and it manages for you. 
+
+### Monitoring
+GCP provides **StackDriver** for helping you monitor
+
+## Data
+Google's tools for helping you get the most out of data, whether analytics of machine learning. 
+
+- Big Query: Analytics database
+- Cloud pub/sub: enterprise messaging
+- Cloud Datalab: interactive data exploration
+- Cloud Dataflow: batch processing and pipelines
+- Cloud Dataproc: managed Hadoop, which is an open source tool for handling big data.
+
+
