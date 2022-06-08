@@ -1,9 +1,10 @@
 # Bash
 
 ## Plurasight Bash Intro Course
-Bash is simply a text file run by an interpreter, the Bash programming language. In order to run a file, you must have executable permissions, which you can add as below:
+Bash is simply a text file run by an interpreter, the Bash shell, zsh, or sh. In order to run a file, you must have executable permissions, which you can add as below:
 ```sh
-# inside myfile.sh
+#!bin/bash
+# Always start your file like so to ensure it's run by the bash shell
 
 # change permissions by adding x to user:
 chmod u+x myfile
