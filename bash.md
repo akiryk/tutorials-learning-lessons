@@ -1,11 +1,17 @@
 # Bash
 
-## Permissions
-
-**Add ability for user to execute a file**
-* `chmod u+x myfile.js`
-* Now you can say ./myfile.js rather than node ./myfile.js
+## Plurasight Bash Intro Course
+Bash is simply a text file run by an interpreter, the Bash programming language. In order to run a file, you must have executable permissions, which you can add as below:
 ```sh
-# ls -la
--rwxr--r--    1 akiryk  staff  1843 Dec 30 08:52 ex3.js
+# inside myfile.sh
+
+# change permissions by adding x to user:
+chmod u+x myfile
+
+# run the file:
+./myfile.sh
+
+# check permissions
+ls -la
+# results in: -rwxr--r--    1 akiryk  staff  1843 Dec 30 08:52 ex3.js
 ```
