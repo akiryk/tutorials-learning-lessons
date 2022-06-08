@@ -15,5 +15,4 @@ Q: Is there a reason we'd use StackDriver? How is it different from DataDog or o
 Q: What are all the ways Wayfair uses GCP? 
 
 Q: How much do we have to handle load balancing? How to choose among these options?
-<img width="2394" alt="image" src="https://user-images.githubusercontent.com/2437758/172704372-015473ed-8651-4389-97c2-ac99cb0e44eb.png">
-
+<img width="2274" alt="image" src="https://user-images.githubusercontent.com/2437758/172704431-b16c179b-221e-4df6-b28f-04aa9388eca1.png">
