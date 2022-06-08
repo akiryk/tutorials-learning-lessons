@@ -11,3 +11,5 @@ Q: Wayfair uses GKE, not Application Engine or Compute Engine, right?
 Q: What is Cloud Endpoints and how is it related to GKE, Compete Engine and App Engine? 
 
 Q: Is there a reason we'd use StackDriver? How is it different from DataDog or other tools we use?
+
+Q: What are all the ways Wayfair uses GCP? 
