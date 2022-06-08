@@ -217,4 +217,5 @@ Google's tools for helping you get the most out of data, whether analytics of ma
 - Cloud Dataflow: batch processing and pipelines
 - Cloud Dataproc: managed Hadoop, which is an open source tool for handling big data.
 
-
+Cloud Vision provides a REST API for categorizing images.
+Cloud Natural Language API does same for making sense of text. It can parse text and flag important ideas. 
