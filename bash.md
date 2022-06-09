@@ -20,11 +20,16 @@ ls -la
 ### Variables
 While it is possible to work with numbers, bash isn't the best tool. Variables are best thought of as strings and only strings. 
 
-In general, better to use lowercase names for variables because the pre-defined vars are all uppercase, and you could override them.
-
-You create a variable by simply `myvar="some value"`. No spaces! `x = 5` fails because bash thinks you have a command, `x` with an argument, `=`
+You create a variable by simply `myvar="some value"`. 
+- Use single quotes if you want to escape `$`. `x='$someVariable, world'` will print `$someVariable, world`. 
+- Use double quotes by default. `x="$someVariable, world"` will print `[value of $someVariable], world`. 
+- don't use spaces `x = "some value"` fails because bash thinks you have a command, `x` with an argument, `=`
+- variable names are case sensitive
+- use lowercase names because pre-defined variables are all uppercase and you could override them
 
 Retrieve the value with keyword `echo` and `$`, as in `echo $myvar`. Use `echo` to avoid running the script unintentionally. 
+
+Predefined variables include `$USER` and `$SHELL`. To see all of them, use the `printenv` command.
 
 Note that the behavior changes in zsh compared to bash in some respects:
 ```sh
@@ -33,6 +38,8 @@ touch $files
 # in bash, you have two files, file1 and file2
 # zsh gives just one file, 'file1 file2'
 ```
+
+There are several predefined variables such as $USER, $SHELL
 
 ### Your first script
 Create a script file comprised of commands. You can refer to arguments with the dollar sign and the number of the argument. For example `$1` refers to the first argument.
@@ -61,3 +68,10 @@ The above script can be used like so:
 ### Debugging
 - Add `-v` to `#!/bin/bash -v` so that every line gets printed before it runs. This way, you can see where a script hangs up. 
 - Add `-x` instead to print also the values being read, which can be more useful
+
+### Printing/Echoing
+`echo` is easy to use for printing content to the terminal, but it isn't very powerful. `printf` is better and does more, but can be complicated. 
+```sh
+# prints My username is akiryk and I'm using the /bin/zsh shell
+printf "My username is %s and my shell is %s\n" $USER $SHELL
+```
