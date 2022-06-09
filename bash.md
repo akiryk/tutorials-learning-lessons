@@ -28,6 +28,7 @@ You create a variable by simply `myvar="some value"`.
 - use lowercase names because pre-defined variables are all uppercase and you could override them
 - use braces to be explicit about the variable name
 - not a bad idea to use double quotes for variables all the time, as in the example script below
+- use ShellCheck utility to test/debug
 
 Retrieve the value with keyword `echo` and `$`, as in `echo $myvar`. Use `echo` to avoid running the script unintentionally. 
 
