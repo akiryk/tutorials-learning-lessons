@@ -26,6 +26,8 @@ You create a variable by simply `myvar="some value"`.
 - don't use spaces `x = "some value"` fails because bash thinks you have a command, `x` with an argument, `=`
 - variable names are case sensitive
 - use lowercase names because pre-defined variables are all uppercase and you could override them
+- use braces to be explicit about the variable name
+- not a bad idea to use double quotes for variables all the time, as in the example script below
 
 Retrieve the value with keyword `echo` and `$`, as in `echo $myvar`. Use `echo` to avoid running the script unintentionally. 
 
@@ -53,7 +55,7 @@ directory="reports"
 mkdir -p $directory
 
 # search for the string passed as the first argument and create a new file with that name
-grep $1 shipments.csv > $directory/$1.csv
+grep $1 shipments.csv > {$directory}_reports/$1.csv
 
 # communicate success to the user
 echo Report created.
@@ -68,6 +70,8 @@ The above script can be used like so:
 ### Debugging
 - Add `-v` to `#!/bin/bash -v` so that every line gets printed before it runs. This way, you can see where a script hangs up. 
 - Add `-x` instead to print also the values being read, which can be more useful
+
+Use [ShellCheck](https://www.shellcheck.net/) as an online debugger utility
 
 ### Printing/Echoing
 `echo` is easy to use for printing content to the terminal, but it isn't very powerful. `printf` is better and does more, but can be complicated. 
