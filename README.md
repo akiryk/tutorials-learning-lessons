@@ -42,8 +42,8 @@ Done
 - [x] [Design a RESTful API](https://www.linkedin.com/learning/designing-restful-apis) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/REST_APIs.md).
 - [x] [APIs and Web Services](https://www.linkedin.com/learning/programming-foundations-apis-and-web-services) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/web-services.md)
 - [x] [Typescript Essential Training](https://www.linkedin.com/learning/typescript-essential-training-14687057) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/typescript.md)
-- [x] [Shell Scripting Essentials](https://app.pluralsight.com/library/courses/shell-scripting-bash-zshell-getting-started/table-of-contents)
-- [x] [GCP] [Fundamentals: Core Infrastructure](https://app.pluralsight.com/library/courses/google-cloud-platform-fundamentals-core-infrastructure/table-of-contents)
+- [x] [Shell Scripting Essentials](https://app.pluralsight.com/library/courses/shell-scripting-bash-zshell-getting-started/table-of-contents) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/bash.md)
+- [x] [GCP] [Fundamentals: Core Infrastructure](https://app.pluralsight.com/library/courses/google-cloud-platform-fundamentals-core-infrastructure/table-of-contents) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/GCP/fundamentals-core-infrastructure.md)
 
 Maybe
 - [ ] [Build a JavaScript test framework](https://cpojer.net/posts/building-a-javascript-testing-framework)
