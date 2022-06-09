@@ -44,6 +44,9 @@ touch $files
 
 There are several predefined variables such as $USER, $SHELL
 
+**Export**
+The `export` command makes a variable available to child processes. If you say `export USER="bsmith"` and then call a shell script such as `./my-script.sh`, `my-script.sh` will be able to reference `$USER` and get `bsmith`, not whatever is set in the `.zshrc` file. 
+
 ### Your first script
 Create a script file comprised of commands. You can refer to arguments with the dollar sign and the number of the argument. For example `$1` refers to the first argument.
 ```sh
