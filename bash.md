@@ -83,3 +83,16 @@ Use [ShellCheck](https://www.shellcheck.net/) as an online debugger utility
 # prints My username is akiryk and I'm using the /bin/zsh shell
 printf "My username is %s and my shell is %s\n" $USER $SHELL
 ```
+
+### If/Else
+Start with `if` and end with `fi`. Otherwise, separate statements with semicolon or on a new line.
+
+When putting an if statement in a script, use double brackets like so:
+```sh
+# if an argument has not been passed
+if [[ ! $1 ]]
+then 
+  echo "no first arg"
+else 
+  echo "success!"
+fi
