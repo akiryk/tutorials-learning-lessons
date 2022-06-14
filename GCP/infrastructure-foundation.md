@@ -35,3 +35,6 @@ Every project gets a default network with one subnet per region and default fire
 
 Networks isolate systems. This graphic shows separate virtual machines that can communicate by different means depending on whether they are on the same network or not. A, B, C, and D represent different Virtual Machines. To be clear, C and D communicate over external IPs but not the public internet — they use Google Edge routers. 
 <img width="2481" alt="image" src="https://user-images.githubusercontent.com/2437758/173688232-087ea628-2fdb-4674-aa88-8331f88f4193.png">
+
+# Status:
+I made it to Virtual Networks: IP Address, so start here: https://app.pluralsight.com/course-player?clipId=95e7c236-691f-45c5-b5a8-20d2d8eff80a
