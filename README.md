@@ -4,11 +4,8 @@ Notes about different code-related topics.
 
 ## Lessons
 Focus on these:
-- [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/tree/master)
-- [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/php-linkedin-leaning.md)
-- [ ] [MonoRepos in GitHub](https://www.linkedin.com/learning/building-monorepos-on-github) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/monorepos.md)
-- [ ] [MonoRepos Robin Weiruch](https://www.robinwieruch.de/javascript-monorepos/)
 - [ ] [Google Cloud Certification Course](https://app.pluralsight.com/channels/details/1b0cc7b3-4ab1-49a4-ad6d-23f827d40996) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/GCP/intro.md)
+- [ ] [Microservices skills development courses](https://app.pluralsight.com/channels/details/2331f77c-5d49-4d45-88d1-fa165b178241)
 
 
 Work your way through these slowly
@@ -20,6 +17,7 @@ Frontend Learning Path:
 - [ ] [JavaScript Code Challenges](https://www.linkedin.com/learning/javascript-code-challenges/available-books?autoSkip=true&autoplay=true&resume=false&u=85880466)
 - [ ] [Docker for Developers](https://www.linkedin.com/learning/docker-for-developers-14493163)
 - [ ] [Your First Kubernetes Project](https://www.linkedin.com/learning/kubernetes-your-first-project)
+- [ ] [MonoRepos in GitHub](https://www.linkedin.com/learning/building-monorepos-on-github) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/monorepos.md)
 
 FullStack Learning Path
 - [ ] [DevOps Overview](https://www.linkedin.com/learning/devops-foundations)
@@ -30,6 +28,9 @@ FullStack Learning Path
 - [ ] [Microservices Patterns](https://www.linkedin.com/learning/microservices-foundations)
 - [ ] [Advanced SQL queries](https://www.linkedin.com/learning/advanced-sql-for-query-tuning-and-performance-optimization)
 - [ ] [Foundations: Databases](https://www.linkedin.com/learning/programming-foundations-databases-2)
+- [ ] [Laravel PHP APIs](https://www.linkedin.com/learning/building-restful-apis-in-laravel-8532490) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/php-linkedin-leaning.md)
+- [ ] [SQL Essential Training](https://www.linkedin.com/learning/sql-essential-training-3) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/tree/master)****
+
 
 Done
 - [x] [Remix Jokes App](https://remix.run/docs/en/v1.4.3/tutorials/jokes#jokes-app-tutorial) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/remix.md)
