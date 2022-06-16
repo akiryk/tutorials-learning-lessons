@@ -24,7 +24,7 @@ gsutil cp some_filt gs://my_bucket_1
 MY_BUCKET=gs://my_bucket_1
 ```
 
-## Virtual Networks and Virtual Machines
+## Virtual Networks
 
 ### Useful background on IP addresses
 - IP addresses are unique ways of pointing to every computer, printer, router, switch, etc. 
@@ -60,3 +60,5 @@ When you make a VM without external IP, you can't ssh to it; however, you can tu
 # gcloud ssh [VM_NAME] --zone [ZONE_NAME] --tunnel-through-iap
 gcloud compute ssh vm-internal --zone us-central1-c --tunnel-through-iap
 ```
+
+## Virtual Machines
