@@ -5,7 +5,7 @@ Notes about different code-related topics.
 ## Lessons
 Focus on these:
 - [ ] [Google Cloud Certification Course](https://app.pluralsight.com/channels/details/1b0cc7b3-4ab1-49a4-ad6d-23f827d40996) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/tree/master/GCP)
-- [ ] [Microservices skills development courses](https://app.pluralsight.com/channels/details/2331f77c-5d49-4d45-88d1-fa165b178241)
+- [ ] [Microservices skills development courses](https://app.pluralsight.com/channels/details/2331f77c-5d49-4d45-88d1-fa165b178241) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/tree/master/Microservices)
 
 
 Work your way through these slowly
