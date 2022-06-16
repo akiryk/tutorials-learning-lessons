@@ -49,6 +49,10 @@ Networks isolate systems. This graphic shows separate virtual machines that can 
 Firewall rules are applied to the network as a whole, but connections are allowed or denied at the instance level.
 Even if firewall rules are deleted, there's an implied rule to deny all ingress and allow all egress
 
+### Common Network Designs
+- If your app needs increased availability, put >1 VM in multiple zones but within the same subnet
+- If your app needs increased robust systems, use multiple regions.  
+
 ### VMs with no external IP
 We create a VM without an external IP and access it with cloud iap. 
 We then enable private google access and  so it can access google api services.  
@@ -60,5 +64,13 @@ When you make a VM without external IP, you can't ssh to it; however, you can tu
 # gcloud ssh [VM_NAME] --zone [ZONE_NAME] --tunnel-through-iap
 gcloud compute ssh vm-internal --zone us-central1-c --tunnel-through-iap
 ```
+
+### Cloud NAT Gateway
+In cloud shell, you can update, patch, etc -- e.g. use `sudo apt-get update` and it works!
+
+It won't work if you try `sudo apt-get update` on a VM without external IP. You can fix this by creating a Cloud NAP gateway. Do so 
+at the subnet level. 
+
+- go to Network Services > Cloud NAT
 
 ## Virtual Machines
