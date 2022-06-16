@@ -74,3 +74,37 @@ at the subnet level.
 - go to Network Services > Cloud NAT
 
 ## Virtual Machines
+A VM is similar to a real piece of hardware with key differences. It includes a virtual CPU, some amount of memory, disk storage, and an IP address. 
+On the other hand, a micro-VM shares its CPU with other VMs, so it's cheaper. Also, some offer burst capability; it can offer above-capacity for a brief period. Both of these can't be done by hardware machines.
+
+Google Cloud options for VMs
+
+Compute Engine 
+- gives the most flexibility; 
+- it's IaaS and you can configure language, scaling. 
+- It's very portable.
+
+### Patch management
+Critical to maintenance and security for your long-running VMs. Use the OS Patch Management service.
+
+### Machine families
+When creating a VM, you have choice of machine families depending on what you need — better price, better memory, etc.
+
+- General Purpose Optimized: There are several options for specific machines from less powerful to more powerful.
+- Compute Optimized: things like gaming, ad serving, streaming.
+- Memory Optimized: in-memory databases. An in-memory database is faster than one on disk, but requires a lot of main memory. 
+- Accelerator Optimized: for computing that requires lots of CPUs 
+- Custom: for cases that aren't a good fit with the above options
+
+### Special configurations
+
+**Preemptible**
+Use preemptible VMs for big discounts. 
+They can be terminated at any time, but you can put in place controls that will start a new one right away.
+Useful for batch processing.
+
+Others include sole-tenant nodes; confidential VM; shielded VMs
+
+### Images
+this is like a Docker image. You can choose Linix or Windows images or custom images. 
+
