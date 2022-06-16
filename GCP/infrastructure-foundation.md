@@ -48,3 +48,15 @@ Networks isolate systems. This graphic shows separate virtual machines that can 
 **Firewalls**
 Firewall rules are applied to the network as a whole, but connections are allowed or denied at the instance level.
 Even if firewall rules are deleted, there's an implied rule to deny all ingress and allow all egress
+
+### VMs with no external IP
+We create a VM without an external IP and access it with cloud iap. 
+We then enable private google access and  so it can access google api services.  
+
+VM instances without external IP addresses are isolated from external networks. With **Cloud NAT**, these instances can access the internet for updates and patches. 
+
+When you make a VM without external IP, you can't ssh to it; however, you can tunnel with iap. To do this, use
+```sh
+# gcloud ssh [VM_NAME] --zone [ZONE_NAME] --tunnel-through-iap
+gcloud compute ssh vm-internal --zone us-central1-c --tunnel-through-iap
+```
