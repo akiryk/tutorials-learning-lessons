@@ -69,3 +69,11 @@ We can solve this with composition, **UI Composition**. There are two ways to do
 
 - Service side composition: compose HTML fragments composed by different services.
 - Client side composition: build a skeleton that aggregates microservice components.
+
+**Distributed Services**
+
+Since there are many services and each can have changing addresses, we need a way for them to find one another. Enter the **Service Registry**, a "phone book" that can look up services by their name.
+
+Services much register on startup and de-register on shut down. Wayfair uses Consul, although only in a limited way. Others include ZooKeeper and Eureka.
+
+CORS is also an issue, since different microservices have different IPs, MSs have to add http headers that enable CORS.
