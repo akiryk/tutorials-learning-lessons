@@ -77,3 +77,30 @@ Since there are many services and each can have changing addresses, we need a wa
 Services much register on startup and de-register on shut down. Wayfair uses Consul, although only in a limited way. Others include ZooKeeper and Eureka.
 
 CORS is also an issue, since different microservices have different IPs, MSs have to add http headers that enable CORS.
+
+## Summary
+- We start with a business that has a domain (e.g. e-commerce) and sub-domains (e.g. user-management; orders; inventory; product)
+- We create microservices based on the subdomains. Each is independent, with its own database, team, and versioning.
+- We need a **gateway** so the user interface is uniform across all these microservices
+- Databases need to exchange information but without directly relying on one another. This is where we use messaging with events and a system like Kafka.
+- Microservices need to expose API contracts so other services can use them
+- Since remote services can fail, we need **circuit breakers** to protect each call
+- The Gateway handles the service registry, authentication, and authorization
+- In order to enable monitoring, each microservice needs to expose a health check API
+- The system will have greater up-time (Availability) because it still works even if one service is down. However, every server must therefore be prepared for other services to fail and must _degrade gracefully_. Further, some services are critical, such as authentication; these must be highly available.
+
+## DURS
+Deploy, Update, Replace, and Scale. Each service must be able to do these things independently.
+
+## Pros and Cons
+- There is no standard tech stack for micro services, so you can't go to a single source for help. You need to stitch things together. 
+- designing your microservices is very much an art and there aren't firm rules; however, there are patterns and strategies for helping with domain driven design.
+- It is challenging to work with a distributed system. Network failure will occur, so services need to handle failure smartly.
+- Security: more services, more potential vulnerabilities. You need to take it seriously. 
+- Testing: easy if you only test your own service but much harder with integrated tests. Some companies therefore test in production and use "chaos" testing, which deliberately introduces errors. 
+- The more services, the more logs and monitoring; this will be hard. 
+
+Pros in green, cons in magenta
+
+<img width="1324" alt="image" src="https://user-images.githubusercontent.com/2437758/174458842-77e9d5cc-33eb-4740-a03a-2b6401892cb7.png">
+
