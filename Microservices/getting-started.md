@@ -11,16 +11,18 @@ Note that this course is mostly a re-cap of [the other beginner one](https://git
 ## Challenges
 First, microservices are hard.
 
-Communication isn't as fast as between modules in a monolith. When in a monolith, services are all in the same server; they are "in-process". In contrast, microservices will need to hit various networks. For this reason, the design of MS APIs needs to take network performance very seriously.
+Slow performance. Communication isn't as fast as between modules in a monolith. When in a monolith, services are all in the same server; they are "in-process". In contrast, microservices will need to hit various networks. For this reason, the design of MS APIs needs to take network performance very seriously.
 
 Networks fail. We need to be prepared for unreliability. For simple cases, this can be handled by trying again when something fails. But we 
 need a way _to handle stateful logic across systems_. For example, say we have a payment service and a content-screening service. If payment succeeds but content screening does not, we need to unwind the payment. We need some kind of stateful logic. 
 
-Analyzing telemetry data. There are multiple sources of data from different services and some operations span services. You can't treat metrics and logging as an afterthought. 
+Security is more complex.
 
-Robust automation with build tools for testing, deployment, monitoring, and scaling is critical. You can't do this stuff manually and there are so many tasks that can be automated in microservices architectures.  
+Analyzing telemetry data is hard since it comes from multiple places. There are multiple sources of data from different services and some operations span services. You can't treat metrics and logging as an afterthought. 
 
-Managing teams and systems. You need a full time architect or team of architects to provide guidance managing the inter-related services and governance. For example, you need to balance autonomy with consistency. 
+Need for robust automation with build tools for testing, deployment, monitoring, and scaling is critical. You can't do this stuff manually and there are so many tasks that can be automated in microservices architectures.  
+
+Oversight/Governance is essenstial. You need a full time architect or team of architects to provide guidance managing the inter-related services and governance. For example, you need to balance autonomy with consistency. 
 
 Beware of pseudo microservices, in which the services are coupled in some way, e.g. by using a shared database. This gets you the complexity of microservices with the inflexibility of a monolith. The worst of both worlds. 
 
