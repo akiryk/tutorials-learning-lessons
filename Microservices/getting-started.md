@@ -26,4 +26,16 @@ Oversight/Governance is essenstial. You need a full time architect or team of ar
 
 Beware of pseudo microservices, in which the services are coupled in some way, e.g. by using a shared database. This gets you the complexity of microservices with the inflexibility of a monolith. The worst of both worlds. 
 
-**New Term!** Remote Procedure Call (RPC). This is another way to design an API that is distinct from REST. It's a way for a server to run a procedure as thought it were on the local machine but is in fact out on the network.
+## Synchronous Architectures
+### Remote Procedure Call (RPC)
+RPC is the network equivalent of calling a function to help run your code. This is another way to design an API that is distinct from REST. It's a way for a server to run a procedure as thought it were on the local machine but is in fact out on the network. SOAP is RPC.  
+- RPCs have arguments and return values
+- they are expected to be executed immediately
+- the call is synchronous; the client that uses the RPC needs to wait for a response before continuing
+### Service Discovery
+The network address of a given server is located dynamically. Using service discovery is a way to ensure services remain truly independent. 
+Ways to do this include:
+- DNS One option is simply to use DNS and this is frequently possible with cloud services. 
+- Apache Zookeeper, which supports Hadoop and Kafka
+- Others
+- if all your services are on one provider like GCP, you're best bet is probably to use their service discovery tools
