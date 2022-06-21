@@ -70,3 +70,6 @@ If you have a service, `A`, with an availability SLA of 99% that is available 99
 Improving one may adversely affect the other. Why? because if you want to be more available, you'll need to set up to enable more re-tries in the event of a failure, which will add to latency. If you want greater speed, you'll have to sacrifice some availability when services don't respond. 
 
 One way to overcome these challenges is with asynchronous, messaging-based communications. 
+
+# Status
+I made it here: https://app.pluralsight.com/course-player?clipId=8f2116a0-f756-4926-baac-25f87549e87f
