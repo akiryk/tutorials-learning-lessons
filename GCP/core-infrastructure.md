@@ -27,3 +27,36 @@ You set up servers and storage in regions and zones around the Google global net
 - latency: time from server to user
 
 Google has wide-ranging security protections; enables customers to leave at any time thanks to wide usage of open-source tools such as Kubernetes, and enable pricing tailored to your workload.
+
+## Pricing
+You can use alerts, quotas and other tools to ensure you aren't hit with a big price increase. 
+
+# Resources & Access
+
+## Organization of GCP
+- Resources are things like storage buckets and VMs
+- Resources live inside of **projects**
+- Projects  organize your resources and are or can be organized into folders
+- Folders enable granular control of privileges for administration
+- Organization Node is the top level.
+
+Policies are managed and applied from the top downward. 
+
+## Identity and Access Management (IAM)
+Who can do what with which resources.
+
+Can do what part is defined by a **role**. Roles include
+- basic: owner, editor, viewer, billing admin
+- predefined: roles such as instance admin, which has privileges on compute engine
+- custom: define your own roles
+
+**Service accounts** enable you to give permissions to a VM.
+
+**Cloud Identity** enables orgs to manage their users and groups through a console, e.g. to disable a user who has left the company or add a new user.
+
+## Interacting with GCP
+You can use the console, the sdk, the mobile app, or an API.
+- The SDK and cloud shell is available through a terminal and has tools such as `gsutil` and the `gcloud` command, which are located in the `bin` directory. 
+
+# Status
+finished here: https://app.pluralsight.com/course-player?clipId=70db1524-b276-4874-9566-0aeeb32cbdca
