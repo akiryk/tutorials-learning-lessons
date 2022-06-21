@@ -6,7 +6,7 @@ The course structure is based on how Google thinks you should prepare. There's a
 
 1. [Preparing for Your Associate Cloud Engineer Journey](https://app.pluralsight.com/library/courses/preparing-associate-cloud-engineer-journey/table-of-contents)
 2. [Google Cloud Fundamentals: Core Infrastructure](https://app.pluralsight.com/library/courses/google-cloud-fundamentals-core-infrastructure/table-of-contents)
-3. [Google Cloud Platform Fundamentals - Core Infrastructure](https://app.pluralsight.com/library/courses/google-cloud-platform-fundamentals-core-infrastructure/table-of-contents) (done)
+3. [Google Cloud Platform Fundamentals - Core Infrastructure](https://app.pluralsight.com/library/courses/google-cloud-platform-fundamentals-core-infrastructure/table-of-contents) (done | [notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/GCP/fundamentals-core-infrastructure.md))
 4. [Essential Google Cloud Infrastructure: Foundation](https://app.pluralsight.com/library/courses/essential-google-cloud-infrastructure-foundation-3/table-of-contents) (done)
 5. Essential Google Cloud Infrastructure: Core Services
 6. Elastic Google Cloud Infrastructure: Scaling and Automation
