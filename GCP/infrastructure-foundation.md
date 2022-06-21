@@ -50,8 +50,10 @@ Firewall rules are applied to the network as a whole, but connections are allowe
 Even if firewall rules are deleted, there's an implied rule to deny all ingress and allow all egress
 
 ### Common Network Designs
-- If your app needs increased availability, put >1 VM in multiple zones but within the same subnet
-- If your app needs increased robust systems, use multiple regions.  
+- If your app needs increased availability, put multiple VMs in multiple zones but within the same subnet (a **zone** is part of a region; e.g. the region is `us-west1` and the zones are `us-west1-a`, `us-west1-b`, and `us-west1-c`).
+- for better latency, put VMs in different regions. 
+- for security best-practices, assign only internal IP addresses whenever possible. Gloud NAT can help with this by enabling private instaces to access the internet.
+- If your app needs more robust systems, use multiple regions.  
 
 ### VMs with no external IP
 We create a VM without an external IP and access it with cloud iap. 
@@ -105,6 +107,14 @@ Useful for batch processing.
 
 Others include sole-tenant nodes; confidential VM; shielded VMs
 
-### Images
-this is like a Docker image. You can choose Linix or Windows images or custom images. 
+### Back up data
+There are a few ways to do this, each with their own benefits:
+- Machine images
+- snapshots
+- custom images
 
+## Review
+This module looked at VNs and VMs and explored common actions. These included:
+- create a network and apply different firewall rules
+- add VMs of different types
+- set up a server with scheduled backups and maintenance 
