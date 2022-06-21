@@ -58,5 +58,31 @@ Can do what part is defined by a **role**. Roles include
 You can use the console, the sdk, the mobile app, or an API.
 - The SDK and cloud shell is available through a terminal and has tools such as `gsutil` and the `gcloud` command, which are located in the `bin` directory. 
 
-# Status
-finished here: https://app.pluralsight.com/course-player?clipId=70db1524-b276-4874-9566-0aeeb32cbdca
+## Google Compute Engine: VMs and Networking
+You generally start with a virtual private cloud (VPC). What is a VPC? 
+It's everything that can be on a public cloud, but it's secure and private: it can be servers, databases, function, VMs; you can host websites there or have services; and you can set firewall rules and include routes to forward traffic to specific destinations. 
+
+Google VPCs are global and can have subnets in any region. This **is important because** it enables solutions that are resilient yet retain a simple network layout — two VMs can be in different zones but on the same subnet.
+
+Compute Engine is Google's IaaS solution. Enables creating VMs that can be configured much like a phsyical server. You choose pre-defined from the "marketplace" or customize your own machine types. Use a pre-emptible machine for jobs that can be unexpectedly interrupted. 
+
+Routing tables are built-in, and are used to forward traffic from one VM to another within or across subnetworks and zones. 
+
+Firewall rules can be defined through meta-data tags on VM instances.
+
+## Cloud load balancing
+Its job is to distribute traffic across multiple instances of an application. You can put it in front of all your traffic, and you don't have to worry about scaling or managing the balancers. 
+
+There are different load balancing solutions depending on your requirements: global HTTP for web traffic, SSL Proxy for secure sockets, regional, and regional internal, which is for load balancing within your network, say between your business and presentation layers. 
+
+## Cloud DNS
+This enables the world at large to find applications built in the cloud. 
+Cloud CDN can be set up to reduce latency and load. After HTTP load balancing is set up, enable the CDN with a single checkbox. 
+
+## Connect networks outside google
+You can connect to on-site networks or to other VPCs using VPN, but Google provides a few other ways: direct peering, carrier peering, dedicated interconnect, or partner interconnect. 
+
+- allow-icmp rule: In order to connect to an external IP use the allow-icmp rule. 
+- allow-ssh allows ssh
+- allow-custom allows access to the internal IP
+
