@@ -1,4 +1,5 @@
-# Fundamentals: Core Infrastructure
+# GCP Fundamentals: Core Infrastructure
+Course: https://app.pluralsight.com/library/courses/google-cloud-platform-fundamentals-core-infrastructure/table-of-contents
 
 ## Introduction
 
