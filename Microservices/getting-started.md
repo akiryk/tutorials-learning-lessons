@@ -38,4 +38,22 @@ Ways to do this include:
 - DNS One option is simply to use DNS and this is frequently possible with cloud services. 
 - Apache Zookeeper, which supports Hadoop and Kafka
 - Others
-- if all your services are on one provider like GCP, you're best bet is probably to use their service discovery tools
+- if all your services are on one provider like GCP, you're best bet is probably to use the GCP service-discovery tools
+
+### Stateless RPCs
+Functional procedures (as in functional programs) are relatively simple. An example might be generating a PDF based on some data passed in as arguments. 
+
+Conduits are a form of facade. This might be a service that helps you communicate with a 3rd party services. 
+
+### Stateful RPCs
+More complex but more useful. 
+Idempotence: property of a system where it doesn't change if you perform the same operation multiple times. E.g. if you send a message and there's a failure to notify sender of success, what happens? The sender re-sends the same message. But the recipient microservice has already recieved it. It should recognize this is the same thing and not treat it as a second or third message. This is idempotence and is important in microservices. 
+
+This has three benefits:
+1. state should be unchanged when there's duplicate data
+2. simplifies implementation for clients because they don't have to worry about tracking state
+3. reduces coupling because it ensures business logic only happens in one place rather than several. That is, in our message example, rather than tracking which messages require notifications in both our client (sender) _and_ our notification service, we only do it in the notification service. 
+
+**Network Partition** and **failure modes**: a division of a network that into relatively independent parts such that one doesn't necessarily know about what happens in the other. This is important for microservices that have to handle failures. Example: your phone communications with a chat service. The chat service communicates with a notification service. In this case, there's a network partition between your phone and the services. Your phone doesn't know if there was a problem between the chat service and the notification service, it just knows that it sent or received a message. 
+
+You need to choose a failure mode, meaning which service's state is more important. 
