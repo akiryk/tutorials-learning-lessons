@@ -45,3 +45,18 @@ Precedence:
 
 - multiplicative operators (`*, /, %`) take precedence over additive ones, so `5 + 5 * 5 = 30` not 50.
 - When there are more than one type of operator, precedence goes left to right, so `5 * 5 / 5 = 5` not 5.
+
+### Type converstion
+Java will implicitly convert if going from one type to a wider type, say from int to long. If you want to go the other way, you need to cast:
+```java
+int x = 10;
+long y = x; // implicit works
+
+long a = 100001010101010L;
+int b = (int) a; // beware of side effects such as discarded data or lost precision!
+```
+
+### Logical Operators
+| ------- | -------- |
+| & | Logical 'and' |
+| ------ | ------|
