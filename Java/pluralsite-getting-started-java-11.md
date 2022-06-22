@@ -57,6 +57,19 @@ int b = (int) a; // beware of side effects such as discarded data or lost precis
 ```
 
 ### Logical Operators
-| ------- | -------- |
-| & | Logical 'and' |
-| ------ | ------|
+| Name | Operator | Description |
+| ------- | ------- | -------- |
+| And | `&` | similar to js `&&` but computes both sides even if first is true |
+| Or | `|` | similar to js `||` but also checks both sides |
+| Exclusive or | `^` | true if one side or the other is true but not both |
+| Negation | `!` | same as js | 
+
+### Conditional Operators
+| Name | Operator | Description |
+| ------- | ------- | -------- |
+| And | `&&` | same as `&` but only checks right side if left side is true |
+| Or | `||` | same as `|` but only checks right side if left is false |
+
+
+
+
