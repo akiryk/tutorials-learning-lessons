@@ -90,7 +90,7 @@ You can connect to on-site networks or to other VPCs using VPN, but Google provi
 Google Cloud has five storage options for structured, unstructured, transactional, and relational data.
 
 ### Cloud Storage
-Duragle "object-storage". This means is manages data as objects and is a type of nosql storage. Object storage does not store data in a file/folder hierarchy ("file storage") or as chunks of a disk ("block storage"). Objects stored in this way have a globally unique key, usually a URL, so they work well with the web. Typical types of data stored in this way include media like images, audio, and video. 
+Cloud storage is a type of durable "object-storage". This means it manages data as objects; it's a type of nosql storage. Object storage does not store data in a file/folder hierarchy ("file storage") or as chunks of a disk ("block storage"). Objects stored in this way have a globally unique key, usually a URL, so they work well with the web. Typical types of data stored in this way include media like images, audio, and video. 
 
 Its primary use is for BLOB (binary large-object) content. 
 
@@ -107,6 +107,26 @@ There are four **storage classses** in cloud storage:
 3. Coldline storage: also for infrequently accessed data, even less frequent
 4. Archive storage: when you access less than once a year and is the cheapest
 
+You can add data to any of these types of storage using gcloud's `gsutil` command or with a drag-and-drop option in the console. For importing huge amounts of data, use Storage Transfer Service. 
+
+### Cloud SQL
+Cloud options for relational databases include MySql, PostGreSQL, and SQLServer.
+Using this option doesn't require any special installations. You get encryption, backups, and automatic replications. 
+
+It's best for web frameworks and for storing things like orders and customer information. 
+
+Compute Engine instances can be configured to access Cloud SQL instances.  
+
 ### Cloud Spanner
+A fully managed relational database that scales horizontally and runs on SQL. It's great for anything that needs a relational database, large dbs, lots of reads/writes. 
+
+Best for largescale db applications.
+
+### Firestore
+A no sql db. Data is stored in documents and organized into collections. It's great for synching data in real-time. 
 
 ### Cloud BigTable
+Google's no-sql big-data service. It powers Google search, maps, and email. It's a great choice for analytics, internet-of-things, large data-sets.
+
+### BigQuery
+This will be discussed later because it straddles data-storage and data-processing. It's generally used for big-data analysis and querying. 
