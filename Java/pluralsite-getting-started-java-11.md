@@ -68,7 +68,7 @@ int b = (int) a; // beware of side effects such as discarded data or lost precis
 | Name | Operator | Description |
 | ------- | ------- | -------- |
 | And | `&&` | same as `&` but only checks right side if left side is true |
-| Or | `||` | same as `|` but only checks right side if left is false |
+| Or | `\|\|` | same as `|` but only checks right side if left is false |
 
 
 
