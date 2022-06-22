@@ -86,3 +86,27 @@ You can connect to on-site networks or to other VPCs using VPN, but Google provi
 - allow-ssh allows ssh
 - allow-custom allows access to the internal IP
 
+## Storage
+Google Cloud has five storage options for structured, unstructured, transactional, and relational data.
+
+### Cloud Storage
+Duragle "object-storage". This means is manages data as objects and is a type of nosql storage. Object storage does not store data in a file/folder hierarchy ("file storage") or as chunks of a disk ("block storage"). Objects stored in this way have a globally unique key, usually a URL, so they work well with the web. Typical types of data stored in this way include media like images, audio, and video. 
+
+Its primary use is for BLOB (binary large-object) content. 
+
+Cloud storage files are organized into buckets. The bucket should be located in a region close to end-users. 
+
+Storage objects are immutable; a new version is created with every change. You can either overwrite the old one or use versioning. 
+
+Because data can quickly get big and expensive, you have options called **lifecycle policies**, such as delete objects older than 365 days or before a certain date or delete only but the three most recent changes. 
+
+There are four **storage classses** in cloud storage:
+
+1. Standard storage: best for frequently accessed, or "hot", data; aka business-critical data
+2. Nearline Storage: infrequently accessed data (data backups; archiving, etc)
+3. Coldline storage: also for infrequently accessed data, even less frequent
+4. Archive storage: when you access less than once a year and is the cheapest
+
+### Cloud Spanner
+
+### Cloud BigTable
