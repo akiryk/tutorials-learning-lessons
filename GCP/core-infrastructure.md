@@ -20,6 +20,9 @@ In PaaS model, you pay only for what you use and you don't have to worry as much
 
 SaaS is another term, although not something related to GCP. Software as a Service is software that runs in the cloud and is used by end-users over the internet. Examples include Google Drive, gmail, etc. 
 
+### Compute Engine vs App Engine
+Compute Engine is Googles IaaS offering and App Engine is the PaaS offering.
+
 ## The Network
 You set up servers and storage in regions and zones around the Google global network. A region is something like Europe or Asia, and you can use regions for redundancy and security. Zones are things like europe-east and europe-west. You can also use multiple zones. Location affects 
 - durability: the resource will continue to exist, say, because of backups or redundancy
@@ -130,3 +133,10 @@ Google's no-sql big-data service. It powers Google search, maps, and email. It's
 
 ### BigQuery
 This will be discussed later because it straddles data-storage and data-processing. It's generally used for big-data analysis and querying. 
+
+## Containers
+Containers scale like PaaS but give you the flexitility and control of IaaS. 
+
+At a high level, Kubernetes is a set of APIs that let you deploy and manage containers on a set of nodes called a cluster. A node represents a computing instance, like a VM. 
+
+A pod is the smallest unit in K8s that you create and deploy. A pod represents a running process on your cluster as either a component of your application or your entire app.
