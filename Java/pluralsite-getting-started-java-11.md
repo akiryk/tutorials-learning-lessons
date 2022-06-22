@@ -70,6 +70,20 @@ int b = (int) a; // beware of side effects such as discarded data or lost precis
 | And | `&&` | same as `&` but only checks right side if left side is true |
 | Or | `\|\|` | same as `\|` but only checks right side if left is false |
 
+### Block Statements and Scope
+Like in JS, use curly braces to create blocks
+```java
+// if statements work without the {}, but only execute the one line that follows
+if (someVar)
+   callFunc1(); // runs!
+   callFunc2(); // won't run!
+  
+if (someVar) {
+   callFunc1(); // runs!
+   callFunc2(); // also runs!
+}
+```
+Note that variables declared in a block behave like `const` values do in JS. They have no value outside of the block context.
 
-
-
+### Switch statement
+You can use switch with non-primitive types but only with certain primitive types: char, int, byte, short, and long
