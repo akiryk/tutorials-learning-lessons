@@ -102,17 +102,39 @@ Benefits:
 **Consumer** The consumer subscribes to and listens to topics. They can subscribe to 1 or many and can configure how those messages get delivered via queues. You could have a different queue for each topic or one queue for messages from all topics. This means the same message published to a topic may be routed to one consumer one way, via a combined queue, and another may be delivered to a single queue. 
 Once consumer reads the message, it removes the message from the queue. 
 
-### Concerns with distributed transactions
+### Distributed transactions
+This is a sequence of coordinated state changes over distributed services. For example, if I post a photo to some app, I need to upload the photo; screen the photo; notify my friends; update my advertising profile; possibly add some fee to my account; etc. 
+
 Problems and concerns:
 - Message routing: best if we have a single service for coordinating how a transaction flows from one service to the next because this gives us a single point of truth representing the entire flow.
 - transaction state: if transaction is distrubuted, it's hard to know at any given time precisely what is the state. Ideally, you also have a single service for keeping track of this state. 
 - Failure compensation: if a given service fails, with chained routing the whole transaction becomes stuck. 
 
 Potential solutions:
+
 **Saga pattern**
+
 This is pattern centralizes the state of the distributed system into one place, a database in which records are kept for the current state of each transaction. As indicated in this image, the database keeps a record for each transaction, and each transaction has a current state. This enables:
 - user-initiated cancelation
 - rollback in the event of a failure. That is, if the Advertising step fails, it uses failure compensation to reset to the initial state and this then goes back to photo screening and timeline which can do the same.
+- change the sequence by redefining the saga to have a different order, say, screen photos first.
 <img width="2619" alt="image" src="https://user-images.githubusercontent.com/2437758/175344427-07d5a86e-1c62-4fe2-af10-0b2fd5332f08.png">
 
-- **routing slip pattern**
+**Routing slip pattern**
+
+A manufacturing routing slip is a document that says what steps need to be performed at what stations on a factory floor. Item A needs to go to stations 1, 2, and 3; at station 1, assemble the bike frame; at station 2, add a cushy seat; etc. 
+
+- change sequence by changing order on "routing slip"
+- easy to conditionally do certain steps -- if a transaction doesn't include a photo, don't include screening on the slip
+- no centralized state, which can improve performance.
+- if failure occurs, it follows the steps backwards
+
+TLDR is that these patterns each have benefits and are best for specific use-cases. E.g. Saga is best for when you need to centralize state, say, for reporting on transaction in progress. If you have conditional routing, routing slip is probably better. 
+
+<img width="2617" alt="image" src="https://user-images.githubusercontent.com/2437758/175347256-15b0b334-1477-4ddd-8ec0-def0397f7100.png">
+
+### Summary of async architectures
+Event driven architectures tend to exhibit "eventual consistency" behavior, meaning at any given time there may be a temporary inconsistency. For example, you liked a post but notification has not been set out yet because the message is waiting in a queue. This is necessary for service independence, but can be uncomfortable for people expecting ACID behaviors (Atomicity, Consistency, Isolation, Durability). 
+
+# NExt up:
+https://app.pluralsight.com/course-player?clipId=d2dc7719-2d49-4fc9-9bbc-169c54bcc601
