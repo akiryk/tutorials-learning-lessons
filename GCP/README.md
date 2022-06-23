@@ -8,7 +8,7 @@ The course structure is based on how Google thinks you should prepare. There's a
 2. [Google Cloud Fundamentals: Core Infrastructure](https://app.pluralsight.com/library/courses/google-cloud-fundamentals-core-infrastructure/table-of-contents) ([notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/GCP/core-infrastructure.md))
 3. [Google Cloud Platform Fundamentals - Core Infrastructure](https://app.pluralsight.com/library/courses/google-cloud-platform-fundamentals-core-infrastructure/table-of-contents) (done | [notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/GCP/fundamentals-core-infrastructure.md))
 4. [Essential Google Cloud Infrastructure: Foundation](https://app.pluralsight.com/library/courses/essential-google-cloud-infrastructure-foundation-3/table-of-contents) (done | [notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/GCP/infrastructure-foundation.md))
-5. Essential Google Cloud Infrastructure: Core Services
+5. [Essential Google Cloud Infrastructure: Core Services](https://app.pluralsight.com/library/courses/essential-google-cloud-infrastructure-core-services-8/table-of-contents) (notes)
 6. Elastic Google Cloud Infrastructure: Scaling and Automation
 7. Reliable Google Cloud Infrastructure: Design and Process
 8. Getting Started with Google Kubernetes Engine
