@@ -8,6 +8,12 @@ Note that this course is mostly a re-cap of [the other beginner one](https://git
 - Hub and Spoke model: If above approach works, the monolith may shrink until it is just an API gateway that defers to microservices. The Gateway can also handle cross-cutting concerns, such as authorization and authentication.
 - Event Driven architecture:  Services communicate via a message bus, that is services don't communicate directly with one another but through a "bus".
 
+## Benefits
+- easier to maintain boundaries between modules. In a monolith, blurring tends to occur and coupling between concerns that should be separate.
+- easier to test and maintain because smaller. 
+- resilience: the whole system won't be "down" because only one part may be down. 
+- ability to isolate third party APIs that might go down behind a single microservice
+
 ## Challenges
 First, microservices are hard.
 
@@ -71,5 +77,27 @@ Improving one may adversely affect the other. Why? because if you want to be mor
 
 One way to overcome these challenges is with asynchronous, messaging-based communications. 
 
-# Status
-I made it here: https://app.pluralsight.com/course-player?clipId=8f2116a0-f756-4926-baac-25f87549e87f
+## Asynchronous Communication via Message Bus
+These are often called event-driven or message-oriented architectures. Use a message bus to communicate between microservices, including how to coordinate distributed transactions and handle failures.
+
+A message bus handles getting messages from **senders** to **consumers**. Compare this to a remote procedure call. An RPC is **2-way** communication. Client sends off a request and receives by a response. Message-bus uses **1-way** communication in contrast. It's async and therefore lets uses do their work faster. 
+
+Example: click a like button. With RPC, you'd have to wait for several microservices to do their job of notifying, updating preferences, modifying advertising algorithms, etc -- only after all that had done would the like be saved. With bus, all you need to do is get the message delivered to the bus. The bus can then queue up all the different services that need updating and it can handle those things async.
+
+Benefits:
+
+- we can add microservices without changing existing services, which don't even need to know about the new services since it's handled by the bus
+- isolate slow services
+- absorb spikes in load
+- faster, no waiting for RPCs to complete
+
+### Anatomy of a message
+- include a payload with the key business info
+- include headers with metadata, timestamp, etc
+- messages must be small to avoid harming throughput and avoid risk of failure. Often size is limited by the implementation. 
+- if messages need to be big, we often put the large part into blog storage and simply refer to that in the message
+
+**Topics**: when publishing a message to a bus, the message is published under a "topic." Subscribers subscribe to one or many topics. Topics are things like "post-liked", "message-sent", "product-rated". 
+
+**Consumer** The consumer subscribes to and listens to topics. They can subscribe to 1 or many and can configure how those messages get delivered via queues. You could have a different queue for each topic or one queue for messages from all topics. This means the same message published to a topic may be routed to one consumer one way, via a combined queue, and another may be delivered to a single queue. 
+Once consumer reads the message, it removes the message from the queue. 
