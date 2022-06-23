@@ -140,3 +140,32 @@ Containers scale like PaaS but give you the flexitility and control of IaaS.
 At a high level, Kubernetes is a set of APIs that let you deploy and manage containers on a set of nodes called a cluster. A node represents a computing instance, like a VM. 
 
 A pod is the smallest unit in K8s that you create and deploy. A pod represents a running process on your cluster as either a component of your application or your entire app.
+
+## App Engine
+A fully managed, serverless platform for developing and hosting applications. It provides nosql, logging, health checks, load balancing, and a user auth api. You use the console to create new applications, configure domain names, and handle other admin. 
+
+1. **Standard App Engine Environment**
+Based on containers, the standard env enables:
+- persistent storage
+- automatic scaling and load balancing 
+- async task queues
+- scheduled tasks
+
+It's great for many applications, but less flexible. You must select from specified versions of java, php, python, node, and other languages. It must conform to sandbox constraints. 
+
+2. **Flexible Environment**
+- Application instances run within Docker containers on Compute Engine virtual machines (VM). 
+- It can support custom runtime or source code written in other programming languages.
+- Allows selection of any Compute Engine machine type for instances so that the application has access to more memory and CPU 
+
+How does GKE compare to these two options? 
+Choose the standard option if you want GCP to take maximum control of you app's deployment and scaling. In contrast, GKE gives you the full flexibility of kubernetes. The flex environment is somewhere between the two. 
+
+### Cloud Endpoints and Apogee Edge
+These are management tools for Google's API. 
+
+**Cloud endpoints** is a distributed system that runs in its own docker container. It enables you to create and maintain APIs with low latency. It provides lots of services to help you with your API. It supports applications running in GKE, App Engine and Compute Engine. 
+
+**Apogee Edge** focuses on business problems such as analytics. It's often used for legacy applications, helping spin off microservices one at a time until the legacy app can be retired. 
+
+### 
