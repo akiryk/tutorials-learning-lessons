@@ -101,3 +101,18 @@ Benefits:
 
 **Consumer** The consumer subscribes to and listens to topics. They can subscribe to 1 or many and can configure how those messages get delivered via queues. You could have a different queue for each topic or one queue for messages from all topics. This means the same message published to a topic may be routed to one consumer one way, via a combined queue, and another may be delivered to a single queue. 
 Once consumer reads the message, it removes the message from the queue. 
+
+### Concerns with distributed transactions
+Problems and concerns:
+- Message routing: best if we have a single service for coordinating how a transaction flows from one service to the next because this gives us a single point of truth representing the entire flow.
+- transaction state: if transaction is distrubuted, it's hard to know at any given time precisely what is the state. Ideally, you also have a single service for keeping track of this state. 
+- Failure compensation: if a given service fails, with chained routing the whole transaction becomes stuck. 
+
+Potential solutions:
+**Saga pattern**
+This is pattern centralizes the state of the distributed system into one place, a database in which records are kept for the current state of each transaction. As indicated in this image, the database keeps a record for each transaction, and each transaction has a current state. This enables:
+- user-initiated cancelation
+- rollback in the event of a failure. That is, if the Advertising step fails, it uses failure compensation to reset to the initial state and this then goes back to photo screening and timeline which can do the same.
+<img width="2619" alt="image" src="https://user-images.githubusercontent.com/2437758/175344427-07d5a86e-1c62-4fe2-af10-0b2fd5332f08.png">
+
+- **routing slip pattern**
