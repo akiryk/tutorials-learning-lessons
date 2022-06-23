@@ -168,4 +168,9 @@ These are management tools for Google's API.
 
 **Apogee Edge** focuses on business problems such as analytics. It's often used for legacy applications, helping spin off microservices one at a time until the legacy app can be retired. 
 
-### 
+## Cloud Run
+A fully managed serverless platform that runs individual containers. You give code or a container to Cloud Run, and it hosts and auto scales as needed to respond to web and other events.
+
+Use Cloud Run if you just need to deploy a containerized application in a programming language of your choice with HTTP/s and websocket support. Examples: websites, APIs, data processing apps, webhooks.
+
+[**Useful graphic** and explainer](https://cloud.google.com/blog/topics/developers-practitioners/where-should-i-run-my-stuff-choosing-google-cloud-compute-option)
