@@ -174,3 +174,24 @@ A fully managed serverless platform that runs individual containers. You give co
 Use Cloud Run if you just need to deploy a containerized application in a programming language of your choice with HTTP/s and websocket support. Examples: websites, APIs, data processing apps, webhooks.
 
 [**Useful graphic** and explainer](https://cloud.google.com/blog/topics/developers-practitioners/where-should-i-run-my-stuff-choosing-google-cloud-compute-option)
+
+## Monitoring
+
+### The Four Golden Signals
+1. Latency: speed and performance of your system as a whole or in part, measured in various ways
+2. Traffic: How many requests are reaching your system, e.g. # of http requests per second but also others.
+3. Saturation: measures how close to capacity is the service
+4. Errors
+
+### SLIs, SLOs, and SLAs
+Service Level Indicators (SLIs) are metrics that measure one aspect of a service's reliability, usually expressed as the number of good events divided 
+by the number of bad events, e.g. number of some error / count of all successful events.
+
+Service Level Objective (SLO). Combines an SLI with a target reliability. Guidelines for choosing SLOs since you can't measure everything: SMART
+- [S]pecific
+- [M]easurable
+- [A]chievable
+- [R]elevant
+- [T]imebound, e.g. a given service should be 99% available per the last 7 days.
+
+Service Level Agreement: a promise to maintain a particular level of success and define consequences if there's a problem. 
