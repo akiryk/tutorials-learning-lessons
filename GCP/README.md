@@ -11,7 +11,7 @@ The course structure is based on how Google thinks you should prepare. There's a
 5. [Essential Google Cloud Infrastructure: Core Services](https://app.pluralsight.com/library/courses/essential-google-cloud-infrastructure-core-services-8/table-of-contents) (notes)
 6. Elastic Google Cloud Infrastructure: Scaling and Automation
 7. Reliable Google Cloud Infrastructure: Design and Process
-8. Getting Started with Google Kubernetes Engine
+8. [Getting Started with Google Kubernetes Engine](https://app.pluralsight.com/library/courses/getting-started-google-kubernetes-engine-8/table-of-contents) (notes)
 9. Logging, Monitoring and Observability in Google Cloud
 10. Preparing for the Associate Cloud Engineer Examination
 https://app.pluralsight.com/library/courses/preparing-associate-cloud-engineer-journey/table-of-contents
