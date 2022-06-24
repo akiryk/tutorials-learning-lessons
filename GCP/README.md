@@ -2,6 +2,11 @@
 
 This program consists of the [Google/PluralSite curriculum](https://app.pluralsight.com/paths/certificate/cloud-engineering-with-google-cloud) and/or the [specialized curriculum](https://app.pluralsight.com/channels/details/1b0cc7b3-4ab1-49a4-ad6d-23f827d40996) designed at wayfair. 
 
+Some additional resources
+- [Visual Notes about GCP](https://github.com/priyankavergadia/GCPSketchnote)
+- [Developer Cheat Sheet](https://googlecloudcheatsheet.withgoogle.com/)
+- [GCP In-A-Minute Video Series](https://www.youtube.com/playlist?list=PLIivdWyY5sqIQ4_5PwyyXZVdsXr3wYhip)
+
 The course structure is based on how Google thinks you should prepare. There's a [diagnostic course](https://app.pluralsight.com/library/courses/preparing-associate-cloud-engineer-journey), which helps you plan study steps, and you're supposed to take it first. I suggest taking it last or close to last as a way to identify where you need to go back and study. This is the [set of links](https://app.pluralsight.com/paths/certificate/cloud-engineering-with-google-cloud) to courses.
 
 1. [Preparing for Your Associate Cloud Engineer Journey](https://app.pluralsight.com/library/courses/preparing-associate-cloud-engineer-journey/table-of-contents)
