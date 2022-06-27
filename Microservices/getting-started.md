@@ -136,5 +136,5 @@ TLDR is that these patterns each have benefits and are best for specific use-cas
 ### Summary of async architectures
 Event driven architectures tend to exhibit "eventual consistency" behavior, meaning at any given time there may be a temporary inconsistency. For example, you liked a post but notification has not been set out yet because the message is waiting in a queue. This is necessary for service independence, but can be uncomfortable for people expecting ACID behaviors (Atomicity, Consistency, Isolation, Durability). 
 
-# NExt up:
-https://app.pluralsight.com/course-player?clipId=d2dc7719-2d49-4fc9-9bbc-169c54bcc601
+## Microservice Boundaries
+In order to design a ms, we need a clear understanding of its API and its dependencies. This defines the service's boundaries. We have _inputs_ and _outputs_. The inputs are the things that come in from the API (http calls, remote procedure calls, message bus consumers). The outputs are the things that the service is dependent on such as data stores, third party APIs, other services, or  message bus publishing.  
