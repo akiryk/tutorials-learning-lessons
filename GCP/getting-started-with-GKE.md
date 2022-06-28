@@ -37,3 +37,47 @@ You need software to build container images and to run them. Docker is one such 
 In broad terms, Docker enables you to create a container with a Dockerfile based on "layers." You start with `FROM`, which creates the first layer, a particular version of Linux, say: `FROM ubuntu:1804`. You then add a next layer, say your application, by copying it in with the copy command: `COPY ./app`. `RUN` builds the application and the last layer uses `CMD` specifying what command to run when it's launched, e.g. `CMD java app/MAIN`
 
 You can build your own containers, but it isn't necessarily so simple. You can use Google's container registry or other public registries to access existing images with the user space you want. 
+
+### Cloud Build
+Tools for CI/CD pipelines
+
+## Kubernetes
+A container-centric management environment. It automatest the deployment, scaling, load-balancing, monitoring, and logging of containerized applications. 
+
+It has declarative configuration, so you tell it the desired state and it figures out how to get there. However, if you want to, you _can_ configure it imperatively. 
+
+1. K8s supports **stateless** applications, such as an nginx or apache serve and **stateful** applications where user and session data can be stored persistently. 
+2. Autoscaling
+3. Resource Limits
+4. Extensibility
+5. Portability: it can be moved and deployed anywhere
+
+Google's managed offering for Kubernetes is GKE. Why use it?
+
+### GKE
+The VMs that host your containers inside a GKE cluster are called nodes. 
+
+## Why choose a compute option?
+There are several GCP options and each has reasons you may want to use it. 
+
+**Why choose Compute Engine**: fully customizeable virtual machines
+- complete control over your OS and virtual hardware
+- most flexible when other solutions don't fit your needs
+
+**Why choose App Engine**: A fully-managed code-first platform
+- you just want to code and deploy your website or mobile app
+- you want to present a RESTful API
+
+**Why choose Google Kubernetes Engine**
+- You have a containerized application
+- cloud-native distributed systems
+- you want more control over your containers than what App Engine provides
+- you want denser packing than what Compute Engine offers
+
+**Why choose Cloud Run**: enables stateless containers
+- you want to pay very little (only for the time it is actually responding, good for hobbyists)
+- you don't need the slight speed boost of App Engine
+
+**Why choose Cloud Functions**: event-driven, serverless compute service
+- can be super helpful for supporting your microservices architecture
+- integrate serverless app with third party APIs
