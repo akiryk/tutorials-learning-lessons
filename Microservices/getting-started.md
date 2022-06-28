@@ -136,5 +136,35 @@ TLDR is that these patterns each have benefits and are best for specific use-cas
 ### Summary of async architectures
 Event driven architectures tend to exhibit "eventual consistency" behavior, meaning at any given time there may be a temporary inconsistency. For example, you liked a post but notification has not been set out yet because the message is waiting in a queue. This is necessary for service independence, but can be uncomfortable for people expecting ACID behaviors (Atomicity, Consistency, Isolation, Durability). 
 
-## Microservice Boundaries
+## Microservice Quality
 In order to design a ms, we need a clear understanding of its API and its dependencies. This defines the service's boundaries. We have _inputs_ and _outputs_. The inputs are the things that come in from the API (http calls, remote procedure calls, message bus consumers). The outputs are the things that the service is dependent on such as data stores, third party APIs, other services, or  message bus publishing.  
+
+If we have clear boundaries between inputs and outputs, we can design good test coverage using the classic pyramid approach (unit tests on the bottom; integration and manual tests at top).
+
+## Continuous Delivery
+In order to continue working with other services and avoid coupling, we need a strategy for modifying and adapting our service
+
+- API versioning: enable others to continue doing what they've been doing but you can move from v1 to v2.
+- Feature Toggles: enable functionality based on a condition
+
+## Team Culture
+There are certain approaches that are so important to developing microservices that you really want everyone on board:
+
+- automation (in testing, build, monitoring, benchmarking). 
+- invest in tooling
+- reserve capacity for building and maintaining tooling and automation
+- in a word, integration of operations with the dev team: **devops**
+- a high performing devops team builds observable software and uses their tools to monitor that everything does as it should
+
+### time allocation
+the well-oiled microservices team plans for these important aspects of work and allocates time accordingly:
+
+- building features
+- planning
+- monitoring
+- proactive maintenance
+- unplanned work (learning and experimenting)
+
+<img width="864" alt="image" src="https://user-images.githubusercontent.com/2437758/176180364-780a9922-7853-4824-9276-647a02059fb5.png">
+
+- unplanned work (learning and experimenting)
