@@ -81,3 +81,19 @@ There are several GCP options and each has reasons you may want to use it.
 **Why choose Cloud Functions**: event-driven, serverless compute service
 - can be super helpful for supporting your microservices architecture
 - integrate serverless app with third party APIs
+
+## Kubernetes Concepts
+A **node** is the smallest unit of hardware in kubernetes. It is a physical machine or virtual machine — some kind of device. 
+A **pod** is the environment where containers live. It can contain 1 or more containers. _If there is more than one container_, they are tightly coupled and share resources such as networking and storage. 
+
+K8s assigns each pod a unique IP address, and every container in the pod shares the same IP address and network ports. Containers in the same pod can communicate by localhost, 127.0.0.1.
+
+**Declarative** configuration. You say what you want and Kubernetes continuously monitors. If reality is out-of-sync with the declared config, it remedies the situation. 
+
+Your cluster needs computers. In GKE, these computers will be Virtual Machines. One of these VMs is called the "control plane" and the others are nodes. The job of the nodes is to run pods. The job of the control plane is to coodinate the cluster. 
+
+Several critical components run on the control plane: 
+- `kubeAPIserver`. It's job is to accept comments that view or change the state of the cluster using the `kubectl` command
+- `etcd`: the cluster's database. It's job is to store the state of the cluster. You won't interract with it directly. 
+- Kube scheduler
+- Kube Controller Manager: attempts to make changes to achieve the desired state
