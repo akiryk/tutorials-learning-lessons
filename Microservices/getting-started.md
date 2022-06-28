@@ -168,3 +168,17 @@ the well-oiled microservices team plans for these important aspects of work and 
 <img width="864" alt="image" src="https://user-images.githubusercontent.com/2437758/176180364-780a9922-7853-4824-9276-647a02059fb5.png">
 
 - unplanned work (learning and experimenting)
+
+## Architecting Services
+The ideal scenario is that feature development requires changes only in a single microservice. This indicates that our boundaries are clear. However, this is not always the case, and some features will require change across two or more services. This can be fine but can also be a sign worth noting:
+
+- if the same two services seem to require changing at the same time for new features, this can indicate that the boundary isn't clear. Consider merging them or else extracting the shared functionality into a new, third microservice
+
+What kind of work does an architect do to intentionally change and influence a microservice's architecture?
+- communicating with people: what's working? What isn't? Also: sharing the rational for design decisions; documentation. 
+- cultivating the tech practices and abilities of the teams
+
+### Review of managing architecture
+- avoid ROI droop with the _[design stamina hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html)_ . This says that for two projects where one uses no design and one has good design, the no-design approach will move faster in features first; however, at a certain point, the good-design approach will catch up to and then overtake it. 
+- "First Derivitive" change -- focus first and most on areas where the rate of change is the greatest. Areas subject to most change benefit most from architecture work. 
+
