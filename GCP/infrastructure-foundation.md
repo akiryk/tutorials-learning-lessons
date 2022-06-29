@@ -98,14 +98,44 @@ When creating a VM, you have choice of machine families depending on what you ne
 - Accelerator Optimized: for computing that requires lots of CPUs 
 - Custom: for cases that aren't a good fit with the above options
 
+### Pricing
+Google Compute Engine uses per-second billing with a min. of 1 minute. Further, pricing is based on resource use, meaning each virtual CPU and GB of memory is billed separately. 
+
+GCP gives discounts based on a few options
+
+- sustained usage: is you use the VM for a significant portion of a billing period, there's a discount
+- preemptible VM: Big discounts, but they only live for up to 24hours and you only get a 30 second heads-up; however, you can put in place controls that will start a new one right away. Useful for batch processing.
+
+
 ### Special configurations
+- preemptible
+- sole tenant nodes: for isolating workloads based on compliance requirements, for example
+- confidential VMs: enable encrypting data while being processed
+- shielded VMs: an even more secure foundation so you know your data hasn't been compromised
 
-**Preemptible**
-Use preemptible VMs for big discounts. 
-They can be terminated at any time, but you can put in place controls that will start a new one right away.
-Useful for batch processing.
+### Images
+When creating a VM, you can choose a boot disk image. Image includes the boot loader, the OS, file system structure, pre-configured software, and customizations.
 
-Others include sole-tenant nodes; confidential VM; shielded VMs
+You can choose a Linux or Windows image. Different types have different charges. You can also use custom images. 
+
+A **machine image** is a compute engine resource that stores all the info requried to create a VM instance. You can use one for system maintentance. They are the ideal resource for cloning and backups. 
+
+### Disk Types
+When setting up a VM, you choose an operating system. That OS will be part of a disk, and you can select which type of disk you want. 
+
+Every VM comes with a single root persistent disk; you choose a base image to have it loaded on. 
+**?????** What does this mean? 
+
+**Persistent Disks**. These are high performance and attach to either Google Compute Engine VMs or GKE VMs through the network interface. It's not physically attached to the machine, so the disk survives even if the VM terminates. 
+
+There are different kinds of persistent disks, based on cost and performance requirements. 
+
+- Standard is low cost and suited for data processing
+- SSDs better for low latenccy and input/output per second (IOPS). 
+
+**Local SSDs** They are _physically attached_ to the machine, so they are not persistent. They will survive a reset but not a VM stop or termination. But they have very high IOPS.
+
+**RAM Disks** Enable you to store data in memory using `tmpfs` (a file system in which all files are in virtual memory). The point of this is to have high throughput and low latency. You'll want to consider an alternate system to back up your data since this method is very volative and erases on restart or stop. 
 
 ### Back up data
 There are a few ways to do this, each with their own benefits:
