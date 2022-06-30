@@ -5,5 +5,5 @@
 
 **Beginner**:
 
-- [Microservices: The Big Picture](https://app.pluralsight.com/library/courses/microservices-big-picture/table-of-contents) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/intro.md)
-- [Microservices: Getting Started](https://app.pluralsight.com/library/courses/getting-started-microservices/table-of-contents) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/getting-started.md)
+- [Microservices: The Big Picture](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/intro.md)
+- [Microservices: Getting Started](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/getting-started.md)
