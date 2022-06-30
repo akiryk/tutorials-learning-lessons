@@ -238,3 +238,16 @@ All of the above points to the importance of monitoring your systems.
 -> "Correlation ID": a unique identifier value that is attached to requests and messages that allow reference to a particular transaction and can help when monitoring issues across a distributed system. 
 
 -> "Circuit breaker pattern": stop making a particular call to another service if the error rate passes a particular limit. After a period of time, it tries again. This can improve performance and prevent amplification effect.
+
+## High Performaing Tech
+Stronger companies are better suited to microservices pattern. This can be measured by your software development approach. Strong teams practice:
+
+- Continuous Deployment
+- Low Lead Time, the time between writing the user story and getting it into production. 1 hour is high perf.
+- Low Mean Time to Recovery (MTTR), the time between identifying a problem and getting the fix out to customers. 1 hour is high perf.
+- Low Change Failure Rate, the rate at which changes cause problems that need to be fixed. 0-15% is high performing.
+
+## Microservices are suited for certain situations
+- large scale: lots of users, lots of data
+- governance: lots of developers, large teams, different products
+- complexity: regulatory, processing, logic, or anything
