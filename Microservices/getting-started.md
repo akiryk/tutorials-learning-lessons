@@ -236,3 +236,5 @@ All of the above points to the importance of monitoring your systems.
 - centralized logs are critical; you should be able to use correlation IDs to track an issue across services
 
 -> "Correlation ID": a unique identifier value that is attached to requests and messages that allow reference to a particular transaction and can help when monitoring issues across a distributed system. 
+
+-> "Circuit breaker pattern": stop making a particular call to another service if the error rate passes a particular limit. After a period of time, it tries again. This can improve performance and prevent amplification effect.
