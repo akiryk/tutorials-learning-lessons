@@ -7,3 +7,4 @@
 
 - [Microservices: The Big Picture](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/intro.md)
 - [Microservices: Getting Started](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/getting-started.md)
+- [Microservices: Architecture Fundamentals](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/ms-architecture-fundamentals.md)
