@@ -182,3 +182,57 @@ What kind of work does an architect do to intentionally change and influence a m
 - avoid ROI droop with the _[design stamina hypothesis](https://martinfowler.com/bliki/DesignStaminaHypothesis.html)_ . This says that for two projects where one uses no design and one has good design, the no-design approach will move faster in features first; however, at a certain point, the good-design approach will catch up to and then overtake it. 
 - "First Derivitive" change -- focus first and most on areas where the rate of change is the greatest. Areas subject to most change benefit most from architecture work. 
 
+## Quality
+External vs Internal quality.
+### Externtal quality measures things visible to end-users:
+- visible to end users
+- reliability
+- performance
+### Internal measures things visible to programmers:
+- maintainability 
+- observability
+- testability
+
+You need both for resilience. Internal quality is the measure of how easy or hard it is to fix/change/improve code in response to issues related to external quality. 
+
+If you create a duplicate of prod code, you can more easily test upper layers of testing pyramid that integrate all the services. 
+
+## Capacity
+Measuring capacity varies depending on whether you're looking at sync or async communications. 
+
+### Synchronous Communications
+You'll want to monitor 
+
+- latency
+- CPU usage
+- memory
+- errors 
+
+If we see latency growing noticeably, and that memory usage spiked shortly beforehand, we can draw some conclusions about what's going on and why. This is why monitoring is so important. 
+
+### Asynchronous Communications
+Better to monitor 
+
+- Queue length (in message bus, e.g.)
+- CPU
+- memory 
+- errors
+
+Error rate is important, but less of a good indicator since robust systems typically won't have a lot of errors. Queue length is a better indicator because it shows us that we're approaching max capacity. One strength of async is that message buses can handle high loads temporarily.
+
+### Automatic scaling
+Using appropriate rules, this can be super helpful. However, beware of unbounded scaling so set limits. 
+
+- trigger scaling based on a metric
+- set an upper limit
+- scale down when load subsides
+
+### Observability
+All of the above points to the importance of monitoring your systems. 
+
+- teams need capacity
+- smart alerting that doesn't create noise
+- human attention, since people are better at spotting meaningful patterns. 
+- centralized logs are critical; you should be able to use correlation IDs to track an issue across services
+
+-> "Correlation ID": a unique identifier value that is attached to requests and messages that allow reference to a particular transaction and can help when monitoring issues across a distributed system. 
