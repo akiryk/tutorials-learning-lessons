@@ -29,5 +29,8 @@ Recommendation: don't start with a microservices-approach, since it's often diff
 
 **Rule**: each microservice must own its own data; don't use a shared data store. 
 
-**Consequence**: you can no longer use joins or do other db processes on multiple services at once, you'll have to make separate calls.
+**Consequence**: you can no longer use joins or do other db processes on multiple services at once, you'll have to make separate calls. You need a way to cope with the temporary inconsistency, which occurs under these conditions -- we aim for what is called "eventual consistency". We can minimize the issues by having good service boundaries; caching; identify natural "seams" in the dababase.
 <img width="763" alt="image" src="https://user-images.githubusercontent.com/2437758/180239153-843f8cfb-1f8c-4bf6-9191-c1a828667ba1.png">
+
+### Components of a microservice
+There doesn't have to be only one process, there can be many. At the least, there's typically your code — say, an API — and a database. But there might be a second process with code to run background tasks or something else. The main point is that each microservice have a clearly defined public interface.
