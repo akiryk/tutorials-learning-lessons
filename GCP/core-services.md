@@ -48,6 +48,19 @@ This is the who part of roles, "who can do what on which resource". There are fi
 
 Principle of least privilege. This is very important because privileges are inherited from top down. This means that if a user is granted editor privileges at the organization level, they'll also have those privileges at the Folder or Project level _even if_ the Folder or Project is more restrictive.
 
+**Service Account** belongs to an application instead of an end-user; used for server-to-server interactions. 
+      
+Be cautious when granting the ServiceAccountUser Role to a user or group. 
+
+**Groups** It's generally recommended to grant roles to groups rather than individuals since it's easy to update the group with new members. 
+
+**Best Practices**
+
+- leverage and understand the resource hierarchy (e.g. a project inherits privileges from it's containing folder)
+- grant roles to groups rather than individuals
+- when using service accounts, be careful with the serviceaccountuser role and give it a clear display name and establish key rotation policies.
+- use Cloud IAP to have a central auth layer rather than network-level firewalls. 
+
 ## Storage and Database Services
 
 ## Resource Management
