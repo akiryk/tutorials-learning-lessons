@@ -62,6 +62,11 @@ Be cautious when granting the ServiceAccountUser Role to a user or group.
 - use Cloud IAP to have a central auth layer rather than network-level firewalls. 
 
 ## Storage and Database Services
+<img width="1144" alt="image" src="https://user-images.githubusercontent.com/2437758/180770463-905224fe-e3a4-445d-89df-b1b7c4e7a660.png">
+
+#### A useful decision tree
+<img width="1172" alt="image" src="https://user-images.githubusercontent.com/2437758/180770692-c45db341-0d77-4668-8eb5-6c33de8f4383.png">
+
 
 ## Resource Management
 
