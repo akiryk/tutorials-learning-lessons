@@ -1,8 +1,9 @@
 # Essential Google Cloud Infrastructure: Core Services
 June 19, 2022 version
 
-[Source Table of Contents](https://app.pluralsight.com/library/courses/essential-google-cloud-infrastructure-core-services-9/table-of-contents)
-[Course Resources](https://s2.pluralsight.com/links/00700a05-c90e-4311-af2c-0a5969905099_8753cf4cc46dd73db26d954eaffcb2ca.pdf)
+- [Source Table of Contents](https://app.pluralsight.com/library/courses/essential-google-cloud-infrastructure-core-services-9/table-of-contents)
+- [Course Resources](https://s2.pluralsight.com/links/00700a05-c90e-4311-af2c-0a5969905099_8753cf4cc46dd73db26d954eaffcb2ca.pdf)
+- [Database PDF](https://storage.googleapis.com/cloud-training/archinfra/v2.2/on-demand/2.2_Storage_and_Database_Services.pdf)
 
 ## Identity and Access Management (IAM)
 GCP IAM is composed of several objects
