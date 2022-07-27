@@ -1,6 +1,6 @@
 # Getting Started with GKE
 
-## Containers
+## Introduction to Containers
 
 What are they and why use them rather than simply deploying apps straight to a virtual machine?
 
@@ -57,7 +57,7 @@ Google's managed offering for Kubernetes is GKE. Why use it?
 ### GKE
 The VMs that host your containers inside a GKE cluster are called nodes. 
 
-## Why choose a compute option?
+### Why choose a compute option?
 There are several GCP options and each has reasons you may want to use it. 
 
 **Why choose Compute Engine**: fully customizeable virtual machines
@@ -82,18 +82,18 @@ There are several GCP options and each has reasons you may want to use it.
 - can be super helpful for supporting your microservices architecture
 - integrate serverless app with third party APIs
 
-## Kubernetes Concepts
-A **node** is the smallest unit of hardware in kubernetes. It is a physical machine or virtual machine — some kind of device. 
-A **pod** is the environment where containers live. It can contain 1 or more containers. _If there is more than one container_, they are tightly coupled and share resources such as networking and storage. 
+## Kubernetes Architecture
 
-K8s assigns each pod a unique IP address, and every container in the pod shares the same IP address and network ports. Containers in the same pod can communicate by localhost, 127.0.0.1.
+### Kubernetes Concepts
 
-**Declarative** configuration. You say what you want and Kubernetes continuously monitors. If reality is out-of-sync with the declared config, it remedies the situation. 
+1. K8s Object Model
+2. The Principle of declarative management
 
-Your cluster needs computers. In GKE, these computers will be Virtual Machines. One of these VMs is called the "control plane" and the others are nodes. The job of the nodes is to run pods. The job of the control plane is to coodinate the cluster. 
+The K8s object is a persistent entity that represents two things: the current state and the desired state of the cluster. This "state" pertains to applications, the resources that are available to them, and policies. 
 
-Several critical components run on the control plane: 
-- `kubeAPIserver`. It's job is to accept comments that view or change the state of the cluster using the `kubectl` command
-- `etcd`: the cluster's database. It's job is to store the state of the cluster. You won't interract with it directly. 
-- Kube scheduler
-- Kube Controller Manager: attempts to make changes to achieve the desired state
+Pods are the basic building blocks. A pod is the environment for containers and may have 1 or more. Pods are the smallest, deployable K8s object. Multiple containers in a pod are tightly coupled and share a network namespace and IP. 
+
+### Kubernetes Control Plane
+
+
+
