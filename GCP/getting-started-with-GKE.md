@@ -110,3 +110,15 @@ When you create a cluster, the default is 3 nodes in a single zone. You can impr
 
 ### Kubernetes Object Management
 Controller objects manage the state of our pods. These controller objects represent the applications, daemons, and batch jobs running on your clusters. There are different types of controller objects, including deployment controller, stateful set controller, daemon controller. These controllers enable us to use a single yaml file. 
+
+### Lab: managing k8s
+Use the Kubernetes Engine tab in the navigation to create, monitor, and modify clusters. 
+Edit the number of nodes by going into the node pool section. See the yaml file, see logs, and everything else there, too. 
+
+### Anthos
+Migrate for Anthos is a tool for getting workloads into containerized deployments in the cloud. Even if your application isn't in a k8s envvironment or not in the cloud, it can automatically migrate for you. Migration is a multistep process. In order to kick it off, you need correct permissions (admin level) and you need firewall and other settings in place. 
+
+1. create processing cluster in Compute Engine
+2. Install the Anthos process using `migctl setup install`, which installs all needed for the migration
+3. Create a migration plan using `migctl migration create` command
+4. There's more to it than this — but it's basically a set of predefined steps. 
