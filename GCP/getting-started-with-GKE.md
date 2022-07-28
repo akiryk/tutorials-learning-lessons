@@ -107,3 +107,6 @@ First, GKE handles all of the control plane components for us. Next, instead of 
 Node pools. What are they and why use them? Not clear, but they are a way to have a bunch of nodes that share the same configuration, say, a few nodes that require more or less memory. 
 
 When you create a cluster, the default is 3 nodes in a single zone. You can improve stability by using a GKE regional cluster, which has a single endpoint but uses multiple zones within a region. 
+
+### Kubernetes Object Management
+Controller objects manage the state of our pods. These controller objects represent the applications, daemons, and batch jobs running on your clusters. There are different types of controller objects, including deployment controller, stateful set controller, daemon controller. These controllers enable us to use a single yaml file. 
