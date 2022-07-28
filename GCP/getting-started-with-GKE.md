@@ -122,3 +122,5 @@ Migrate for Anthos is a tool for getting workloads into containerized deployment
 2. Install the Anthos process using `migctl setup install`, which installs all needed for the migration
 3. Create a migration plan using `migctl migration create` command
 4. There's more to it than this — but it's basically a set of predefined steps. 
+
+## Introduction to Kubernetes Workloads
