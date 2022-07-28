@@ -91,9 +91,19 @@ There are several GCP options and each has reasons you may want to use it.
 
 The K8s object is a persistent entity that represents two things: the current state and the desired state of the cluster. This "state" pertains to applications, the resources that are available to them, and policies. 
 
-Pods are the basic building blocks. A pod is the environment for containers and may have 1 or more. Pods are the smallest, deployable K8s object. Multiple containers in a pod are tightly coupled and share a network namespace and IP. 
+Pods are the basic building blocks. A pod is the environment for containers and may have 1 or more of them. Pods are the smallest, deployable K8s object. Multiple containers in a pod are tightly coupled and share a network namespace and IP. 
 
 ### Kubernetes Control Plane
 
+In order to work, a cluster requires a few things. First and foremost, it needs computers — in GCP, that means VMs. One of these VMs is called the control plane and the others are called nodes. The job of the nodes is to run the pods; the control plane coordinates the cluster. 
 
+When you use the `kubectl` command, you're communicating with the control plane (specifically, the kube API server, which resides there). 
 
+Beyond the API server, the control plane includes a database for storing state of the clusters and tools for scheduling, monitoring, managing pods, and fixing issues. 
+
+### GKE Concepts (or why use it rather than rolling your own)
+First, GKE handles all of the control plane components for us. Next, instead of you having to spin up VMs (nodes), GKE does it for you — it deploys and registers Compute Engine instances as nodes. Because they run on Compute Engine, you choose the machine type and other details.
+
+Node pools. What are they and why use them? Not clear, but they are a way to have a bunch of nodes that share the same configuration, say, a few nodes that require more or less memory. 
+
+When you create a cluster, the default is 3 nodes in a single zone. You can improve stability by using a GKE regional cluster, which has a single endpoint but uses multiple zones within a region. 
