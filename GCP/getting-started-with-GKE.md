@@ -124,3 +124,10 @@ Migrate for Anthos is a tool for getting workloads into containerized deployment
 4. There's more to it than this — but it's basically a set of predefined steps. 
 
 ## Introduction to Kubernetes Workloads
+### Kubectl command
+You use `kubectl` to communicate with the Kube API server on your control plane. Before it can do anything, first you need to configure it with the location and credentials of a kubernetes cluster. Once configured, you use it to create kubernetes objects, view, delete, and view config files.
+
+In general `kubectl` is a tool for administering the internal state of an existing cluster. It can't create new clusters or change the shape of existing clusters. For that, you need the gke control plane — `gcloud` and clould console are your tools.
+
+### Deployments
+Deployements describe a desired state of pods. 
