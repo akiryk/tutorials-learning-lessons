@@ -48,3 +48,5 @@ Using domain driven design is often very helpful, as is using your existing mono
 In the example e-commerce site, we have separate services for Catalog, Basket, Ordering, Identity, and others. Catalog needs to support flexible queries and lots of data so it uses SQL Server. Basket is short lived data, so it uses Redis. 
 
 ## Building Microservices
+
+https://github.com/dotnet-architecture/eShopOnContainers
