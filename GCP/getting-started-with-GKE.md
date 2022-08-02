@@ -140,4 +140,14 @@ There are three ways to create a deployment
 - imperatively, doing it inline in a terminal
 - use the GKE workloads menu in the cloud console.
 
-Next up: Services and Scaling module
+### Deployment strategies
+**Blue/Green deployments**
+
+This is a strategy for upgrading to a new version of your application only after you've fully tested it. YOu create a v2 version that spins up as v1 is still in use. Only then do you update the `.yaml` file to point to v2. The disadvantage is you're using twice as many resources for a period of time. 
+
+**Canary**
+
+A variation on blue/green strategy; in this case, the rollout is gradual. It minimizes excess usage during the update. 
+
+**Choosing the right approach**
+<img width="2480" alt="image" src="https://user-images.githubusercontent.com/2437758/182436055-7f8c8e62-e997-42c9-b561-da094746a1fe.png">
