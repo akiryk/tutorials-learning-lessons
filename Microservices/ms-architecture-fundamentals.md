@@ -48,5 +48,16 @@ Using domain driven design is often very helpful, as is using your existing mono
 In the example e-commerce site, we have separate services for Catalog, Basket, Ordering, Identity, and others. Catalog needs to support flexible queries and lots of data so it uses SQL Server. Basket is short lived data, so it uses Redis. 
 
 ## Building Microservices
+There are a few options for hosting your microservice. Using a virtual machine is the traditional option, but Platform as a Service is also viable. Finally, containers are the fast growing recommended approach.
 
-https://github.com/dotnet-architecture/eShopOnContainers
+Example containerized app for windows or mac: https://github.com/dotnet-architecture/eShopOnContainers
+
+When you create a new service, you'll want to have a separate repo for each service. 
+
+### Templates
+It's highly recommended to use microservice templates so that you have standardization across certain consistent concerns. For example, the following are all necessary and can be included in a template:
+- logging
+- testing
+- monitoring health
+- configuration
+- build scripts
