@@ -131,3 +131,13 @@ In general `kubectl` is a tool for administering the internal state of an existi
 
 ### Deployments
 Deployements describe a desired state of pods. 
+Deployments are designed for stateless applications such as web frontends. A backend stores data persistently and other k8s objects (not deployments) will access it. 
+Deployment is a 2-part process. There's a yaml file and a deployment controller. 
+A controller is a loop-process created by kubernetes to ensure pods are as specified.
+
+There are three ways to create a deployment
+- declaratively, using a yaml file
+- imperatively, doing it inline in a terminal
+- use the GKE workloads menu in the cloud console.
+
+Next up: Services and Scaling module
