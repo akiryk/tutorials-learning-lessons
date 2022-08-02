@@ -151,3 +151,46 @@ A variation on blue/green strategy; in this case, the rollout is gradual. It min
 
 **Choosing the right approach**
 <img width="2480" alt="image" src="https://user-images.githubusercontent.com/2437758/182436055-7f8c8e62-e997-42c9-b561-da094746a1fe.png">
+
+### Lab
+You create a deployment by, first, having a yaml file. An example is `nginx-deployment.yaml`
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
+```
+
+Now you can use kubectl to deploy with 
+```sh
+kubectl apply -f ./nginx-deployment.yaml
+# later...
+kubectl get deployments
+# scale up with 
+kubectl scale --replicas=10 deployment nginx-deployment
+# later, scale down
+kubectl scale --replicas=3 deployment nginx-deployment
+```
+
+**Session Affinity**
+
+If you are using a canary deployment, you can't ensure that the client will see the same Pod by default. If you want clients to visit the same pod on each subsequent request, use `sessionAffinity: ClientIP` in yaml file. 
+
+Next up: Kubernetes networking module
