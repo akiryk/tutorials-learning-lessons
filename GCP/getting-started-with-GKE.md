@@ -200,3 +200,25 @@ If you are using a canary deployment, you can't ensure that the client will see 
 - Persistent Volume Claims (PVCs). PersistentVolumeClaims enable Pods to access PersistentVolumes, so use PersistentVolumeClaims for any data that you expect to survive Pod scaling, updating, or migrating. Remember [what is a pod](https://cloud.google.com/kubernetes-engine/docs/concepts/pod#:~:text=Pods%20are%20the%20smallest%2C%20most,and%20share%20the%20Pod's%20resources.).
 - Creating a manifest for persistence
 
+### Create and apply a manifest with a PVC
+Most of the time, you don't need to directly configure PV objects or create Compute Engine persistent disks. Instead, you can create a PVC, and Kubernetes automatically provisions a persistent disk for you.
+
+**My note** In the lab, you create a PVC using a manifest yaml file and you create a pod using a different yaml file that specifies the PVC, as in 
+```sh
+# PVC yaml (just a portion of it)
+kind: PersistentVolumeClaim
+metadata:
+  name: hello-web-disk
+
+# Pod yaml
+kind: Pod
+volumes:
+    - name: pvc-demo-volume
+      persistentVolumeClaim:
+        claimName: hello-web-disk
+```
+
+Once you make a yaml file (your manifest), apply it with `kubectl apply -f pvc-demo.yaml`
+
+Start shell access to your pod: `kubectl exec -it pvc-demo-pod -- sh`
+
