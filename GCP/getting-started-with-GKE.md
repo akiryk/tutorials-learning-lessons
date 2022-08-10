@@ -193,4 +193,10 @@ kubectl scale --replicas=3 deployment nginx-deployment
 
 If you are using a canary deployment, you can't ensure that the client will see the same Pod by default. If you want clients to visit the same pod on each subsequent request, use `sessionAffinity: ClientIP` in yaml file. 
 
-Next up: Kubernetes networking module
+## Pod Networking
+
+- Volumes and persistent volumes
+- PersistentVolumes are storage that is available to a Kubernetes cluster
+- Persistent Volume Claims (PVCs). PersistentVolumeClaims enable Pods to access PersistentVolumes, so use PersistentVolumeClaims for any data that you expect to survive Pod scaling, updating, or migrating. Remember [what is a pod](https://cloud.google.com/kubernetes-engine/docs/concepts/pod#:~:text=Pods%20are%20the%20smallest%2C%20most,and%20share%20the%20Pod's%20resources.).
+- Creating a manifest for persistence
+
