@@ -83,3 +83,18 @@ How can instances in different projects communicate with each other?
 1. Internet: slower and less secure and more expenseive
 2. VPC Network Peering: two VPCs can connect over google's network without a public IP
 3. Shared VPC: this is mainly for enforcing security standards
+
+#### Authentication & Security
+IAM and Access Control Lists (ACLs).
+- Iam is usually recommended for controlling access to your resources
+- ACLs are best when you want fine-grained control, such as who can access what object in a given storage bucket. 
+
+GCP takes care of encryption both in-flight and at-rest. 
+
+#### DDoS attacks
+this is a shared responsibility between GCP and you. Your part includes:
+- good firewall rules
+- use default anti-spoofing protection
+- few external IP addresses unless necessary
+- use load balancing, since it acts as a proxy to hide your internal instances
+- use Cloud Armor
