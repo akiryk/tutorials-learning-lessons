@@ -63,6 +63,23 @@ We have a few options on GCP:
 - Cloud Storage. This is usually for bucket storage. Bad: can't be used as a root disk. Good: multiple instances can write to the bucket at the same time; good for global access; good for general purpose file sharing.
 
 #### Availability
-Ensure availability by having instances in multple zones within a region or, better yet, in multiple regions.
+Ensure availability by having instances in multple zones within a region or, better yet, in multiple regions. A region contains many zones, so `us-central1` contains `us-central1-a` and `us-central1-b` etc.
 
-A region contains many zones, so `us-central-1` contains 
+For a higher level of availability, use **autoscaling instance groups**. These are managed groups of VM instances that automatically add or remove VM instances depending on load. This only works with managed instance groups. In order to use this option:
+- over-provision by 50% of your needs
+- use a Cloud Load Balancer
+- Instances cannot have stateful data; you need to use a database or Cloud Storage, which is automatically replicated. Cloud SQL has a "high availability" option. 
+
+#### Networks
+aka Virtual Private Clouds (VPCs). You don't need Organizations or Folders when organizing your GCP account, but you do need Projects. Projects have separate security controls. Projects by default come with up to 5 networks.
+
+A network belongs to only one project and spans all regions; a subnet belongs to only one network and can belong to only one region; an instance belongs to only one subnet.
+
+A subnet allows you to define an IP range and a default gateway for the resources it contains. 
+
+What about communication among instances? VMs can communicate with one another even if in different subnets, although the default firewall rules say only by SSH, [RDP]([url](https://www.cloudflare.com/learning/access-management/what-is-the-remote-desktop-protocol/)), and [ICMP](https://www.cloudflare.com/learning/ddos/glossary/internet-control-message-protocol-icmp/). 
+
+How can instances in different projects communicate with each other?
+1. Internet: slower and less secure and more expenseive
+2. VPC Network Peering: two VPCs can connect over google's network without a public IP
+3. Shared VPC: this is mainly for enforcing security standards
