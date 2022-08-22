@@ -9,4 +9,4 @@ There are four principles to OOP
 ## Static and Const
 Const properties are accessed with the `self` keyword.
 
-Static properties and methods use `static` or `self` depending on what you are trying to do. In general, use 
+Static properties and methods use `static` or `self` or `parent` depending on what you are trying to do. Use `static` to be more explicit. 
