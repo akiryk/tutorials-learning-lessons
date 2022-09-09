@@ -8,4 +8,4 @@
 This section uses a [github repo](https://github.com/cloudacademy/intro-to-k8s) with example projects.
 
 Prerequisites:
-* Docker, [see course](https://cloudacademy.com/learning-paths/cloud-academy-docker-in-depth-129/). See my notes. 
+* Docker, [see course](https://cloudacademy.com/learning-paths/cloud-academy-docker-in-depth-129/). See [my notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/docker.md). 
