@@ -1,5 +1,6 @@
 # Docker
 These notes are for the Cloud Academy [Docker In Depth](https://cloudacademy.com/learning-paths/cloud-academy-docker-in-depth-129/) learning path.
+This is a prerequisite for the [k8s course](https://github.com/cloudacademy/intro-to-k8s).
 
 ## Introduction
 
@@ -27,9 +28,5 @@ root@c61f1448330a:/# exit
 # docker commit [change flag to change the CMD] [name_of_ubuntu_image] [new_name]
 docker commit --change='CMD ["python3", "-c", "import this"]' c61f1448330a ubuntu_python
 docker images # will list ubuntu_python as a new image
-docker run ubuntu_python # will run the image as a container, which will output the python command
-
-
-
-
-
+docker run ubuntu_python # will create a container based on this image, which will output the python command
+```
