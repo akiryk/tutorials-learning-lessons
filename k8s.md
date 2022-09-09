@@ -2,7 +2,8 @@
 
 [The Course](https://cloudacademy.com/learning-paths/certified-kubernetes-application-developer-ckad-exam-preparation-1-3086/) is on Cloud Academy.
 
-## [Introduction to Kubernetes](https://cloudacademy.com/course/introduction-to-kubernetes/introduction/
+## Introduction to Kubernetes
+[Link to the course](https://cloudacademy.com/course/introduction-to-kubernetes/introduction/)
 
 This section uses a [github repo](https://github.com/cloudacademy/intro-to-k8s) with example projects.
 
