@@ -8,7 +8,7 @@ This is a prerequisite for the [k8s course](https://github.com/cloudacademy/intr
 * Start with an image
 * Run the image as a container
 * Install some software into your container
-* Convert the container to a new image
+* Convert the container to a new image and, optionally, change the default `CMD` command that will get run when you run the container. In this case, we'll change the default, which is `/bin/bash`, to one that will run some python code
 
 In this example, we start with an Ubuntu image
 ```sh
@@ -30,3 +30,33 @@ docker commit --change='CMD ["python3", "-c", "import this"]' c61f1448330a ubunt
 docker images # will list ubuntu_python as a new image
 docker run ubuntu_python # will create a container based on this image, which will output the python command
 ```
+
+### How to run a server from your container
+Example with Go.
+
+In order to run go, you need to have it installed. A good way to ensure you have what you need it to use the official Go image from docker hub, e.g. https://hub.docker.com/_/golang. 
+
+1. Create Dockerfile:
+
+Example Dockerfile
+```
+# Create build stage based on buster image
+FROM golang:1.16-buster AS builder
+# Create working directory under /app
+WORKDIR /app
+# Copy over all go config (go.mod, go.sum etc.)
+COPY go.* ./
+# Install any required modules
+RUN go mod download
+# Copy over Go source code
+COPY *.go ./
+# Run the Go build and output binary under hello_go_http
+RUN go build -o /hello_go_http
+# Make sure to expose the port the HTTP server is using
+EXPOSE 8080
+# Run the app binary when we run the container
+ENTRYPOINT ["/hello_go_http"]
+```
+
+2. Build the image from the Dockerfile: `docker build -t myapp .` The `-t` is flag for the name of the app and the `.` says to make it from the current directoy.
+3. Run the image: `docker run -d -p 3000:8080 -t myapp`
