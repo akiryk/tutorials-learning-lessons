@@ -29,9 +29,9 @@ slice = slice[1:2]                // 4
 ### Maps
 Maps are key/value pairs known in other languages as dictionaries or hashes. They are restricted to a single type
 ```go
-	m := map[string]string{"firstname": "Bilbo", "lastlame": "Baggins", "home": "The Shire"}
-  // add to an existing map
-	m["favorite color"] = "purple"
+m := map[string]string{"firstname": "Bilbo", "lastlame": "Baggins", "home": "The Shire"}
+// add to an existing map
+m["favorite color"] = "purple"
 
 ```
 
@@ -42,29 +42,29 @@ There will be a fixed number of fields that typically define a concept, e.g. a u
 the struct might have fields for id, name, email, etc.
 
 ```go
-  // First, you must define the struct with type keyword
-	type Person struct {
-		name    string
-		age     int
-		hobbies []string
-	}
+// First, you must define the struct with type keyword
+type Person struct {
+	name    string
+	age     int
+	hobbies []string
+}
   
-  // you can initialize the struct without populating it at all
-  var janet Person
-  fmt.Println(janet) // will use zero-values for name, age, and hobbies, 0 []
-  // populate one field at a time
-	janet.name = "Janet"
-	janet.age = 38
-	janet.hobbies = []string{"running", "from", "bears"}
+// you can initialize the struct without populating it at all
+var janet Person
+fmt.Println(janet) // will use zero-values for name, age, and hobbies, 0 []
+// populate one field at a time
+janet.name = "Janet"
+janet.age = 38
+janet.hobbies = []string{"running", "from", "bears"}
 
-  // or populate all at once
-	var saul = Person{"Saul", 33, []string{"biggness", "solitude", "painting"}}
+// or populate all at once
+var saul = Person{"Saul", 33, []string{"biggness", "solitude", "painting"}}
 
-  // or populate with keys as well
-	var bill = Person{
-		name:    "Abe",
-		age:     101,
-		hobbies: []string{"fishing", "sailing", "remote control cars"},
-	}
+// or populate with keys as well
+var bill = Person{
+	name:    "Abe",
+	age:     101,
+	hobbies: []string{"fishing", "sailing", "remote control cars"},
+}
 
 ```
