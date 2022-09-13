@@ -9,10 +9,13 @@ There are 4 array-like constructs in Go
 
 ### Array
 ```go
-// initialize an array of 2 ints
-var arr[2] int
-arr[0] = 20
-arr[1] = 30
+// Longform initialization (an array of 2 strings)
+var names [2]string
+names[0] = "Carlos"
+names[1] = "Sandra"
+
+// Short form initialization
+names := [2]string{"Carlos", "Sandra"}
 ```
 
 ### Structs
