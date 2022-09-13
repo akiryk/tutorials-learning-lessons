@@ -17,6 +17,15 @@ names[1] = "Sandra"
 // Short form initialization
 names := [2]string{"Carlos", "Sandra"}
 ```
+### Slice
+A slice is built on top of the array construct. It's flexible; Go assigns memory for you and then copies to a different memory location if the array gets too big
+```go
+slice := []int{1,2,3}
+slice = append(slice, 4, 5, 6, 7) // 1 2 3 4 5 6 7
+slice = slice[2:]                 // 3 4 5 6 7
+slice = slice[:3]                 // 3 4 5
+slice = slice[1:2]                // 4
+```
 
 ### Structs
 Structs are collections of properties that can have different types. 
