@@ -4,6 +4,22 @@ This is a prerequisite for the [k8s course](https://github.com/cloudacademy/intr
 
 ## Introduction
 
+### Basics
+```sh
+# To see what images are on your maching
+docker images
+
+# See what containers are running
+docker ps
+
+# See what containers have run in the past
+docker ps -a
+
+# Remove a container and then an image
+docker rm SOMECONTAINERID#
+docker rmi SOMEIMAGE
+```
+
 ### How to create a new image from a container
 * Start with an image
 * Run the image as a container
@@ -58,5 +74,12 @@ EXPOSE 8080
 ENTRYPOINT ["/hello_go_http"]
 ```
 
-2. Build the image from the Dockerfile: `docker build -t myapp .` The `-t` is flag for the name of the app and the `.` says to make it from the current directoy.
+2. Build the image from the Dockerfile: `docker build -t myapp .` The `-t` is flag for the name of the app and the `.` says to make it from the current directory.
 3. Run the image: `docker run -d -p 3000:8080 -t myapp`
+
+## Networking
+There are three networks
+- Bridge, the default
+- Host
+- None
+They all exist as networks only on the local host. There are additional types, however, that aren't only local.
