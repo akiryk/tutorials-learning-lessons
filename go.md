@@ -68,3 +68,59 @@ var bill = Person{
 }
 
 ```
+
+## Control Flow
+### If Statements
+```go
+if i < 5 {
+   break
+}
+
+if someString == "hello" {
+   // do something
+}
+```
+### Loops, part 1
+```go
+// standard for-loop with initializer; condition; final expression
+for i := 0; i < 5; i++ {
+   println(i)
+}
+
+// simple condition; similar to a while loop
+myVar := true
+for myVar {
+   if someCondition == whatever {
+       myVar = false
+   }
+}
+
+// infinite loop
+for {
+   // do something
+   if (someCondition == true) {
+       break
+   }
+}
+```
+### Loops, part 2 (collections)
+```go
+nums := []int{1, 21, 33, 44, 554}
+for i := 0; i < len(nums); i++ {
+	println(nums[i])
+}
+
+// range keyword iterates over collections
+for index, value := range nums {
+	println(index, value) // will output 0 1, 1 21, 2 33 etc
+}
+
+// range also over maps
+colorsByDay := map[string]string{
+	"Monday":    "Blue",
+	"Tuesday":   "Orange",
+	"Wednesday": "Salt n Peppa",
+}
+for key, value := range colorsByDay {
+	println(key, value)
+}
