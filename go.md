@@ -124,3 +124,5 @@ colorsByDay := map[string]string{
 for key, value := range colorsByDay {
 	println(key, value)
 }
+```
+Note that it doesn't work the same way for structs; you need to iterate over fields/values in a struct using a different approach.
