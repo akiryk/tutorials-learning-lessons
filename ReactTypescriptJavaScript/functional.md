@@ -1,7 +1,7 @@
 # Functional
 
 ## Composition
-Example compose function 
+Compose with reduce
 
 ```js
 function compose(...fns) {
@@ -23,7 +23,7 @@ function compose(...fns) {
   return input => _compose(input);
 }
 ```
-Example compose useing recursion
+Compose with recursion
 ```js
 function composeByRecursion(...fns) {
   if (!fns.length) {
