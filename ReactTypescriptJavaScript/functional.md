@@ -1,7 +1,16 @@
 # Functional
 
 ## Composition
-Compose with reduce
+Compose with reduce less verbose
+```js
+function compose(...fns) {
+  return fns.reduce((composedFns, currentFn) => {
+    return input => composedFns(currentFn(input));
+  });
+}
+```
+  
+Compose with reduce more verbose
 
 ```js
 function compose(...fns) {
