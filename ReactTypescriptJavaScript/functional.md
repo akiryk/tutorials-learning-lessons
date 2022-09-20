@@ -20,3 +20,20 @@ function compose(...fns) {
   return input => _compose(input);
 }
 ```
+Example compose useing recursion
+```js
+function composeByRecursion(...fns) {
+  if (fns.length === 1) {
+    return input => fns[0](input);
+  }
+  // call composeByRecursion with fns less the head
+  const head = fns[0];
+  const next = fns[1];
+  const tail = fns.slice(2);
+
+  tail.unshift(input => head(next(input)));
+
+
+  return composeByRecursion(...tail);
+}
+```
