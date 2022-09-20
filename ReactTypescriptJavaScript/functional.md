@@ -32,12 +32,12 @@ function composeByRecursion(...fns) {
   if (fns.length === 1) {
     return input => fns[0](input);
   }
-  const accumluatedFns = fns[0]; // the head
+  const composedFns = fns[0]; // the head
   const nextFn = fns[1]; // the current function
   const uncomposedFns = fns.slice(2); // the tail
 
   // Put the composed functions at the front of the array
-  uncomposedFns.unshift(input => accumluatedFns(nextFn(input)));
+  uncomposedFns.unshift(input => composedFns(nextFn(input)));
 
   return composeByRecursion(...tail);
 }
