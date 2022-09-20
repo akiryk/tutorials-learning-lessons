@@ -23,10 +23,12 @@ function compose(...fns) {
 Example compose useing recursion
 ```js
 function composeByRecursion(...fns) {
+  if (!fns.length) {
+     return input => input;
+  }
   if (fns.length === 1) {
     return input => fns[0](input);
   }
-  // call composeByRecursion with fns less the head
   const head = fns[0];
   const next = fns[1];
   const tail = fns.slice(2);
