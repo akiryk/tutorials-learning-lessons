@@ -5,6 +5,9 @@ Example compose function
 
 ```js
 function compose(...fns) {
+  if (!fns.length) {
+    return input => input;
+  }
   const _compose = fns.reduce((accumulator, currentValue) => {
     /*
      * On first iteration:
