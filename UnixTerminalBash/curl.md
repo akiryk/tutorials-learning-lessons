@@ -3,14 +3,15 @@
 ### How to POST and format json
 ```sh
 URL="http://whatever"
+
+# use -X or --request to specify the type of request (GET, POST, etc) 
+# add headers with --header or -H
+# then output to json formatter
+
 curl --url $URL \
-  # use -X or --request to specify the type of request (GET, POST, etc)
   -X POST  \
-  # add headers with --header or -H
   --header "Content-Type: application/json"  \
-  # administrator not typically needed, but if you need additional headers, add them here.
   --header "Administrator: Yes" \
-  -d '{"quote_id":16067777 }' \
-  # output to json formatter
-  | python3 -m json.tool
+  -d '{"quote_id":16067777 }' | \
+  python3 -m json.tool
 ```
