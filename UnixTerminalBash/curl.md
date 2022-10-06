@@ -2,7 +2,8 @@
 
 ### How to POST and format json
 ```sh
-curl --url "http://some.endpoint.com" \
+URL="http://whatever"
+curl --url $URL \
   # use -X or --request to specify the type of request (GET, POST, etc)
   -X POST  \
   # add headers with --header or -H
