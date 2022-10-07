@@ -1,3 +1,7 @@
+
+## Resources
+https://www.youtube.com/watch?v=VGgTmxXp7xQ decent intro to the basics
+
 ## Basics
 ```sh
 # search for a word in a file
