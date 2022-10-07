@@ -1,10 +1,35 @@
+## Basics
 ```sh
 # search for a word in a file
-grep "something" ./some-file.txt
+grep "something" file.txt
 
 # case insensitive
-grep "thing" -i ./some-file.txt
+grep "thing" -i file.txt
 
+# -w
+# search only for the word (find "Eve" not "Evening")
+grep "eve" -i -w names.txt
+
+# -n 
+# show me where by line number 
+grep "eve" -n names.txt
+
+# Combine arguments
+grep "eve" -win names.txt
+
+# pass arguments to arguments
+# show 2 lines before and 2 lines after each result
+grep "ede" -iwn -B 2 -A 2 names.txt
+
+# Better yet, use -C
+grep "ede" -iwn -C 2 names.txt
+
+# Search everying in current directory, use wildcard
+grep "what" -in ./*
+```
+
+## Piping
+```sh 
 # grep from curl
 curl -v --stderr - https://www.gutenberg.org/cache/epub/69102/pg69102.txt | grep "website" -i
 ```
