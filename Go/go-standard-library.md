@@ -2,7 +2,7 @@
 
 ## Printing and formatting
 
-When using `fmt.Printf()`, you can pass in variables corresponding to the data type. For a complete list, see [the golang fmt docs(https://pkg.go.dev/fmt). 
+When using `fmt.Printf()`, you can pass in variables corresponding to the data type. For a complete list, see the [go fmt package docs](https://pkg.go.dev/fmt).
 
 ```go
 // print variable as a string
