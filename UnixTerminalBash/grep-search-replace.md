@@ -1,3 +1,14 @@
+```sh
+# search for a word in a file
+grep "something" ./some-file.txt
+
+# case insensitive
+grep "thing" -i ./some-file.txt
+
+# grep from curl
+curl -v --stderr - https://www.gutenberg.org/cache/epub/69102/pg69102.txt | grep "website" -i
+```
+
 Search for all files in a directory that include a word
 and output name of the files into a txt file
 
