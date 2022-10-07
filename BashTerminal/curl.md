@@ -1,10 +1,11 @@
 # Curl
 
 ### How to POST and format json
+
 ```sh
 URL="http://whatever"
 
-# use -X or --request to specify the type of request (GET, POST, etc) 
+# use -X or --request to specify the type of request (GET, POST, etc)
 # add headers with --header or -H
 # then output to json formatter
 
