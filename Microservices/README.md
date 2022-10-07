@@ -5,6 +5,10 @@
 
 **Beginner**:
 
-- [Microservices: The Big Picture](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/intro.md)
-- [Microservices: Getting Started](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/getting-started.md)
-- [Microservices: Architecture Fundamentals](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/ms-architecture-fundamentals.md)
+- [Microservices: The Big Picture](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/intro.md) **done**
+- [Microservices: Getting Started](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/getting-started.md) **done**
+- [Microservices: Architecture Fundamentals](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/ms-architecture-fundamentals.md) *not done*
+
+**Focus on gaps**
+
+- [Microservices DevOps](https://app.pluralsight.com/course-player?clipId=363a8fd2-7f72-4821-8d90-fdc46ed9c310) | [Notes](https://github.com/akiryk/tutorials-learning-lessons/blob/master/Microservices/devops.md)
