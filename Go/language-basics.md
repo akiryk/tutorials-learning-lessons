@@ -1,13 +1,18 @@
 # Go
 
-## Arrays
+## Types
 
-There are 4 array-like constructs in Go
-
-- array
-- slice
-- map
-- struct
+### Constants
+Constants can be declared one at a time or as a group
+```go
+const name = "My Name"
+const (
+    R = "Rated R"
+    G = "Rated G"
+    // you can mix types inside this set of constant declarations
+    cost = 7.99
+)
+```
 
 ### Array
 
@@ -54,6 +59,7 @@ the struct might have fields for id, name, email, etc.
 ```go
 // First, you must define the struct with type keyword
 type Person struct {
+	// since these names are lowercase, they can't be accessed outside of the package
 	name    string
 	age     int
 	hobbies []string
@@ -78,6 +84,10 @@ var bill = Person{
 }
 
 ```
+
+## Custom Types / OOP
+
+type Movie struct
 
 ## Control Flow
 
