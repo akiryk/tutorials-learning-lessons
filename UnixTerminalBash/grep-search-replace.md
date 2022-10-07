@@ -26,6 +26,10 @@ grep "ede" -iwn -C 2 names.txt
 
 # Search everying in current directory, use wildcard
 grep "what" -in ./*
+
+# search in current directory AND subdirectories with -r 
+# no need for the slash
+grep "what" -winr .
 ```
 
 ## Piping with Curl
