@@ -28,10 +28,13 @@ grep "ede" -iwn -C 2 names.txt
 grep "what" -in ./*
 ```
 
-## Piping
+## Piping with Curl
 ```sh 
 # grep from curl
 curl -v --stderr - https://www.gutenberg.org/cache/epub/69102/pg69102.txt | grep "website" -i
+
+# pipe json to nice format
+curl -v --stderr - https://www.gutenberg.org/cache/epub/69102/pg69102.txt | python3 -m json.tool
 ```
 
 Search for all files in a directory that include a word
