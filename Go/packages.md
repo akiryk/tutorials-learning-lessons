@@ -25,3 +25,7 @@ my-project
     package
         package.go
 ```
+2. `cd` into each directory and run `go mod init example.com/main` and `go mod init example.com/package`. Note that main and package can be named anything.
+3. In prod, your main would import the package from a repo (e.g. `example.com/package`). However, for dev purposes, you may want to import a local package. In that case, you need to <code>cd</code> into `main` and run `go mod edit -replace example.com/package ../package`
+4. In main.go, use the code from package.go by using `import "example.com/package" and by doing something like `fmt.Println(package.SayHello())`. 
+  
