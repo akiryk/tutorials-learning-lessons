@@ -13,3 +13,15 @@ Where do these packages live?
 
 `main` package can be in any directory and don't need to match the name of the directory. Other packages must be in a directory of their name —
 that is, package `mylib` must be in a folder called "mylib"
+
+## Make and use a package
+This requires a proper directory structure, proper `go.mod` files, and use of `go mod tidy`. Plus, one very special command.
+
+1. Create your directory structure
+```sh
+my-project
+    main
+        main.go
+    package
+        package.go
+```
