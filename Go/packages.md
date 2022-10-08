@@ -21,10 +21,10 @@ This requires a proper directory structure, proper `go.mod` files, and use of `g
 ```sh
 my-project
     main_app
-        main_app.go # doesn't need to be the same name as the folder
+        main_app.go # doesn't need to be the same name as the folder; however, package name must be "main"
         go.mod # don't create this manually; it will be created in step 2
     my_package
-        my_package.go 
+        my_package.go # doesn't need to be same name as the folder; however, the package name must be the same
         go.mod # don't create this manually; it will be created in step 2
 ```
 2. `cd` into main_app and run `go mod init example.com/main_app`
