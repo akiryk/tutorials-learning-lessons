@@ -20,12 +20,13 @@ This requires a proper directory structure, proper `go.mod` files, and use of `g
 1. Create your directory structure
 ```sh
 my-project
-    main
-        main.go
-    package
-        package.go
+    main_app
+        main_app.go # doesn't need to be the same name as the folder
+    my_package
+        my_package.go 
 ```
-2. `cd` into each directory and run `go mod init example.com/main` and `go mod init example.com/package`. Note that main and package can be named anything.
-3. In prod, your main would import the package from a repo (e.g. `example.com/package`). However, for dev purposes, you may want to import a local package. In that case, you need to <code>cd</code> into `main` and run `go mod edit -replace example.com/package ../package`
-4. In main.go, use the code from package.go by using `import "example.com/package" and by doing something like `fmt.Println(package.SayHello())`. 
+2. `cd` into main_app and run `go mod init example.com/main_app`
+3. `cd` into 
+4. In prod, your main_app package would import the library package from a repo (e.g. `example.com/my_package`). However, for dev purposes, you may want to import a local package. In that case, you need to <code>cd</code> into `main_app` and run `go mod edit -replace example.com/my_package=../my_package`. Then you need to run `go mod tidy`. 
+5. In main.go, use the code from my_package.go by using `import "example.com/my_package" and by doing something like `fmt.Println(my_package.SayHello())`. 
   
