@@ -153,3 +153,10 @@ for key, value := range colorsByDay {
 ```
 
 Note that it doesn't work the same way for structs; you need to iterate over fields/values in a struct using a different approach.
+
+## Functions
+You'll sometimes see "receiver" functions like so
+```go
+func (f SomeDataType) myFunction() {
+```
+It's similar to creating a method on an object. If `SomeDataType` is a `Person` object, then you could have different instantiations of person each call it's `myFunction` method. You couldn't call `myFunction` on it's own. See some [more info here](https://medium.com/@adityaa803/wth-is-a-go-receiver-function-84da20653ca2). 
