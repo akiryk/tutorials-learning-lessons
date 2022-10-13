@@ -4,12 +4,13 @@ Basic compose function with reduce
 function compose(...fns) {
   return fns.reduce((a, c) => {
     return v => a(c(v));
-  })
+  }, v => v)
 }
+
 ```
 Compose with recursion
 ```javascript
-function composer(...fns) {
+function compose(...fns) {
   if (fns.length === 0) {
     return identity => identity;
   }
