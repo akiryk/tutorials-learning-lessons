@@ -2,6 +2,15 @@
 ## Resources
 https://www.youtube.com/watch?v=VGgTmxXp7xQ decent intro to the basics
 
+## Shortcuts
+```sh
+# Find a directory
+find ./ -type d -name "dir_name" -print
+
+# Find a word in directory and subdirectories
+grep -nir "myword" ./
+```
+
 ## Basics
 ```sh
 # search for a word in a file
