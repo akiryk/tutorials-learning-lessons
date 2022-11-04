@@ -19,9 +19,9 @@ function compose(...fns) {
     return value => fns[0](value);
   }
   
-  const head = fns[0];
-  const rest = fns.slice(1);
-  const res = [value => head(value), ...rest];
-  return compose(...res);
+  const [first, second, ...rest] = fns;
+   
+  return compose(value => first(second(value)), ...rest);
 }
+
 ```
