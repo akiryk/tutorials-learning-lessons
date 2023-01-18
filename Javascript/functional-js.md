@@ -25,3 +25,20 @@ function compose(...fns) {
 }
 
 ```
+
+Here's a good start for testing:
+```javascript
+const add = (x, y) => x + y;
+const mult = (x, y) => x * y;
+const sub = (x, y) => x - y;
+const div = (x, y) =>  x / y;
+
+const add10 = (x) => add(x, 10);
+const add100 = (x) => add(x, 100);
+const add5 = (x) => add(x, 5);
+const mult2 = (x) => mult(x, 2);
+const mult10 = (x) => mult(x, 10);
+const sub2 = (x) => sub(x, 2);
+const div2 = (x) => div(x, 2);
+
+```
