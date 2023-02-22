@@ -6,7 +6,73 @@
 ## Deep dive into keyboard events
 https://www.youtube.com/watch?v=jLqTXkFtEH0
 
-## Key/Value hashes
+
+
+## Conditionals
+```js
+// Set value to baz ONLY if foo or bar is true
+const myValue = foo || bar ? baz : null;
+```
+
+## Array
+
+### Array destructuring
+```js
+const letters = ['a', 'b', 'c', 'x', 'y', 'z']
+const swappedEnds = [letters[0], letters[letters.length - 1]] = [letters[letters.length - 1], letters[0]];
+
+console.log(swappedEnds);
+// ['z', 'a']
+```
+### Array.some() and Boolean function
+In javascript, `Boolean` is a function. Who knew? You can use it like this:
+```js
+const x = [];
+Boolean(x.length); // false
+Boolean(x.length === 0]); // true
+```
+It makes a handy way to work with `Array.some()` and the like
+```js
+const {name, content} = formData; // imagine we can extract these fields from the data;
+const fieldErrors = {
+   name: validateNameField(name), // returns a string with error message
+   content: validateContentField(content),
+}
+// Now, check if either of the fieldErrors are truthy!
+if (Object.values(fieldErrors).some(Boolean)) {
+  return badRequest({ fieldErrors, fields });
+}
+
+const arrOfObjects = [{id: 1}, {id: 33}, null, {id: 32}];
+arrayOfObjects.filter(Boolean);
+// [{id: 1}, {id: 33}, {id: 32}];
+```
+
+### of n sequential numbers
+```js
+const myArray = Array.from(Array(10).keys());
+// myArray is now [0,1,2,3,4,5,6,7,8,9]
+
+// If you do this, it fills the new array with n copies of the *same* array
+Array.from(Array(10).fill([]));
+```
+
+### Fill()
+Fill() is required to make the array enumarable. `new Array(10)` gives an array that has length of 10, but that's all. You can't map over it.
+
+
+### of n arbitrary elements
+The above approach won't work for these examples because the above will fill the array with the same object
+```js
+const arrayOfArrays = new Array(10).fill().map(()=>[]);
+// [[], [], [], ...]
+const arrayOfObjects = new Array(10).fill().map((e,i)=>({id:i}));
+// [{id: 0}, {id: 1}, {id: 2}, {id: 3}, ...];
+```
+
+## Object
+
+### Key/Value hashes
 Spread an array into an object to create a key/value hash
 ```js
 const colors = ['red', 'blue', 'green'];
@@ -33,67 +99,14 @@ Object.fromEntries(jobs);
 */
 ```
 
-## Array.some() and Boolean function
-In javascript, `Boolean` is a function. Who knew? You can use it like this:
-```js
-const x = [];
-Boolean(x.length); // false
-Boolean(x.length === 0]); // true
-```
-It makes a handy way to work with `Array.some()` and the like
-```js
-const {name, content} = formData; // imagine we can extract these fields from the data;
-const fieldErrors = {
-   name: validateNameField(name), // returns a string with error message
-   content: validateContentField(content),
-}
-// Now, check if either of the fieldErrors are truthy!
-if (Object.values(fieldErrors).some(Boolean)) {
-  return badRequest({ fieldErrors, fields });
-}
 
-const arrOfObjects = [{id: 1}, {id: 33}, null, {id: 32}];
-arrayOfObjects.filter(Boolean);
-// [{id: 1}, {id: 33}, {id: 32}];
-```
-
-## Optional Chaining
+### Optional Chaining
 ```js
 // find array value
 const id = response?.data?.employees?.[0]?.name;
 ```
 
-## Conditionals
-```js
-// Set value to baz ONLY if foo or bar is true
-const myValue = foo || bar ? baz : null;
-```
-
-## Create an array
-
-## of n sequential numbers
-```js
-const myArray = Array.from(Array(10).keys());
-// myArray is now [0,1,2,3,4,5,6,7,8,9]
-
-// If you do this, it fills the new array with n copies of the *same* array
-Array.from(Array(10).fill([]));
-```
-
-## Fill()
-Fill() is required to make the array enumarable. `new Array(10)` gives an array that has length of 10, but that's all. You can't map over it.
-
-
-## of n arbitrary elements
-The above approach won't work for these examples because the above will fill the array with the same object
-```js
-const arrayOfArrays = new Array(10).fill().map(()=>[]);
-// [[], [], [], ...]
-const arrayOfObjects = new Array(10).fill().map((e,i)=>({id:i}));
-// [{id: 0}, {id: 1}, {id: 2}, {id: 3}, ...];
-```
-
-## Copy an object
+### Copy an object
 
 Say we have an object with deeply nested data, and we want to make a copy that only changes one of the deeply nested properties.
 ```js
@@ -138,7 +151,9 @@ Use spread operator to destructure each property all the way down:
 }
 ```
 
-## Async Await
+## Async 
+
+### Async Await
 
 ```js
 // Imagine getUsers returns a promise; put the `async` keyword immediately before the function.
@@ -153,7 +168,7 @@ const getUsers = async () => {
 } 
 ```
 
-## Async Await in an array map
+### Async Await in an array map
 
 - Say you have a 2d array -- an array that holds arrays of IDs.
 - You want to load data by ID for each of the IDs
