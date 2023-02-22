@@ -20,9 +20,12 @@ const myValue = foo || bar ? baz : null;
 ```js
 const letters = ['a', 'b', 'c', 'x', 'y', 'z']
 const swappedEnds = [letters[0], letters[letters.length - 1]] = [letters[letters.length - 1], letters[0]];
-
 console.log(swappedEnds);
 // ['z', 'a']
+
+const swappedArbitrary = [letters[1], letters[3]] = [letters[3], letters[1]];
+console.log(swappedArbitrary);
+// ["x", "b"]
 ```
 ### Array.some() and Boolean function
 In javascript, `Boolean` is a function. Who knew? You can use it like this:
