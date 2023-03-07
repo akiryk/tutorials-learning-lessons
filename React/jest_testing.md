@@ -1,5 +1,21 @@
 # Jest Testing
 
+### Mock but use original
+```js
+jest.mock(
+  '@root/hot_deals/dynamic/hot_deals_desktop_layout_config_component_fragments',
+  () => {
+    const originalModule = jest.requireActual(
+      '../hot_deals_desktop_layout_config_component_fragments'
+    );
+    return {
+      ...originalModule,
+      getEnergyLabelInfo: jest.fn(),
+    };
+  }
+);
+```
+
 ### Test lazy loaded components
 Mock the library and still test components that were lazy loaded with `@loadable/component`
 ```js
