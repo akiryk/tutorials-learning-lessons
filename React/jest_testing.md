@@ -3,10 +3,10 @@
 ### Mock but use original
 ```js
 jest.mock(
-  '@root/hot_deals/dynamic/hot_deals_desktop_layout_config_component_fragments',
+  '@root/dir/some_file',
   () => {
     const originalModule = jest.requireActual(
-      '../hot_deals_desktop_layout_config_component_fragments'
+      '../some_file'
     );
     return {
       ...originalModule,
