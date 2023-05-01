@@ -1,5 +1,16 @@
 # Jest Testing
 
+### Mock default 
+```js
+jest.mock(
+  '@root/my_file/to/test',
+  () => {
+    return {__esModule: true, default: () => null};
+  }
+);
+
+```
+
 ### Mock but use original
 ```js
 jest.mock(
