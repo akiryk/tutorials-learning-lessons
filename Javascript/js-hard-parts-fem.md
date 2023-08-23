@@ -20,6 +20,13 @@ JavaScript needs to work with the browser or with modules provided by node and t
 | fetch/xhr | network requests |
 
 ### Event Loop
-There's an important feature of JS called the 'event loop'. This is the thing that controls what happens when, and it has strict rules.
+
+There are three main lists of operation in JavaScript:
+- the main synchronous thread, which includes the call stack
+- a microtask queue, which is a list of things to do based on asynchronous events (e.g. promises)
+- a task queue or callback queue, which handles functions called back from setTimer or setInterval
+
+The event loop has these rules
 1. Handle things in the main thread first
-2. Handle things in the callback queue only once main thread is complete.
+2. Handle things in the `microtask queue` next
+3. Handle things in the callback queue aka `task queue` only once main thread is complete.
