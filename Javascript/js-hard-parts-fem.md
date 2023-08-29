@@ -30,3 +30,26 @@ The event loop has these rules
 1. Handle things in the main thread first
 2. Handle things in the `microtask queue` next
 3. Handle things in the callback queue aka `task queue` only once main thread is complete.
+
+To be specific:
+
+```js
+function display(data) { console.log(data) }
+function printHello() { console.log('Hello') }
+function blockFor300ms() { // block for 300ms }
+
+setTimeout(printHello, 0);
+
+const tweets = fetch("www.twitter.com/tweets/idNameBill1221/1"); // say it takes 200ms to return
+tweets.then(display);
+
+blockFor300ms();
+
+console.log("hi there!");
+```
+What happens when?
+1. We log "hi there!"
+2. We log the data returned from fetch
+3. We print "Hello" 
+
+```
