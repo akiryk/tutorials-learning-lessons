@@ -14,7 +14,7 @@ jest.mock(
 ### Mock but use original
 ```js
 jest.mock(
-  '@root/dir/some_file',
+  '@root/dir/SomeComponent',
   () => {
     const originalModule = jest.requireActual(
       '../some_file'
@@ -22,6 +22,21 @@ jest.mock(
     return {
       ...originalModule,
       getEnergyLabelInfo: jest.fn(),
+    };
+  }
+);
+```
+
+### Mock throw error
+```js
+jest.mock(
+  '@root/dir/SomeComponent',
+  () => {
+    return {
+      __esModule: true,
+      default: () => {
+        throw new Error('Uh oh!');
+      },
     };
   }
 );
