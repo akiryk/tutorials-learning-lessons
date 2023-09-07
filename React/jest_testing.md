@@ -42,6 +42,19 @@ jest.mock(
 );
 ```
 
+Eliminate all the **console error noise** that comes from throwing the error!
+```js
+ beforeEach(() => {
+    jest.clearAllMocks();
+    // We're throwing an error, so jest gives us lots of noise in the console.
+    // Spy on the console to eliminate that noise.
+    // Per Kent C. Dobbs, https://www.youtube.com/watch?v=dxWrHEOD5DU
+    jest.spyOn(console, 'error');
+    // @ts-ignore
+    console.error.mockImplementation(() => {});
+  });
+```
+
 ### Test lazy loaded components
 Mock the library and still test components that were lazy loaded with `@loadable/component`
 ```js
