@@ -42,6 +42,23 @@ jest.mock(
 );
 ```
 
+or, even better maybe
+```js
+jest.mock(
+  '@root/dir/MyComponenet',
+  () => jest.fn()
+);
+
+// then, in the test
+beforeEach(() => {
+    jest.clearAllMocks();  
+    const MockMyComponent = MyComponenet as jest.Mock;
+    MockMyComponent.mockImplementation(() => {
+        throw new Error('Uh oh!');
+    });
+})
+```
+
 Eliminate all the **console error noise** that comes from throwing the error!
 ```js
  beforeEach(() => {
