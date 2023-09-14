@@ -9,6 +9,16 @@ It has an `exports` property.
 - If you want to export a single class/variable/function, as in `export default`, we can use `module.exports`
 - if you want to export multiple variables/function, use `exports`
 
+## Event loop
+The node event loop is more involved than the Javascript event loop. There are 5 different queues. In order of precedence:
+
+1. microtask queue
+  - a) functions called with `process.nextTick()`, which you shouldn't use anyway
+  - b) functions invoked by promises
+2. timer queue handles timers
+3. i/o callback queue for all callbacks associated with node i/o functions (e.g. `on('data', ioCallback)`)
+4. Check queue: anything called with `setImmediate()`
+5. Close queue: functions called by the `close()` callback
 
 ## Streams
 Rather than loading entire files into the buffer, use streams, which are well explained in [the streams handbook](https://github.com/substack/stream-handbook)
