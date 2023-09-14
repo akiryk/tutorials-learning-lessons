@@ -12,8 +12,7 @@ It has an `exports` property.
 ## Event loop
 The node event loop is more involved than the Javascript event loop. There are 5 different queues. In order of precedence:
 
-1a. microtask queue: functions called with `process.nextTick()`, which you shouldn't use anyway
-1b. functions invoked by promises
+1. a) microtask queue: functions called with `process.nextTick()` b) functions invoked by promises
 2. timer queue handles timers
 3. i/o callback queue for all callbacks associated with node i/o functions (e.g. `on('data', ioCallback)`)
 4. Check queue: anything called with `setImmediate()`
