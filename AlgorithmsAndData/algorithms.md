@@ -33,3 +33,38 @@ o(n*n) quadratic time
 | o(n) | Linear Time | search an unsorted array for a value | 
 | o(n log n) | log linear time | complex sorting like heap sort or merge sort |
 | o(n * n) | quadratic time | sorting algorithms like bubble sort, selection sort, etc |
+
+## Binary Search Test 
+answers below
+```js
+const list = [10, 20, 22, 25, 28, 31, 44, 532, 10100];
+const needleTrue = 20;
+const needleFalse = 4999;
+binarySearch(list, needleTrue); // return true!
+binarySearch(list, needleFalse); // return false!
+```
+
+## Binary Search Answer
+```js
+const list = [10, 20, 22, 25, 28];
+
+export default function bs_list(haystack: number[], needle: number): boolean {
+    let lo = 0;
+    let hi = haystack.length;
+
+    do {
+        const m = Math.floor(lo + (hi - lo) / 2);
+        const v = haystack[m];
+        if (v === needle) {
+            return true;
+        } else if (v > needle) {
+            // search to the left!
+            hi = m;
+        } else {
+            lo = m + 1;
+        }
+    } while (lo < hi);
+
+    return false;
+}
+```
