@@ -68,3 +68,44 @@ export default function bs_list(haystack: number[], needle: number): boolean {
     return false;
 }
 ```
+
+## Crystal balls question
+You have two crystal balls and they will break at a certain height. What algorithm could you use to have better performance than linear or binary search? 
+
+Linear: you could drop the first ball at 1ft, then 2ft, 3ft, etc. Eventually, it will break. This is linear time (o of n)
+Search: or you could divide in half, then use linear for the second ball. This doesn't really buy you anything; it's still o of n because we ignore the constants
+
+## Crystal balls answer
+If you search for a spot that breaks by jumping in increments of the square root, you'll limit the possible items you check to the sqrt. This means your big-o will be sqrt of n. 
+```js
+function two_crystal_balls(breaks) {
+    const jumpAmount = Math.floor(Math.sqrt(breaks.length));
+
+    let i = jumpAmount;
+    
+    for (; i < breaks.length; i += jumpAmount) {
+         console.log(i)
+        if (breaks[i]) {
+            break;
+        }
+    }
+
+    i -= jumpAmount;
+
+    for (let j = 0; j < jumpAmount && i < breaks.length; i++, j++) {
+      console.log(i)
+        if (breaks[i]) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+const f = false;
+const t = true;
+
+const a = [f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,t,t,t,t,t,t,t]
+
+two_crystal_balls(a)
+```
