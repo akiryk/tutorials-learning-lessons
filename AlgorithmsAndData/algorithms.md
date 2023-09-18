@@ -128,13 +128,14 @@ Technically, it requires n-squared + n / 2, but we ignore the constants
 function bubbleSort(unsortedList) {
   const sorted = [...unsortedList];
   let j = sorted.length - 1;
+ 
   while(j > 0) {
     for (let i = 0; i < j; i++) {
-      if (list[i] > list[i+1]) {
+      if (sorted[i] > sorted[i+1]) {
         // swap them!
-        const bigger = list[i];
-        list[i] = list[i + 1];
-        list[i + 1] = bigger;
+        const bigger = sorted[i];
+        sorted[i] = sorted[i + 1];
+        sorted[i + 1] = bigger;
       }
     }
     j--;
