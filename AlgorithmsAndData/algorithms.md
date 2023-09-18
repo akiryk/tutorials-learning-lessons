@@ -109,3 +109,34 @@ const a = [f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,t,t,t,t
 
 two_crystal_balls(a)
 ```
+## Bubble Sort
+Start with a list of numbers
+Return a sorted list of numbers
+
+## Bubble Sort Answer
+Simple: 
+- loop through the array and compare each element with its neighbor.
+- if the first is larger than the second, then swap.
+- after one iteration of this loop, the largest element will be on the far right
+- now repeat the loop but make it one element shorter (don't compare the last element)
+- and so on
+
+Because this algorithm loops twice, the big o is o of n squared.
+Technically, it requires n-squared + n / 2, but we ignore the constants
+
+```js
+function bubbleSort(unsortedList) {
+  const sorted = [...unsortedList];
+  let j = sorted.length - 1;
+  while(j > 0) {
+    for (let i = 0; i < j; i++) {
+      if (list[i] > list[i+1]) {
+        // swap them!
+        const bigger = list[i];
+        list[i] = list[i + 1];
+        list[i + 1] = bigger;
+      }
+    }
+  }
+}
+```
