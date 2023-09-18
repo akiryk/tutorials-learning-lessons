@@ -137,6 +137,8 @@ function bubbleSort(unsortedList) {
         list[i + 1] = bigger;
       }
     }
+    j--;
   }
+  return sorted;
 }
 ```
