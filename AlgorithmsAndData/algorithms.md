@@ -28,7 +28,7 @@ o(n*n) quadratic time
 
 | Notation | Description | Example | 
 | -------- | ----------- | ------- |
-| o(1) | Constant Time | Look up an element in array by index |
+| o(1) | Constant Time | Look up an element in array by index. It doesn't matter what the input (i) is; it doesn't matter how long the list is: lookup will be the same either way |
 | o(log n) | Logarithmic Time | Find element in sorted array with binary search |
 | o(n) | Linear Time | search an unsorted array for a value | 
 | o(n log n) | log linear time | complex sorting like heap sort or merge sort |
