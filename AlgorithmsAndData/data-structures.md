@@ -5,13 +5,13 @@ It's important to distinguish these two things. A data structure is used to orga
 These notes are from a few sources:
 - [Programming Foundations, Data Structures](https://www.linkedin.com/learning/programming-foundations-data-structures)
 - [Programing Foundations: Algorithms](https://www.linkedin.com/learning/programming-foundations-algorithms)
+- [Primogen's Last Algos Course](https://frontendmasters.com/courses/algorithms/arrays-vs-linked-list/)
 
 ## Short cut to quizes
 [Linked Lists, Java](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38217226?autoplay=true&resume=false&u=85880466)
 [Stacks and Queues](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38215986?autoplay=true&resume=false&u=85880466)
 [Hash Tables Quiz](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38219100?autoSkip=true&autoplay=true&resume=false&u=85880466)
 [Common Data Structures](https://www.linkedin.com/learning/programming-foundations-algorithms/quiz/urn:li:learningApiAssessment:9897115?autoplay=true&resume=false&u=85880466)
-[Primogen's Last Algos Course](https://frontendmasters.com/courses/algorithms/arrays-vs-linked-list/)
 
 What makes an algorithm efficient? 
 The scenario (such as sort this list) and available data structure types (such as an array).
