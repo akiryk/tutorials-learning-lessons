@@ -46,16 +46,37 @@ Big O notation for linked lists varies on the action. For accessing an entry, be
 Add, delete, and search are all also 0(n), because each potentially requires going through the entire list. 
 Insert can be 0(1), assuming we insert to the head and not somewhere internal.
 
-Good: it's easy to add and remove items and that there's no need to reorganize the underlying memory that holds the data, unlike with arrays. 
+Good: 
+- it's easy to add and remove items from either the head or the tail, constant time. 
+- when adding/removing from anywhere, there's no need to reorganize the underlying memory that holds the data, unlike with arrays. 
 
-Bad: It can't look up an item quickly by index.
+Bad: 
+- It can't look up an item quickly by index.
+- In order to find an item that isn't the head or tail, it needs to walk the list, so big o of n. 
 
 ### Arrays
 According to Primogen, an array is technically a way to store data in sequenced locations in memory. The locations will depend on the type of data being stored. If the data is 16kb each, less memory is needed for each element than 32b items. In a true array, you have to state up front the number of spots you want reserved as well as what is being reserved. In JavaScript, when we say we're using an array, we're actually using something that wraps an array. 
 
 When we do something like `jsArray.unShift(value)`, we're changing the length of the array AND moving everthing over one spot. This has performance implications. It also means that we need the wrapper code to create a new array under the hood, a new array with more slots. In practice, JS probably creates arrays that come with a few extra slots just in case — but not tons of extra spots. 
 
-### Stacks and Queues
+Good:
+- You can easily get an element by random access (by an index)
+
+### Queues
+In Queues, the "head" is the first item in the list. If we want to push a new item, we add it to the tail. If we want to pop an item, we grab it from the front, the head. 
+
+Assuming we have a pointer to the head and the tail, it's easy/constant-time to get the first item in and to add a new item. 
+
+**Queue Definition:** Like an array but with FIFO behavior only. Unlike an array, it has specific actions:
+`enqueue`, `dequeue`, `peek` and sometimes `search`. 
+
+**Queues are good for:** FIFO behavior. Say we're doing some kind of video download buffering and want to asynchronously request data and ensure we send it down in the order it was requested rather than the order it was returned. We could keep track of our requests in a queue using FIFO. 
+Dequeuing: Once the request returns, we return that data from the list and move to the next item. 
+Enqueueing: If we have another request, we add it to the tail. 
+
+**Bad** Not good for searching or for retrieving an item that isn't at the head or tail. It can be O(n) time for these operations. 
+
+### Stacks
 
 In both Stacks and Queues, the "head" is the item that will be returned first. "Peek()" will display informationa about the head.
 
