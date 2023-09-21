@@ -11,6 +11,7 @@ These notes are from a few sources:
 [Stacks and Queues](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38215986?autoplay=true&resume=false&u=85880466)
 [Hash Tables Quiz](https://www.linkedin.com/learning/programming-foundations-data-structures-2/quiz/urn:li:learningApiAssessment:38219100?autoSkip=true&autoplay=true&resume=false&u=85880466)
 [Common Data Structures](https://www.linkedin.com/learning/programming-foundations-algorithms/quiz/urn:li:learningApiAssessment:9897115?autoplay=true&resume=false&u=85880466)
+[Primogen's Last Algos Course](https://frontendmasters.com/courses/algorithms/arrays-vs-linked-list/)
 
 What makes an algorithm efficient? 
 The scenario (such as sort this list) and available data structure types (such as an array).
@@ -48,6 +49,11 @@ Insert can be 0(1), assuming we insert to the head and not somewhere internal.
 Good: it's easy to add and remove items and that there's no need to reorganize the underlying memory that holds the data, unlike with arrays. 
 
 Bad: It can't look up an item quickly by index.
+
+### Arrays
+According to Primogen, an array is technically a way to store data in sequenced locations in memory. The locations will depend on the type of data being stored. If the data is 16kb each, less memory is needed for each element than 32b items. In a true array, you have to state up front the number of spots you want reserved as well as what is being reserved. In JavaScript, when we say we're using an array, we're actually using something that wraps an array. 
+
+When we do something like `jsArray.unShift(value)`, we're changing the length of the array AND moving everthing over one spot. This has performance implications. It also means that we need the wrapper code to create a new array under the hood, a new array with more slots. In practice, JS probably creates arrays that come with a few extra slots just in case — but not tons of extra spots. 
 
 ### Stacks and Queues
 
