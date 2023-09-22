@@ -63,6 +63,8 @@ Good:
 - You can easily get an element by random access (by an index)
 
 ### Queues
+First of all, a queue is just a specific implementation of a **linked list**. It is a linked list in which the first-item-in will be the first-item-out. FIFO.  
+
 In Queues, the "head" is the first item in the list. If we want to push a new item, we add it to the tail. If we want to pop an item, we grab it from the front, the head. 
 
 Assuming we have a pointer to the head and the tail, it's easy/constant-time to get the first item in and to add a new item. 
