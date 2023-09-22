@@ -65,7 +65,19 @@ Good:
 ### Queues
 First of all, a queue is just a specific implementation of a **linked list**. It is a linked list in which the first-item-in will be the first-item-out. FIFO.  
 
-In Queues, the "head" is the first item in the list. If we want to push a new item, we add it to the tail. If we want to pop an item, we grab it from the front, the head. 
+In Queues, the "head" is the first item in the list. If we want to insert a new item, we add it to the tail. If we want to extract an item, we grab it from the front, the head. 
+It's helpful to use the terms _enqueue_ and _dequeue_ rather than _push_ and _pop_, since those have a particular meaning in JavaScript.
+```js
+/**
+ * HEAD              TAIL // enqueue(A)
+ * HEAD A            TAIL // enqueue(B)
+ * HEAD A->B         TAIL // enqueue(C)
+ * HEAD A->B->C      TAIL // dequeue()
+ * HEAD B->C         TAIL // dequeue()
+ * HEAD C            TAIL // dequeue()
+ * HEAD              TAIL
+ */
+```
 
 Assuming we have a pointer to the head and the tail, it's easy/constant-time to get the first item in and to add a new item. 
 
