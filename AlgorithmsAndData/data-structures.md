@@ -92,19 +92,24 @@ Enqueueing: If we have another request, we add it to the tail.
 
 ### Stacks
 
-In both Stacks and Queues, the "head" is the item that will be returned first. "Peek()" will display informationa about the head.
-
 **Stack Definition:** A list with LIFO behavior. It generally has these actions:
-`push`, `pop`, `peek` (show the head of the list) and sometimes `search`.
+`push`, `pop`, `peek` (show the head of the list) and sometimes `search`. "Peek()" will display informationa about the head.
+
+```js
+/**
+ * Stack is Last in First out
+ * HEAD                  TAIL push(A)
+ * HEAD A                TAIL push(B)
+ * HEAD A->B             TAIL push(C)
+ * HEAD A->B->C          TAIL pop()
+ * HEAD A->B             TAIL pop()
+ * HEAD A                TAIL
+ */
+```
 
 **Stacks are good for:** Stacks are great to keeping track of state or the order of when things have occurred. There is no indexing in stacks; if you want to access the next item, you must first pop off the element that's currently at the top of the stack. They are also good for anything where you want to rewind a sequence of events, e.g. with error handling.
 
-**Queue Definition:** Like an array but with FIFO behavior only. Unlike an array, it has specific actions:
-`enqueue`, `dequeue`, `peek` and sometimes `search`. 
-
-**Queues are good for:** when things need to happen.
-
-Neither is particularly good for searching or for retrieving an item that isn't at the top (of the stack) or the bottom (of the queue). It can be O(n) time for these operations. 
+**Bad** Stacks are great at searching or for retrieving an item that isn't at the top (of the stack) or the bottom (of the queue). It can be O(n) time for these operations. 
 
 ### Hash Tables
 
