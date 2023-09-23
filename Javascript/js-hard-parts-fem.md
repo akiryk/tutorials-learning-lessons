@@ -53,3 +53,6 @@ What happens when?
 3. We print "Hello" 
 
 ```
+## Closures
+A function creates a variable environment. If it's returned from within another function, it brings with it a hidden property called `[[scope]]` that includes the variable environment. This collection of variables is something we call "closure", but perhaps a more precise name is Persistent Static/Lexically Scoped Reference Data. This is data that will stick around; it's statically scoped as opposed to dynamically scoped, meaning it's determined when the function is created, not based on where it's invoked. And it's data.
+
