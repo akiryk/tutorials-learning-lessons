@@ -54,13 +54,19 @@ Bad:
 - It can't look up an item quickly by index.
 - In order to find an item that isn't the head or tail, it needs to walk the list, so big o of n. 
 
-### Arrays
+### Array List (aka, array)
 According to Primogen, an array is technically a way to store data in sequenced locations in memory. The locations will depend on the type of data being stored. If the data is 16kb each, less memory is needed for each element than 32b items. In a true array, you have to state up front the number of spots you want reserved as well as what is being reserved. In JavaScript, when we say we're using an array, we're actually using something that wraps an array. 
 
 When we do something like `jsArray.unShift(value)`, we're changing the length of the array AND moving everthing over one spot. This has performance implications. It also means that we need the wrapper code to create a new array under the hood, a new array with more slots. In practice, JS probably creates arrays that come with a few extra slots just in case — but not tons of extra spots. 
 
 Good:
 - You can easily get an element by random access (by an index)
+
+### Array List vs Linked List: Which is better?
+It depends. 
+- If you want to push and pop things off the end, either work fine.
+- If you want to enqueue and dequeue, the array list is much less performance.
+- If you want random access, an array is great
 
 ### Queues
 First of all, a queue is just a specific implementation of a **linked list**. It is a linked list in which the first-item-in will be the first-item-out. FIFO.  
