@@ -117,6 +117,9 @@ Enqueueing: If we have another request, we add it to the tail.
 
 **Bad** Stacks are great at searching or for retrieving an item that isn't at the top (of the stack) or the bottom (of the queue). It can be O(n) time for these operations. 
 
+### Ring Buffer
+Also called a circular buffer, it acts like a queue, but its head and tail aren't necessarily at the start and end. Called a "ring" buffer because it cycles around if a new element needs to be added that exceeds the length. A use case is something like video buffering: you store the frames of the last 5 seconds of video so they can be quickly retrieved; each time a new frame appears, it's added to the buffer's tail and the frame at the head is removed. 
+
 ### Hash Tables
 
 A **hash table** is an form of an **associative array** — a collection of key:value pairs in which order isn't important. We use the terms "put", "add", or "insert", depending on language, for adding a new key/value pair to the table. We always add in pairs. A hash table is very much like a dictionary; the difference is that a hash table requires  applying a hash function to a key and mapping that to a bucket.
