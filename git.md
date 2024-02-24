@@ -1,8 +1,22 @@
 # Git
 
+### Devops master class
+[video](https://www.youtube.com/watch?v=hQJktcBzJUs)
+
+```sh
+# clean list of logs
+git log --oneline --graph --decorate --all
+
+# reset things in staging back to working directory
+git reset <file>
+
+# reset things in working directory back to how they were
+git restore <file>
+```
+
 ### Tips 'n tricks
 ```sh
-# Show only the names of files that have been deleted
+# Show only the name****s of files that have been deleted
 git diff master --diff-filter=D --summary
 
 # have been modified
