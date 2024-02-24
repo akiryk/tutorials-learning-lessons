@@ -12,6 +12,10 @@ git reset <file>
 
 # reset things in working directory back to how they were
 git restore <file>
+
+# reset both staging and working directory to how they were before.
+# anything that was committed will remain committed.
+git reset --hard
 ```
 
 ### Tips 'n tricks
