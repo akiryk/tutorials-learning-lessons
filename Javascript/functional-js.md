@@ -2,6 +2,10 @@
 Basic compose function with reduce
 ```javascript
 function compose(...fns) {
+  return (arg) => fns.reduceRight((result, func)=> func(result), arg)
+}
+
+function compose(...fns) {
   return fns.reduce((a, c) => {
     return v => a(c(v));
   }, v => v)
