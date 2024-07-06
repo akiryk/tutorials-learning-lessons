@@ -1,6 +1,6 @@
 # Challenges
 
-Create a function that returns n arrays of arbitrary length and that contain arbitrary initial data. 
+### 1. Create a function that returns n arrays of arbitrary length and that contain arbitrary initial data. 
 ```js
 // example
 const setValues = () => ({
