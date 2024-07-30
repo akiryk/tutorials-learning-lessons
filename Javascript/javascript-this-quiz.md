@@ -22,19 +22,19 @@ bar: function() {
     } else {
       console.log('not window')
     }
+  },
+  baz() {
+    // test with const getValueOfBaz = obj.baz;
+    // then see what you get with getValueOfBaz()
+    const x = () => this;
+    return x;
   }
+}
 
 // What will return
 obj.runFunction();
 
-// True of False
-const getValueOfX = obj.bar();
-console.log(getValueOfX() === obj);
-console.log(getValueOfX() === window);
-
-// True of False
-const getValueOfX2 = obj.bar;
-console.log(getValueOfX2()() === obj);
-console.log(getValueOfX2()() === window);
+getValueOfBaz = obj.baz;
+// console.log(getValueOfBaz() === obj) ??
 ```
 
