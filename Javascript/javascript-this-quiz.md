@@ -3,63 +3,29 @@
 ## Quiz
 Run the following in jsbin or whatever
 ```js
-const obj = {
-  outerThis: this,
-  runFunction: function() {
-    if (obj.outerThis === this){
-      console.log('outerThis === this in function')
+bar: function() {
+    const x = () => this;
+    const y = x();
+    if (y === window) {
+      console.log('window')
     } else {
-      console.log('outerThis !== this in function')
+      console.log('not window')
     }
   },
-  runArrowFunction: () => {
-    if (obj.outerThis === this){
-      console.log('outerThis === this in arrow fn')
+  foo() {
+    function getThis() {
+      return this;
+    }
+    const x = getThis();
+    if (x === window) {
+      console.log('window')
     } else {
-      console.log('outerThis !== this in affor fn')
+      console.log('not window')
     }
-  },
-  whatIsOuterThis: function(){
-    if (obj.outerThis === window) {
-      console.log("outerThis is window")
-    } else if (obj.outerThis === obj) {
-      console.log('outerThis is obj')
-    }
-  },
-  whatIsThis: function(){
-    if (this === window) {
-      console.log("this is window in fn")
-    } else if (this === obj) {
-      console.log('this is obj in fn')
-    }
-  },
-  whatIsThisArrow: () => {
-    if (this === window) {
-      console.log("this is window in arrow fn")
-    } else if (this === obj) {
-      console.log('this is obj in arrow fn')
-    }
-  },
-  bar: function() {
-    const x = (() => this);
-    return x;
   }
-}
 
-// True or False?
+// What will return
 obj.runFunction();
-
-// True or False?
-obj.runArrowFunction();
-
-// True or False?
-obj.whatIsOuterThis();
-
-// True or False?
-obj.whatIsThis();
-
-// True or False?
-obj.whatIsThisArrow();
 
 // True of False
 const getValueOfX = obj.bar();
