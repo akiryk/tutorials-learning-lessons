@@ -1,6 +1,15 @@
 # This in JavaScript
 
 ## Quiz
+
+document.addEventListener('click', () => {
+  console.log(this); // what is this?
+})
+
+document.addEventListener('click', function() {
+  console.log(this); // what is this?
+})
+
 Run the following in jsbin or whatever
 ```js
 const obj = {
